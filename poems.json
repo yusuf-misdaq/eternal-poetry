@@ -367,6 +367,33 @@
         "prayer"
       ],
       "bookSource": null
+    },
+    {
+      "id": 1759860587760,
+      "title": "Untitled",
+      "author": "Yusuf Misdaq",
+      "content": "Terrible justice\n\nMeat sandwhich with \nMeat for bread. \n\nA chink in the illusory spotlight\n   It lied about everything\nNot by lying\n       But by what it left out",
+      "location": "April 14th, 2024. Santa Monica, California.",
+      "note": "",
+      "categories": [
+        "grr",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759860907752,
+      "title": "Pickings",
+      "author": "Yusuf Misdaq",
+      "content": "The cauldron comes in smouldering \nI throw in rose heads\n  and fenugreek \n    and butter\nit's a slanted way to approach \n  Sobriety \n      by making myself further \n          intoxicated\n   But it's the only way \n          I know to be \nStumbling from tree to tree\n    Clipping \n                     everything\nthat sings  \n                   to me. \n\n~\n\n\"sillowese,\" says the rose\ni don't know what it means\nand I don't care. \n  the trembling in my heart\n     reverberates into the air.",
+      "location": "April 14th, 2024. Santa Monica, California.",
+      "note": "",
+      "categories": [
+        "flower"
+      ],
+      "bookSource": null,
+      "comments": []
     }
   ],
   "categories": [
@@ -374,6 +401,7 @@
     "art",
     "black",
     "body",
+    "flower",
     "grr",
     "light",
     "lol",
