@@ -419,7 +419,7 @@
                 <a href="#contact">Contact</a>
                 <a href="#donate">Donate</a>
             </div>
-            <p style="font-size: 0.75rem; opacity: 0.7;">© <span id="year"></span> Poetry Eternal. All rights reserved.</p>
+            <p style="font-size: 0.75rem; opacity: 0.7;">© <span id="year"></span> Eternal Poetry. Yusuf Misdaq. All rights reserved.</p>
         </footer>
     </div>
 
@@ -458,7 +458,7 @@
                     <textarea id="content-input"></textarea>
                 </div>
                 <div class="form-group">
-                    <label>Location & Date (e.g., "San Diego, September, 2009")</label>
+                    <label>Date & Location (e.g., "September 9th, 2016. Santa Monica, Los Angeles.")</label>
                     <input type="text" id="location-input">
                 </div>
                 <div class="form-group">
@@ -658,7 +658,7 @@
 
             var html = '<article>';
             html += '<h2 class="poem-title">' + escapeHtml(poem.title) + '</h2>';
-            html += '<p class="poem-author">By <a href="https://en.wikipedia.org/wiki/Y._Misdaq" target="_blank">' + escapeHtml(poem.author).toUpperCase() + '</a></p>';
+            html += '<p class="poem-author">BY <a href="https://en.wikipedia.org/wiki/Y._Misdaq" target="_blank">' + escapeHtml(poem.author).toUpperCase() + '</a></p>';
             html += '<div class="poem-content">' + escapeHtml(poem.content) + '</div>';
             if (poem.location) html += '<p class="poem-location">' + escapeHtml(poem.location) + '</p>';
             if (poem.note) html += '<p class="poem-note">' + escapeHtml(poem.note) + '</p>';
@@ -688,7 +688,7 @@
             html += '<button class="dropdown-trigger" onclick="toggleDropdown(\'share\')">📤 Share this poem</button>';
             html += '<div class="dropdown-content hidden" data-dropdown="share">';
             html += '<button onclick="copyShareLink()">📋 Copy link</button>';
-            html += '<a href="https://twitter.com/intent/tweet?text=' + encodeURIComponent(poem.title + ' by ' + poem.author) + '" target="_blank">Share on Twitter</a>';
+            html += '<a href="https://twitter.com/intent/tweet?text=' + encodeURIComponent(poem.title + ' by ' + poem.author) + '" target="_blank">Share on X</a>';
             html += '<a href="https://www.facebook.com/sharer/sharer.php" target="_blank">Share on Facebook</a>';
             html += '<a href="https://wa.me/?text=' + encodeURIComponent(poem.title) + '" target="_blank">Share on WhatsApp</a>';
             html += '<a href="sms:?body=' + encodeURIComponent(poem.title) + '">Share via SMS</a>';
