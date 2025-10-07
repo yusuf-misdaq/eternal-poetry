@@ -486,6 +486,12 @@
             </div>
 
             <div class="admin-section">
+                <h2>Manage Comments</h2>
+                <p style="margin-bottom: 1rem; color: #666;">View and moderate all comments across your poems.</p>
+                <div id="comments-list"></div>
+            </div>
+
+            <div class="admin-section">
                 <h2>Backup & Restore</h2>
                 <p style="margin-bottom: 1rem; color: #666;">Export your poems to save a backup, or import previously saved data.</p>
                 <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
@@ -515,7 +521,8 @@
       "categories": [
         "prayer",
         "moving"
-      ]
+      ],
+      "comments": []
     }
   ],
   "categories": [
@@ -629,7 +636,7 @@
 
             var html = '<article>';
             html += '<h2 class="poem-title">' + escapeHtml(poem.title) + '</h2>';
-            html += '<p class="poem-author">By <a href="https://en.wikipedia.org/wiki/Y._Misdaq" target="_blank">' + escapeHtml(poem.author) + '</a></p>';
+            html += '<p class="poem-author">By <a href="https://en.wikipedia.org/wiki/Y._Misdaq" target="_blank">' + escapeHtml(poem.author).toUpperCase() + '</a></p>';
             html += '<div class="poem-content">' + escapeHtml(poem.content) + '</div>';
             if (poem.location) html += '<p class="poem-location">' + escapeHtml(poem.location) + '</p>';
             if (poem.note) html += '<p class="poem-note">' + escapeHtml(poem.note) + '</p>';
@@ -637,6 +644,23 @@
             html += '</article>';
 
             html += '<div class="interactive-sections">';
+            
+            if (poem.comments && poem.comments.length > 0) {
+                html += '<div class="dropdown-section">';
+                html += '<button class="dropdown-trigger" onclick="toggleDropdown(\'reader-comments\')">💭 What other readers felt</button>';
+                html += '<div class="dropdown-content hidden" data-dropdown="reader-comments">';
+                for (var i = 0; i < poem.comments.length; i++) {
+                    var comment = poem.comments[i];
+                    html += '<div style="border-bottom: 1px solid #eee; padding: 1rem 0; margin-bottom: 1rem;">';
+                    if (comment.name) {
+                        html += '<p style="font-weight: 500; margin-bottom: 0.5rem;">' + escapeHtml(comment.name) + '</p>';
+                    }
+                    html += '<p style="font-size: 0.95rem; line-height: 1.6;">' + escapeHtml(comment.text) + '</p>';
+                    html += '<p style="font-size: 0.75rem; color: #999; margin-top: 0.5rem;">' + comment.date + '</p>';
+                    html += '</div>';
+                }
+                html += '</div></div>';
+            }
             
             html += '<div class="dropdown-section">';
             html += '<button class="dropdown-trigger" onclick="toggleDropdown(\'share\')">📤 Share this poem</button>';
@@ -666,8 +690,12 @@
             html += '<div class="dropdown-section">';
             html += '<button class="dropdown-trigger" onclick="toggleDropdown(\'comments\')">💬 Comment on this poem</button>';
             html += '<div class="dropdown-content hidden" data-dropdown="comments">';
-            html += '<p style="color: #666; font-size: 0.9rem;">Comments coming soon. For now, you can share your thoughts by emailing the author.</p>';
-            html += '</div></div>';
+            html += '<div id="comment-form-' + poem.id + '">';
+            html += '<input type="text" id="comment-name-' + poem.id + '" placeholder="Your name (optional)" style="width: 100%; padding: 0.5rem; margin-bottom: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-family: Georgia, serif;">';
+            html += '<input type="email" id="comment-email-' + poem.id + '" placeholder="Your email (optional)" style="width: 100%; padding: 0.5rem; margin-bottom: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-family: Georgia, serif;">';
+            html += '<textarea id="comment-text-' + poem.id + '" placeholder="Share your thoughts..." style="width: 100%; padding: 0.5rem; margin-bottom: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-family: Georgia, serif; min-height: 6rem; resize: vertical;"></textarea>';
+            html += '<button onclick="submitComment(' + poem.id + ')" style="padding: 0.75rem 1.5rem; background: #000; color: #fff; border: none; border-radius: 4px; cursor: pointer; font-family: Georgia, serif;">Post Comment</button>';
+            html += '</div></div></div>';
 
             html += '</div>';
 
@@ -728,6 +756,43 @@
             alert('Link copied to clipboard!');
         }
 
+        function submitComment(poemId) {
+            var name = document.getElementById('comment-name-' + poemId).value.trim();
+            var email = document.getElementById('comment-email-' + poemId).value.trim();
+            var text = document.getElementById('comment-text-' + poemId).value.trim();
+
+            if (!text) {
+                alert('Please write a comment before posting.');
+                return;
+            }
+
+            var comment = {
+                name: name || 'Anonymous',
+                email: email,
+                text: text,
+                date: new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })
+            };
+
+            for (var i = 0; i < data.poems.length; i++) {
+                if (data.poems[i].id === poemId) {
+                    if (!data.poems[i].comments) {
+                        data.poems[i].comments = [];
+                    }
+                    data.poems[i].comments.push(comment);
+                    break;
+                }
+            }
+
+            saveData();
+            alert('Thank you for sharing your thoughts!');
+            
+            document.getElementById('comment-name-' + poemId).value = '';
+            document.getElementById('comment-email-' + poemId).value = '';
+            document.getElementById('comment-text-' + poemId).value = '';
+            
+            renderPoem();
+        }
+
         function goHome() {
             state.view = 'home';
             state.category = null;
@@ -760,6 +825,7 @@
             renderCategoryCheckboxes();
             renderCategoryChips();
             renderPoemsList();
+            renderCommentsList();
         }
 
         function renderCategoryCheckboxes() {
@@ -792,6 +858,58 @@
                 html += '</div>';
             }
             document.getElementById('poems-list').innerHTML = html || '<p>No poems yet. Add your first poem above!</p>';
+        }
+
+        function renderCommentsList() {
+            var html = '';
+            var totalComments = 0;
+            
+            for (var i = 0; i < data.poems.length; i++) {
+                var poem = data.poems[i];
+                if (poem.comments && poem.comments.length > 0) {
+                    html += '<div style="border: 1px solid #ddd; border-radius: 8px; padding: 1.5rem; margin-bottom: 1.5rem; background: #fafafa;">';
+                    html += '<h3 style="font-size: 1.1rem; margin-bottom: 1rem; font-weight: 500;">' + escapeHtml(poem.title) + '</h3>';
+                    
+                    for (var j = 0; j < poem.comments.length; j++) {
+                        var comment = poem.comments[j];
+                        totalComments++;
+                        html += '<div style="background: white; border: 1px solid #eee; border-radius: 4px; padding: 1rem; margin-bottom: 0.75rem;">';
+                        html += '<div style="display: flex; justify-content: space-between; align-items: start;">';
+                        html += '<div style="flex: 1;">';
+                        html += '<p style="font-weight: 500; margin-bottom: 0.25rem;">' + escapeHtml(comment.name) + '</p>';
+                        if (comment.email) {
+                            html += '<p style="font-size: 0.85rem; color: #666; margin-bottom: 0.5rem;">' + escapeHtml(comment.email) + '</p>';
+                        }
+                        html += '<p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 0.5rem;">' + escapeHtml(comment.text) + '</p>';
+                        html += '<p style="font-size: 0.75rem; color: #999;">' + comment.date + '</p>';
+                        html += '</div>';
+                        html += '<button onclick="deleteComment(' + poem.id + ', ' + j + ')" class="button button-danger" style="margin-left: 1rem;">Delete</button>';
+                        html += '</div></div>';
+                    }
+                    html += '</div>';
+                }
+            }
+            
+            if (totalComments === 0) {
+                html = '<p style="color: #666;">No comments yet. Comments will appear here once readers start sharing their thoughts.</p>';
+            } else {
+                html = '<p style="margin-bottom: 1rem; font-weight: 500;">Total comments: ' + totalComments + '</p>' + html;
+            }
+            
+            document.getElementById('comments-list').innerHTML = html;
+        }
+
+        function deleteComment(poemId, commentIndex) {
+            if (confirm('Are you sure you want to delete this comment?')) {
+                for (var i = 0; i < data.poems.length; i++) {
+                    if (data.poems[i].id === poemId) {
+                        data.poems[i].comments.splice(commentIndex, 1);
+                        break;
+                    }
+                }
+                saveData();
+                renderAdmin();
+            }
         }
 
         function savePoem() {
