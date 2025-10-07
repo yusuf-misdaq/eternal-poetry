@@ -502,6 +502,27 @@
                 <p style="font-size: 0.85rem; color: #999;">Export creates a JSON file with all your poems and categories. Keep it safe as a backup!</p>
             </div>
 
+            <div class="admin-section">
+                <h2>🚀 Sync to GitHub</h2>
+                <p style="margin-bottom: 1rem; color: #666;">Click below to get the updated data code. Copy it and paste it into your index.html file on GitHub.</p>
+                <button onclick="showGitHubSync()" class="button button-primary" style="background: #2ea44f;">📤 Generate Sync Code</button>
+                <div id="github-sync-output" class="hidden" style="margin-top: 1.5rem;">
+                    <p style="font-weight: 500; margin-bottom: 0.5rem;">Instructions:</p>
+                    <ol style="margin-bottom: 1rem; padding-left: 1.5rem; line-height: 1.8;">
+                        <li>Copy the code below (click the "Copy" button)</li>
+                        <li>Go to your GitHub repo: <a href="https://github.com/yusuf-misdaq/eternal-poetry" target="_blank" style="text-decoration: underline;">eternal-poetry</a></li>
+                        <li>Click on <code style="background: #f0f0f0; padding: 0.2rem 0.4rem;">index.html</code> → pencil icon (Edit)</li>
+                        <li>Find the line that says <code style="background: #f0f0f0; padding: 0.2rem 0.4rem;">var data = {</code> (around line 422)</li>
+                        <li>Select everything from <code style="background: #f0f0f0; padding: 0.2rem 0.4rem;">var data = {</code> down to the closing <code style="background: #f0f0f0; padding: 0.2rem 0.4rem;">};</code></li>
+                        <li>Delete that section and paste your new code</li>
+                        <li>Scroll down → "Commit changes"</li>
+                        <li>Wait 2-3 minutes for GitHub Pages to update</li>
+                    </ol>
+                    <button onclick="copyGitHubCode()" class="button button-secondary" style="margin-bottom: 0.5rem;">📋 Copy Code</button>
+                    <div id="github-code-display" style="background: #f5f5f5; border: 1px solid #ddd; border-radius: 4px; padding: 1rem; max-height: 20rem; overflow-y: auto; font-family: monospace; font-size: 0.85rem; white-space: pre-wrap; word-break: break-all;"></div>
+                </div>
+            </div>
+
             <div style="text-align: center; margin-top: 2rem;">
                 <a href="#" onclick="goHome(); return false;" style="text-decoration: underline;">View Site</a>
             </div>
@@ -513,34 +534,418 @@
   "poems": [
     {
       "id": 1,
-      "title": "On the doorstep of your studio while you sleep within",
+      "title": "On the Doorstep of your Studio, while you Sleep Within",
       "author": "Yusuf Misdaq",
       "content": "\"Wa laylee itha sajaa\" *\n\nI sit between a long-legged\nThin spider that rests in the corner of a\nMidnight plant.\nAnd to my right, a small slug.\nI am snug in between them both\nThe night is theirs\nI am the visitor.\n\nI have come on Earth to taste sweetness\nTo watch spiders\nSee fences errected\nClosed flowers under the black mixture of\nMoon and fog.\n\nFaraway light that leaves\nAnd the distant sound, also faraway\nOf neighbourhood sirens and conflict\nSmall and dry sound\nLike the spider\nIt is never far\nOur father of death.\n\nFor these years of life\nThe truthful clouds\nPluming and roseing\nBlooming and passing\nHave watched me as I watched them\nThey have seen how",
-      "location": "San Diego, September, 2009",
+      "location": "September, 2009. South Park, San Diego.",
       "note": "* Quran 93:2",
       "categories": [
+        "moving",
+        "prayer"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759819915467,
+      "title": "Echoing of Chasmic Vervours",
+      "author": "Yusuf Misdaq",
+      "content": "Firey hands touch the material and\nEverything burns up to\nImmediate flame \n\nThe game is gone and\nThe hand is played\n\nWhen the point of breathing at nothing comes \nYour chasmic vervour \nShimmers as a black patch upon a \nLava crawl \n\nEverything will melt unto \nPure nothing \n\nThe body a sumptuously devoured flake bidden bye\n\nA mind that made a million molehills is now one with the mountain\n\nA fountain of Divine lava \nThe final sentence of Gods love in this life\nThe crumbling meandering overwashing that must happen\nTo all forms\nBefore gas and spirit \nbegin to form\nAnew \n\nThe Godliness of us \nMarks us\n\nWe canâ€™t go quietly \nWe are so Divine we \nWill never shut down\n\nLike some silly line \nA child drew \nWe keep on flowing \nFrom river to sea \n     and\nFrom sea we \nAre siphoned off into \nEternity",
+      "location": "September 30th, 2025. Historic Filipinotown, Los Angeles",
+      "note": "",
+      "categories": [
+        "moving",
         "prayer",
+        "water"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759820195759,
+      "title": "az gul amadee",
+      "author": "Yusuf Misdaq",
+      "content": "Prime coming. \nA sure force\nAligning such that\nTwo rhythms and\n     Timelines begin merging.\n\n~\n\nChannels untucked.\n   Rapidly dissipating residuals\n  That which remains of the statue \n  Is what love refused to\n        Cast away.   \n\n~\n\nSixteen places out\nUncategorized peripheries\n\nIn dreams we met there\nAnd in life we are\n   Trying to square the clouds\n   Into something\n   The sun can shine on.",
+      "location": "September 11th, 2022. Washington D.C.",
+      "note": "",
+      "categories": [
+        "afg",
+        "love"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759820273485,
+      "title": "Plane to Medina",
+      "author": "Yusuf Misdaq",
+      "content": "Bigger than generational wealth \n\nA calling into the future\nDown the everlong tunnel of my descendants\nHere we were, Iâ€™ll say\nOn each others shoulders\nGifting you the latest transmissions \n\nWe heard and obeyed\nPassed on what we could\nMay He have mercy on us\nWhat limitations we were bound by!\nLove and loneliness and living in a time of \nDis ease and desperation\n\nAside from our darling period, before we came of age, \nIt has all been a storm. \nWeâ€™ve weathered it as best we could \nFor your sake\n\nFor your sake, o our children!\n\nCalling you from where you listen \nIn heavenly oceans \nAwaiting birth awaiting love\nAwaiting your come up\n\nYou donâ€™t know how much we\nLong for you\nTo be among us\nBack where you belong\n\nOh my child!\nPrecious child!\nStay forever while you leave\nStay by my side forever \nMy beautyâ€¦\n\nI will watch you grow\nOut of what I was\nAnd into yourself\n\nAnd only then will I know\nMy time has come\nTo let go.\n\nMy perfume purpose \nHaving filled this earth \nMy scent stamped and \nMy descendants ready, \n\nAble \nto \nRun.",
+      "location": "",
+      "note": "February 2022. Plane.",
+      "categories": [
+        "prayer",
+        "love",
         "moving"
       ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759820692937,
+      "title": "Remembering Carmel",
+      "author": "Yusuf Misdaq",
+      "content": "Can glass be blown backwards \n      Can solid go back to liquid?\n\nWe keep fantasizing about it\nIn films and in\nShowers as we close our eyes\nAnd in sexuality as we liquify\n\nWe walk timidly towards the ocean \n.Itâ€™s cold, and that scares us.\nBut we still go there\nAnd we still want to be in it\n\nThe liquid crystal embalming us\nThe water now warm \nA rhythm emerging in our minds \nWe swaying and our arms waving \nDizzying off as some\nLovely slimey thing\nTickles our ankles and small toes\n\nWhere have we gone?\nWhat is this familiar place?\nWhere is my mother if \nThis is origin?\n\nOr does this go back further?\nIt might because \nI can see stars up in this pale blue sky.\n\nAnd I see globes that were planets\nAnd beyond them \nBeyond all\nKnown science\nA slanted door\nTo another realm \n\nThe door is the size of all the universes I just saw \nAnd the realm behind it is so limitless that \nConcepts like size are gone\n\nI open my eyes \nwaist deep in this \nclear blue\nangelness\n\nAs I re-emerge onto the beach \nThe people look at me strangely \nEven though I walk one pace at a time\nWith my limbs I have.\n\nThe beach people have tinny instruments that emit sound waves\nPoor quality transmissions on limited frequencies of \nSound with no width in \nAny sense.\n\nCrimes against humanity look like this\nA sleepy forgetfulness\n\nAnd as I notice the curve of her summer dress\nI smile remembering \nI am rejoining this \nBeautiful mess.",
+      "location": "August 2022. Santa Barbara, California.",
+      "note": "",
+      "categories": [
+        "moving",
+        "water"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759820731850,
+      "title": "Untitled",
+      "author": "Yusuf Misdaq",
+      "content": "Linear Marouf \nMerciful lines scar the sky \nSay a sangeen fare thee well \nHolding out one hand that waves\nEmotion unspoken and if it be received\nAs a hard token, so be it. \nEverything in its time falls\nPassions rise and inevitable\nLoves eyes and its back of minds \nWhere the boys go running\nAnd the girls hiding\nA dark void to be \nAlone \nand feel.",
+      "location": "December 29th, 2021. Washington D.C.",
+      "note": "",
+      "categories": [
+        "sad",
+        "black"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759820819689,
+      "title": "Goodbye",
+      "author": "Yusuf Misdaq",
+      "content": "Goodbye my heart\n\nRadiant beauty is yours\nIâ€™ve seen it and touched it \nIâ€™ve been inside you\nYou wept and couldnâ€™t speak\n\nBut you gush open and your\nBody \nWaters your heart. \n\nEvery secret in you and\nEvery formulation within the grasp of your fine mind\n\nBut \n         the dancing and the \n                                                 stillness: \n   Less trodden\n   Less traversed \n   Less tickled.",
+      "location": "December 29th, 2021. Washington D.C.",
+      "note": "",
+      "categories": [
+        "love",
+        "sad",
+        "body"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759820890571,
+      "title": "Desires",
+      "author": "Yusuf Misdaq",
+      "content": "Parody becomes reality  \nThe absurd blends imperceptibly into our daily dose  \nBefore we know it we are nodding in agreement  \nBuying everything, seriously \nLike a German listening intently to a sarcastic joke they donâ€™t get.    \n\nWe are capable of sinking like a stone to the bottom of a filthy pond  \nSo much can be added to our weight\nSo quickly, new desires can become ours  \nAnd we long for it, and it acts us out \n\nWe move in ways we never would  \nMiming out the persona of someone we donâ€™t recognize  \nPraying for something we never thought we wanted \n\nStrangers to ourselves  \nNo hearts within us  \nBut awash with these new desires \nAll that remains are the desires in us  \n\nClicking us into movement as our limbs \nJerk into action and sprawl us across the cities.",
+      "location": "July 6th, 2022. My Van, California.",
+      "note": "",
+      "categories": [
+        "body",
+        "society",
+        "grr"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759821032185,
+      "title": "A Poem for Electronica Musicians",
+      "author": "Yusuf Misdaq",
+      "content": "Sometimes I wonder if \nI sold my soul to the arpeggiator   \n\nSometimes I wonder if  \nI let the wrong one in  \n\nSometimes I wonder if  \nI've been surfing a wave that isn't my own  \n\nSometimes I wonder if  \nI could drop all the coins and start anew  \n\nFirey teardrops velveting down my mountainous robes\nInto the black chasm that takes three days to reach \nThe earth of earth \nWherein lies a bubbling spring",
+      "location": "April 19th, 2019. Maryland.",
+      "note": "",
+      "categories": [
+        "music"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759821079505,
+      "title": "Untitled",
+      "author": "Yusuf Misdaq",
+      "content": "far reaching star unfolds  \nthere has been sand that  \nfeels for me rising  \nfeels for me  \nsun in my hand   \n\nin my mouth  \nthere is  \ncrystal spuck  \n\nreal fabrication  \nspitting out mist  \nemitting rarified  \nluck\n\nlanding upon your  \nshoulders ive come  \nto hold you from  \nbehind and place \nhands upon your \nlower back that  \nenergize and ironize  \nglueing you \ncontagious   \n\ni hold your breath \nin my palms i will  \nheal you               \n               r skin  \nthrough skin  \ni encounter \nessence  \n\nyour ink \nbefore it made words \n\nyour dark ink  \nthat i saw and know \nbefore it filled your  \nreceptacle and  \nmade float \n\nyour vessels \ni knew your  \ninky origins  \n\nand everything that you do  \nwould be as natural to me as  \nwater on my hands and  \ninterlocking my fingers and \nholding you from behind  \nus locked in to one.",
+      "location": "April 19th, 2019. Maryland.",
+      "note": "",
+      "categories": [
+        "love",
+        "water",
+        "body"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759821337420,
+      "title": "Prep Coffee",
+      "author": "Yusuf Misdaq",
+      "content": "Chimes echo out of the starlight  \nA bird chases a squirrel down a tree \nHappenings in the orbital sky \nTwinkling stars and the look in your eye    \n\nTouch me \nDonâ€™t touch me \nReach far in  \n\nLove me \nDonâ€™t come, just   \n   Stay                     \n                   as you are    \n\nA far river \nIn the eyes sunken distance \nThe green, dreaming hills \nMelting without insistence  \n\nPie on the wind\nFood from a lover prepared\nKindness pellets\nLove, touch me by the air.  \n\n*\n\nThey turn the volume down self-consciously when Nirvana comes on\nThey think itâ€™s too rough for this sun\nBut really\nThe friction makes the moonlight smoother",
+      "location": "May 7th, 2022. New Jersey.",
+      "note": "For Wazo",
+      "categories": [
+        "light",
+        "music",
+        "star"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759821501927,
+      "title": "Sleepy Poem",
+      "author": "Yusuf Misdaq",
+      "content": "My temple is certified and affluent when denied and dented, \nIt fills with smoke which also clears, and settled suns which also rise. \nMy tears are drowning fears which slowly vapour clear on up,\nCloud is me and you and all our pain that cries to feel relieved, \nRain on earth is vapour, we are cycles, we are circles. \nAll the time forgetting, 'til we turn and must remember.",
+      "location": "May 13th, 2006. Brighton.",
+      "note": "",
+      "categories": [
+        "sad",
+        "water"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759821701322,
+      "title": "Twinners",
+      "author": "Yusuf Misdaq",
+      "content": "Adjoining rooms\n   You visit me when mine is flooded\n      richly with sun\n   Iâ€™ll come to yours, too, \n      At the mirrored moment of our day\nCorrespondingly \n   Weâ€™ll talk water particles \n      into the sand particles \n         and our desert will \n           balance and lose\n              its sting",
+      "location": "Jan 25th, 2024. Downtown Los Angeles.",
+      "note": "",
+      "categories": [
+        "light",
+        "time",
+        "water"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759821791823,
+      "title": "Untitled",
+      "author": "Yusuf Misdaq",
+      "content": "Chiming is everything \n\nThatâ€™s the motto I live by \n\nI sit in a resonant room \n of hammered metal pans\n  gongs and tuning forks \n   but I make no move\n     and in silence\n      await you in \n       anticipation of \n        the noise you will \n         come with and \n          how each chime\n           will dictate the \n            next moment",
+      "location": "Jan 25th, 2024. Downtown Los Angeles.",
+      "note": "",
+      "categories": [
+        "music"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759821936322,
+      "title": "Airways",
+      "author": "Yusuf Misdaq",
+      "content": "A trigonal\n                 muck \nFor six paces\n       Keep your nose out of \n           my airspaces\n                  \nMy airways arenâ€™t yet clear\n   Itâ€™s obvious and apparent \n    as blockages always are\n\nThe state of the world (burning)\n    ironically requires long \n         cooling breaths \n           which in \n              turn\n        necessitate \n       clear airways                     \n\nHaving experienced the serenity of regular meditation, \nI have become one of those lucky people who can say things like \nâ€˜if only everyone (or enough people) could blow \ncool calming air onto the world \nthings would change.'",
+      "location": "March 10th, 2024. Rosslyn, Virginia",
+      "note": "",
+      "categories": [
+        "moving",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759822116799,
+      "title": "Untitled",
+      "author": "Yusuf Misdaq",
+      "content": "Salient touching stones\n   mark up with clinks \nthe noise re-arrangements \nand uncommon \ndemanifestings \nall signed off \nunicorn signatures\navid signatories \nfiery tributaries\nmodern ritual flushers",
+      "location": "March 13th 2024, Dubai Terminal 2, on Runway.",
+      "note": "",
+      "categories": [
+        "art"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759822384775,
+      "title": "No Title",
+      "author": "Yusuf Misdaq",
+      "content": "No one asked and \n   therefore never knew \n     of the goldfish that \n        swim inside me\n      they tickle \n        and keep my torso \n          on its toes \n\nThe manifesting gatherer \n  that lives in the center \n   of the berry forest\n  wages all their fortunes \n   on the snow coming \n     out gold this   \n      spring season \n         but the ax \n  wielding barbarian \nscientists have already \nset in motion the \nburning/harvesting schedule \nfor the next 71 years\nwhich is when they calculate\nthat all of the resources will \nfinally be excavated and evaporated \nâ€œthen, and only then,â€ said Chuck\nâ€œWill we exit with dignity.â€",
+      "location": "March 13th 2024, Dubai Terminal 2, on Runway.",
+      "note": "",
+      "categories": [
+        "lol",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759822472139,
+      "title": "Untitled",
+      "author": "Yusuf Misdaq",
+      "content": "Mansion\n               sell my home\n\nI want to live with you\n my zip code will change to you\n  and six of my seven names\n   will become your names\n\n     the straightest legendary lovers\n      must become women\n       it has to happen.",
+      "location": "March 13th 2024, Dubai Terminal 2, on Runway.",
+      "note": "",
+      "categories": [
+        "love"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759822573323,
+      "title": "In Every Injury",
+      "author": "Yusuf Misdaq",
+      "content": "I keep falling and in \n   every red graze \n                            on my knee\n                      I see your\n                    loving (of) me.",
+      "location": "March 13th 2024, Dubai Terminal 2, on Runway.",
+      "note": "",
+      "categories": [
+        "body",
+        "love"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759822701613,
+      "title": "Days",
+      "author": "Yusuf Misdaq",
+      "content": "I have to walk out to the gallows \nEach time I leave my home\n\n  thatâ€™s what life begins to feel like\n\nBut Iâ€™m walking with freed will \nKnowing the torture is really \n  nurture.",
+      "location": "March 13th 2024, Dubai Terminal 2, on Runway.",
+      "note": "",
+      "categories": [
+        "black",
+        "moving",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759822957180,
+      "title": "The Mountaineer â€" D E F R O C K E D",
+      "author": "Yusuf Misdaq",
+      "content": "I climb to the top of the ladder\n muezzin move\nall to declare to the world\n that Iâ€™m a man \n   that, I promise, Iâ€™m a man. \n\nI can strike !\n make fire !\npound the mountain and \nstand on top. \n\nI canâ€™t fly \nMy thuddy vesture keeps \nheavy clods entrenched \n                                      in \n    soil and sod. \n\nIâ€™m sad and small \n  Behind a nightingales call\nMy all, summarized\n  and standing tall is\n  aught but a speck\n  of filigree dust\n\nMust my shadow and \n    Ancestus reduce me \n      punishingly down\n   to the lower-ranked\n      classes?\n\nIf I donâ€™t listen and\n  take heed I surely \n    will achieve magnificence\n      but only in the manner\n        of my comeuppance \n    wherein a great white \n        thunder strike shall \n          seek my skull end \n                             and \n        fling me off\nthis goliath mound. \n\nOr, if the wise back-tredder\n   is found within my \n      puffed-up foolery \n   and I tender my self \n     and step down \n     returning to my \n    simple village of chums\n     where I was only \n      (but always) meâ€¦ \n\n\n\nA carrot in the tree\n some later month or three\n    just me alone \n knees up by my ears\nlike I was twenty (and\n   not forty) three\nmunching contentedly \n   as the orange sun \n     breaks free. \n\nâ€œMy family, I have\n   they know me!â€  \nA satisfying, brave \n    crunch of nothing \n to accompany my \ngreat economy epiphany",
+      "location": "March 13th 2024, Dubai Terminal 2, on Runway.",
+      "note": "",
+      "categories": [
+        "grr",
+        "light",
+        "lol"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759823248773,
+      "title": "\"Shukran\"",
+      "author": "Yusuf Misdaq",
+      "content": "\"Shukran,\"\nspoken softly \n\nthe warm chain \nthat binds action\nto ethic",
+      "location": "March 13th, 2024, Plane",
+      "note": "",
+      "categories": [
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759823403674,
+      "title": "My Invisible Career circa. 2024",
+      "author": "Yusuf Misdaq",
+      "content": "An infinite mind \nthat keeps on \ncreating new vistas \nand variations \n\nthey never knew me \nand now they call it \"A.I.\"\n\nI laugh, because\nnothing insults me",
+      "location": "March 13th, 2024, Plane",
+      "note": "",
+      "categories": [
+        "lol"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759823458495,
+      "title": "The Future",
+      "author": "Yusuf Misdaq",
+      "content": "wherever I have left \nto go \nawaits \n           me\n    excitedly",
+      "location": "March 13th, 2024, Plane",
+      "note": "",
+      "categories": [
+        "moving",
+        "time"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759823895495,
+      "title": "Fasting amongst average Muslims",
+      "author": "Yusuf Misdaq",
+      "content": "'Don't use your mind,'\nI want to tell the boy who is unaware\nHe is silhouetted by a sun \nin the window behind him\nAs he tells me energetically that \nit's too late for me to eat the food\nthat I've just been given. \n'Use your eyes!'\n\nThese salafis are taking\nthe most beautiful aspect of Islam\n - its nearness to nature - \nand are actively anesthetizing it\nuntil eventually \nall that's left will be \nlux scents\nmarble floors and \na golden statue \nof Cristiano Ronaldo.",
+      "location": "March 13th, 2024, Plane",
+      "note": "",
+      "categories": [
+        "grr",
+        "lol",
+        "society",
+        "time"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759824421004,
+      "title": "Untitled",
+      "author": "Yusuf Misdaq",
+      "content": "It's always night in space\nSteps in floating zero \nYour astro hands up like\na mime or a helpless blind \nperson \n\nYour eyes may as well be closed\nYour lips smacking together feebly \nYou are a dot \n                          passing through the great\nInfinite.",
+      "location": "March 18th, 2024. Karte Parwan, Kabul.",
+      "note": "",
+      "categories": [
+        "afg",
+        "black"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759824713383,
+      "title": "Lillianne aka Lily",
+      "author": "Yusuf Misdaq",
+      "content": "Lillanne Pharaohdust\n Lillyanne Thomlinson \n  Lillyanne of the pond and lake\n    Lillyanne of the boudoir \n      (before it's too late)\n    She applies blusher to her cheeks\n       and stick to her cake hole\n    She's been on fire since the day she was born\n       Lillyanne desert \n          Lillyanne valley \n              Lilzy jokes by the poolside\n                 Playing cards with the cool guys\n                    Flowin jus like a moon tide\n                      Glowin just like a moon rise \n\n              Cool Lily \n                                   Water Lily \n                  Moistily",
+      "location": "March 25th, 2024. Dubai Terminal 3.",
+      "note": "",
+      "categories": [
+        "lol"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1759825287123,
+      "title": "Pre Nuptual Eulogy",
+      "author": "Yusuf Misdaq",
+      "content": "1\nOh God\nCrack open the dark \nPrism in the\n dark chasm in\n  the silent hole\n    in me. \n\nIf You scan Your ray \n    of light on \n  that hidden \n    shadow jewel \n  You will show me\n    and the world\n  what it means\n     'being alive.'\n\nI have never ever prayed \n   for electrocution \n   or destruction in my life. \n\nBut if it be at Your loving hands, \n   \"take me!\" \n\nI give unto \n   I leave me\n       to You. \n\nFlame away me\n   My hands raised\n      Like a flag up \n         in flames. \n\nI wave goodbye\n  Left to right\n     sway away \n        into the light. \n\n2\nMaybe other things \n will remain out\n        lasting me\n     I will accept \n      coming out early \n\nAsh. Toblerone. Booze. \n      I never felt right\n      sharing the stage\n    with so many games. \n\nWhen I was young I wanted \n   to cover everything \n      in flames. \n\nNow that I'm serious\n  I ask only You God\n    To flood my bloody \n        body with Your\n        magic electrons\n            and let me \n         join the ranks\n         of the natural\n                ones.",
+      "location": "March 25th, 2024. Plane Returning from Afghanistan.",
+      "note": "",
+      "categories": [
+        "afg",
+        "prayer"
+      ],
+      "bookSource": null,
       "comments": []
     }
   ],
   "categories": [
-    "prayer",
-    "love",
-    "moving",
-    "water",
-    "sad",
+    "afg",
+    "art",
     "black",
     "body",
-    "society",
-    "music",
+    "grr",
     "light",
+    "lol",
+    "love",
+    "moving",
+    "music",
+    "prayer",
+    "sad",
+    "society",
     "star",
     "time",
-    "grr",
-    "lol",
-    "art"
+    "water"
   ]
 };
 
