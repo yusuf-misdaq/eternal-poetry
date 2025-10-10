@@ -300,7 +300,8 @@
       "categories": [
         "lol"
       ],
-      "bookSource": null
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1759823458495,
@@ -369,28 +370,85 @@
       "bookSource": null
     },
     {
-      "id": 1759860587760,
-      "title": "Untitled",
+      "id": 1759887545426,
+      "title": "A Feeling, the weight of a Butterfly",
       "author": "Yusuf Misdaq",
-      "content": "Terrible justice\n\nMeat sandwhich with \nMeat for bread. \n\nA chink in the illusory spotlight\n   It lied about everything\nNot by lying\n       But by what it left out",
-      "location": "April 14th, 2024. Santa Monica, California.",
+      "content": "Perceval. Palleme. Proser. \nPoint-in-fact.  .Past.Time.\n\nWhere does it go?\n\nIf I wear a mink coat or a suit.\nIf I shave my head or let it go Lennon. \nIf I love and be loved or\n                                             Leave everyone \nLaid out where they stand\n\nWhat does it change?\n\nOnly your heart is sacred to me, my dearest \nAnd no longer to rush you, wish I\nNo longer to encase and embrace you\nJust to stand opposite where we behold each other;\n Feel each others\nTrembling presence\n\nContinuing into one another\n\nWith no worldly wheeling \nWith no watchfulness\nNo wattage nor\nWasting of time, which is \nWithout time, in this, our \nWantless wish",
+      "location": "Late 2008. Washington D.C.",
       "note": "",
       "categories": [
-        "grr",
-        "society"
+        "body",
+        "love"
       ],
-      "bookSource": null,
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://www.amazon.com/Butterfly-Gate-Yusuf-Misdaq/dp/0955502438",
+        "coverImage": "https://imgur.com/a/Eqr2AhJ",
+        "year": "2011"
+      }
+    },
+    {
+      "id": 1760083784983,
+      "title": "Untitled",
+      "author": "Yusuf Misdaq",
+      "content": "We don’t look upon this Sea as gateway to dream \nIt’s only location, \nand wet, \nand grey-brown colour.\nBrighton or Hove.\n\nBut when it pulls its top up\nAnd shows its flat stomach, dotted with illumined pebbles \nAnd chilled gulls\nAnd when we walk into it (when it invites us in)\nAnd we stand on sand\nAnd feel secure (sinking-dissolving)\nAnd become part of the waves, a sibling to them\nAnd leave our world\nAnd feel special.\nChosen.\n\nThen is when your eyelashes may flutter inexplicably \nAnd sharp, fresh thoughts may slice in for you\n\nThen is when your Tiger-Heart is polished\nAnd framed centrally within a Slow Golden \nUnfolding case with\nRefined, fruit-size jewels embedded all around it \nGlinting in ridiculous colour\n\nThen is when the silent power inside you crows \nEchoes and tides out across this flat Sun-Forest \nThis land of Rolling Arrivals\nThis Rounded Green Mover\nThis\n         Coming\n                          .Sea.",
+      "location": "April 7th, 2008. Brighton.",
+      "note": "",
+      "categories": [
+        "water"
+      ],
+      "bookSource": {
+        "title": "Brighton Streets",
+        "amazonUrl": "https://a.co/d/4WBLiyF",
+        "coverImage": "/Brighton Streets.png",
+        "year": "2010"
+      },
       "comments": []
     },
     {
-      "id": 1759860907752,
-      "title": "Pickings",
+      "id": 1760115112464,
+      "title": "Sunset Seagull at Sea",
       "author": "Yusuf Misdaq",
-      "content": "The cauldron comes in smouldering \nI throw in rose heads\n  and fenugreek \n    and butter\nit's a slanted way to approach \n  Sobriety \n      by making myself further \n          intoxicated\n   But it's the only way \n          I know to be \nStumbling from tree to tree\n    Clipping \n                     everything\nthat sings  \n                   to me. \n\n~\n\n\"sillowese,\" says the rose\ni don't know what it means\nand I don't care. \n  the trembling in my heart\n     reverberates into the air.",
-      "location": "April 14th, 2024. Santa Monica, California.",
+      "content": ".Sunset-Seagull at Sea. \n.Distant . Delivered.\n.Does not die . Is kept alive. \n.Amidst the purple\n                                Re-enchanter.\n\n\n.Sunset-Seagull at Sea.\n.Curl a new way, un-calibrated. \n.Will not die, with Sky\n                                      has mated. \n.Spawning friends that fly unfurling.\n\n\n.Sunset-Seagull at Sea.\n.First to know, from your final-distance. \n.Thrusting forwards, blazing deeper. \n.You are the witness of the Final Weeper.",
+      "location": "March/April 2008. Brighton.",
       "note": "",
       "categories": [
-        "flower"
+        "light",
+        "water"
+      ],
+      "bookSource": {
+        "title": "Brighton Streets",
+        "amazonUrl": "https://a.co/d/eAgzuQJ",
+        "coverImage": "/Brighton-Streets.png",
+        "year": "2010"
+      },
+      "comments": []
+    },
+    {
+      "id": 1760115314403,
+      "title": "Dark Sea After Sunset",
+      "author": "Yusuf Misdaq",
+      "content": "When the crashing sea has smashed my sadness to spittle, I turn around and climb the steep hill of pebbles to return home.\n\nMy feet sink as I climb\nJust as they did when I had child-feet. \nNow they sink down heavier\nBut I am a stronger climber.\n\nAnd when I reach the top, I look broadly into a distance, and the wind surfs through my hair, and I feel like a handsome champion of bravery, possessor of courage; renewed and ready to fly forwards into future furlongs",
+      "location": "March 2008. Brighton.",
+      "note": "",
+      "categories": [],
+      "bookSource": {
+        "title": "Brighton Streets",
+        "amazonUrl": "https://a.co/d/dCovY9I",
+        "coverImage": "",
+        "year": "2010"
+      },
+      "comments": []
+    },
+    {
+      "id": 1760115466152,
+      "title": "The West Pier (Realised)",
+      "author": "Yusuf Misdaq",
+      "content": ".Complex ghost. \n.Future foresight irony. \n.Embedded sea-stud.\n\nThud of matter \nPresence important\n\nThe last living thing in this slipping city\n\nS’not pretty\nS’staring at nobody\nLets itself mean a lot to me\n\nS’not clogged up by hearts & guts\nS’not so bitter ’bout the parts and cuts \nLeaves behind all its betrayed trust \nLiving all alone in the fabric sea:\n(a spread-out bed-sheet, blown with air)\n\nI will not be surprised\nIf finally one day\nThey scrape the money together\nAnd you are scrapped\nAnd turned into a luxury hotel on the water\nOr something else which further alienates the normal people \nPandering to the rich\n\nN’I won’t mourn neither \nWon’t moan again\nOr compose a sad song \nWhen they remodel you Into some aberration\n\n(Because) I was here to witness\nThe best years of your Burning death\n\nI extracted every Ounce of Glory you Gave away\nAs you sunk and degraded\n\nYou do not grieve\nFor that which you did not take for granted.",
+      "location": "27th April, 2008. Brighton.",
+      "note": "",
+      "categories": [
+        "society"
       ],
       "bookSource": null,
       "comments": []
@@ -401,7 +459,6 @@
     "art",
     "black",
     "body",
-    "flower",
     "grr",
     "light",
     "lol",
