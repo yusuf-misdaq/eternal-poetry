@@ -761,8 +761,11 @@
             return availablePoems[Math.floor(Math.random() * availablePoems.length)];
         }
 
-        function selectCategory(cat) {
-            state.category = state.category === cat ? null : cat;
+            function selectCategory(cat) {
+            if (state.category === cat) {
+                state.currentPoemId = null;
+            }
+            state.category = cat;
             state.dropdowns = {};
             renderCategories();
             renderPoem();
