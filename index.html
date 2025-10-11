@@ -80,7 +80,6 @@
         .poem-title {
             font-size: 2rem;
             margin-bottom: 0.5rem;
-            text-align: left;
             color: #000;
         }
 
@@ -88,8 +87,6 @@
             font-size: 0.9rem;
             margin-bottom: 2rem;
             color: #000;
-            text-align: left;
-
         }
 
         .poem-author a {
@@ -103,15 +100,12 @@
             white-space: pre-wrap;
             margin-bottom: 2rem;
             text-align: left;
-            color: #000;
         }
 
         .poem-location, .poem-note {
             font-size: 0.9rem;
             font-style: italic;
-            text-align: left;
             margin-bottom: 0.5rem;
-            
         }
 
         .new-poem-button {
@@ -187,16 +181,6 @@
         .book-display {
             display: flex;
             gap: 1.5rem;
-            text-align: left;
-        }
-        
-        .book-display > div {
-            text-align: left;
-        }
-
-        .book-display h3,
-        .book-display p {
-            text-align: left;
         }
 
         .book-cover {
@@ -204,8 +188,6 @@
             height: 12rem;
             object-fit: cover;
             border: 1px solid #ddd;
-            text-align: left;
-
         }
 
         .amazon-link {
@@ -216,8 +198,6 @@
             color: #fff;
             text-decoration: none;
             font-size: 0.85rem;
-            text-align: left;
-
         }
 
         footer {
@@ -435,7 +415,7 @@
                 <a href="#contact">Contact</a>
                 <a href="#donate">Donate</a>
             </div>
-            <p style="font-size: 0.75rem; opacity: 0.7;">© <span id="year"></span> Eternal Poetry. Yusuf Misdaq. All rights reserved.</p>
+            <p style="font-size: 0.75rem; opacity: 0.7;">© <span id="year"></span> Poetry Eternal. All rights reserved.</p>
         </footer>
     </div>
 
@@ -474,7 +454,7 @@
                     <textarea id="content-input"></textarea>
                 </div>
                 <div class="form-group">
-                    <label>Date & Location (e.g., "September 9th, 2016. Santa Monica, Los Angeles.")</label>
+                    <label>Location & Date (e.g., "San Diego, September, 2009")</label>
                     <input type="text" id="location-input">
                 </div>
                 <div class="form-group">
@@ -564,7 +544,8 @@
             editingId: null,
             dropdowns: {},
             currentPoemId: null,
-            dataLoaded: false
+            dataLoaded: false,
+            specificPoemId: null
         };
 
         function init() {
@@ -572,7 +553,17 @@
             document.getElementById('book-toggle').addEventListener('change', function(e) {
                 document.getElementById('book-fields').classList.toggle('hidden', !e.target.checked);
             });
+            
+            checkURLForPoem();
             loadPoemsFromJSON();
+        }
+
+        function checkURLForPoem() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var poemId = urlParams.get('poem');
+            if (poemId) {
+                state.specificPoemId = parseInt(poemId);
+            }
         }
 
         function loadPoemsFromJSON() {
@@ -664,17 +655,27 @@
         }
 
         function renderPoem() {
-            var poem = getRandomPoem();
-            if (!poem) {
-                document.getElementById('poem-display').innerHTML = '<p>No poems available. Add some in the admin panel!</p>';
-                return;
+            var poem;
+            
+            if (state.specificPoemId) {
+                poem = data.poems.find(function(p) { return p.id === state.specificPoemId; });
+                if (!poem) {
+                    document.getElementById('poem-display').innerHTML = '<p>Poem not found.</p>';
+                    return;
+                }
+            } else {
+                poem = getRandomPoem();
+                if (!poem) {
+                    document.getElementById('poem-display').innerHTML = '<p>No poems available. Add some in the admin panel!</p>';
+                    return;
+                }
             }
 
             state.currentPoemId = poem.id;
 
             var html = '<article>';
             html += '<h2 class="poem-title">' + escapeHtml(poem.title) + '</h2>';
-            html += '<p class="poem-author">BY <a href="https://en.wikipedia.org/wiki/Y._Misdaq" target="_blank">' + escapeHtml(poem.author).toUpperCase() + '</a></p>';
+            html += '<p class="poem-author">By <a href="https://en.wikipedia.org/wiki/Y._Misdaq" target="_blank">' + escapeHtml(poem.author).toUpperCase() + '</a></p>';
             html += '<div class="poem-content">' + escapeHtml(poem.content) + '</div>';
             if (poem.location) html += '<p class="poem-location">' + escapeHtml(poem.location) + '</p>';
             if (poem.note) html += '<p class="poem-note">' + escapeHtml(poem.note) + '</p>';
@@ -703,11 +704,11 @@
             html += '<div class="dropdown-section">';
             html += '<button class="dropdown-trigger" onclick="toggleDropdown(\'share\')">📤 Share this poem</button>';
             html += '<div class="dropdown-content hidden" data-dropdown="share">';
-            html += '<button onclick="copyShareLink()">📋 Copy link</button>';
-            html += '<a href="https://twitter.com/intent/tweet?text=' + encodeURIComponent(poem.title + ' by ' + poem.author) + '" target="_blank">Share on X</a>';
-            html += '<a href="https://www.facebook.com/sharer/sharer.php" target="_blank">Share on Facebook</a>';
-            html += '<a href="https://wa.me/?text=' + encodeURIComponent(poem.title) + '" target="_blank">Share on WhatsApp</a>';
-            html += '<a href="sms:?body=' + encodeURIComponent(poem.title) + '">Share via SMS</a>';
+            html += '<button onclick="copyShareLink(' + poem.id + ')">📋 Copy link</button>';
+            html += '<a href="https://twitter.com/intent/tweet?text=' + encodeURIComponent(poem.title + ' by ' + poem.author) + '&url=' + encodeURIComponent(getShareUrl(poem.id)) + '" target="_blank">Share on Twitter</a>';
+            html += '<a href="https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(getShareUrl(poem.id)) + '" target="_blank">Share on Facebook</a>';
+            html += '<a href="https://wa.me/?text=' + encodeURIComponent(poem.title + ' by ' + poem.author + ' ' + getShareUrl(poem.id)) + '" target="_blank">Share on WhatsApp</a>';
+            html += '<a href="sms:?body=' + encodeURIComponent(poem.title + ' by ' + poem.author + ' ' + getShareUrl(poem.id)) + '">Share via SMS</a>';
             html += '</div></div>';
 
             if (poem.bookSource) {
@@ -761,12 +762,14 @@
             return availablePoems[Math.floor(Math.random() * availablePoems.length)];
         }
 
-            function selectCategory(cat) {
+        function selectCategory(cat) {
             if (state.category === cat) {
                 state.currentPoemId = null;
             }
             state.category = cat;
             state.dropdowns = {};
+            state.specificPoemId = null;
+            window.history.pushState({}, '', window.location.pathname);
             renderCategories();
             renderPoem();
         }
@@ -789,12 +792,23 @@
 
         function getNewPoem() {
             state.dropdowns = {};
+            state.specificPoemId = null;
+            window.history.pushState({}, '', window.location.pathname);
             renderPoem();
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function copyShareLink() {
-            alert('Link copied to clipboard!');
+        function getShareUrl(poemId) {
+            return window.location.origin + window.location.pathname + '?poem=' + poemId;
+        }
+
+        function copyShareLink(poemId) {
+            var url = getShareUrl(poemId);
+            navigator.clipboard.writeText(url).then(function() {
+                alert('Link copied to clipboard! Share this link and it will show this exact poem.');
+            }).catch(function(err) {
+                alert('Could not copy link. Please manually copy: ' + url);
+            });
         }
 
         function submitComment(poemId) {
@@ -837,6 +851,8 @@
         function goHome() {
             state.view = 'home';
             state.category = null;
+            state.specificPoemId = null;
+            window.history.pushState({}, '', window.location.pathname);
             render();
         }
 
