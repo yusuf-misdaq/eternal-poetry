@@ -384,7 +384,7 @@
       "bookSource": {
         "title": "The Butterfly Gate",
         "amazonUrl": "https://www.amazon.com/Butterfly-Gate-Yusuf-Misdaq/dp/0955502438",
-        "coverImage": "/The Butterfly Gate.png",
+        "coverImage": "The Butterfly Gate.png",
         "year": "2011"
       },
       "comments": []
@@ -421,7 +421,7 @@
       "bookSource": {
         "title": "Brighton Streets",
         "amazonUrl": "https://a.co/d/eAgzuQJ",
-        "coverImage": "/Brighton Streets.png",
+        "coverImage": "Brighton Streets.png",
         "year": "2010"
       },
       "comments": []
@@ -454,7 +454,12 @@
         "society",
         "time"
       ],
-      "bookSource": null,
+      "bookSource": {
+        "title": "Brighton Streets",
+        "amazonUrl": "https://a.co/d/5cng7jM",
+        "coverImage": "Brighton Streets.png",
+        "year": "2011"
+      },
       "comments": []
     },
     {
@@ -471,7 +476,7 @@
       "bookSource": {
         "title": "Brighton Streets",
         "amazonUrl": "https://a.co/d/fqv4txc",
-        "coverImage": "/Brighton Streets.png",
+        "coverImage": "Brighton Streets.png",
         "year": "2010"
       },
       "comments": []
