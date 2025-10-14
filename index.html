@@ -662,7 +662,7 @@
             if (poem.bookSource) {
                 html += '<div style="margin: 2rem 0; padding: 1.5rem; border: 1px solid #ddd; border-radius: 4px; background: #fafafa;">';
                 html += '<h3 style="font-size: 1.2rem; margin-bottom: 1rem; text-align: left; color: #000;">From the book:</h3>';
-                html += '<div style="display: flex; gap: 1.5rem; align-items: start; justify-content: space-between;">';
+                html += '<div style="display: flex; gap: 1.5rem; align-items: flex-start; justify-content: space-between;">';
                 html += '<div style="text-align: left; flex: 1;">';
                 html += '<p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem; text-align: left; color: #000;">' + escapeHtml(poem.bookSource.title) + '</p>';
                 html += '<p style="margin-bottom: 0.5rem; text-align: left; color: #000;">' + escapeHtml(poem.author) + '</p>';
@@ -674,8 +674,8 @@
                     if (!imagePath.startsWith('http') && !imagePath.startsWith('/')) {
                         imagePath = window.location.pathname.replace('/index.html', '') + '/' + imagePath;
                     }
-                    html += '<div style="flex-shrink: 0;">';
-                    html += '<img src="' + escapeHtml(imagePath) + '" style="width: 8rem; height: 12rem; object-fit: cover; border: 1px solid #ddd; display: block;" alt="' + escapeHtml(poem.bookSource.title) + '" onerror="console.error(\'Image failed to load:\', this.src); this.style.display=\'none\';">';
+                    html += '<div style="flex-shrink: 0; align-self: flex-start;">';
+                    html += '<img src="' + escapeHtml(imagePath) + '" style="width: 8rem; height: 12rem; object-fit: cover; border: 1px solid #ddd; display: block; margin-top: -0.5rem;" alt="' + escapeHtml(poem.bookSource.title) + '" onerror="console.error(\'Image failed to load:\', this.src); this.style.display=\'none\';">';
                     html += '</div>';
                 }
                 html += '</div></div>';
