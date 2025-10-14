@@ -82,7 +82,6 @@
             margin-bottom: 0.5rem;
             color: #000;
             text-align: left;
-
         }
 
         .poem-author {
@@ -90,7 +89,6 @@
             margin-bottom: 2rem;
             color: #000;
             text-align: left;
-
         }
 
         .poem-author a {
@@ -112,7 +110,6 @@
             font-style: italic;
             margin-bottom: 0.5rem;
             text-align: left;
-
         }
 
         .new-poem-button {
@@ -183,28 +180,6 @@
 
         .dropdown-content a:hover, .dropdown-content button:hover {
             text-decoration: underline;
-        }
-
-        .book-display {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .book-cover {
-            width: 8rem;
-            height: 12rem;
-            object-fit: cover;
-            border: 1px solid #ddd;
-        }
-
-        .amazon-link {
-            display: inline-block;
-            margin-top: 1rem;
-            padding: 0.5rem 1rem;
-            background: #000;
-            color: #fff;
-            text-decoration: none;
-            font-size: 0.85rem;
         }
 
         footer {
@@ -402,9 +377,6 @@
             .checkbox-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            .book-display {
-                flex-direction: column;
-            }
         }
     </style>
 </head>
@@ -480,7 +452,7 @@
                     <div id="book-fields" class="book-fields hidden">
                         <input type="text" id="book-title" placeholder="Book Title">
                         <input type="text" id="book-amazon" placeholder="Amazon URL">
-                        <input type="text" id="book-cover" placeholder="Cover Image URL (use Imgur or similar)">
+                        <input type="text" id="book-cover" placeholder="Cover Image Filename (e.g., Brighton Streets.png)">
                         <input type="text" id="book-year" placeholder="Year">
                     </div>
                 </div>
@@ -686,6 +658,22 @@
             html += '<div class="poem-content">' + escapeHtml(poem.content) + '</div>';
             if (poem.location) html += '<p class="poem-location">' + escapeHtml(poem.location) + '</p>';
             if (poem.note) html += '<p class="poem-note">' + escapeHtml(poem.note) + '</p>';
+            
+            if (poem.bookSource) {
+                html += '<div style="margin: 2rem 0; padding: 1.5rem; border: 1px solid #ddd; border-radius: 4px; background: #fafafa;">';
+                html += '<h3 style="font-size: 1.2rem; margin-bottom: 1rem; text-align: left; color: #000;">From the book:</h3>';
+                html += '<div style="display: flex; gap: 1.5rem; align-items: start;">';
+                if (poem.bookSource.coverImage) {
+                    html += '<img src="' + escapeHtml(poem.bookSource.coverImage) + '" style="width: 8rem; height: 12rem; object-fit: cover; border: 1px solid #ddd;" alt="Book cover">';
+                }
+                html += '<div style="text-align: left;">';
+                html += '<p style="font-size: 1.1rem; font-weight: 500; margin-bottom: 0.5rem; text-align: left; color: #000;">' + escapeHtml(poem.bookSource.title) + '</p>';
+                html += '<p style="margin-bottom: 0.5rem; text-align: left; color: #000;">' + escapeHtml(poem.author) + '</p>';
+                html += '<p style="margin-bottom: 1rem; text-align: left; color: #000;">' + escapeHtml(poem.bookSource.year) + '</p>';
+                html += '<a href="' + escapeHtml(poem.bookSource.amazonUrl) + '" target="_blank" style="display: inline-block; padding: 0.5rem 1rem; background: #000; color: #fff; text-decoration: none; border-radius: 4px;">Available on Amazon</a>';
+                html += '</div></div></div>';
+            }
+            
             html += '<button onclick="getNewPoem()" class="new-poem-button">Get New Poem</button>';
             html += '</article>';
 
@@ -717,21 +705,6 @@
             html += '<a href="https://wa.me/?text=' + encodeURIComponent(poem.title + ' by ' + poem.author + ' ' + getShareUrl(poem.id)) + '" target="_blank">Share on WhatsApp</a>';
             html += '<a href="sms:?body=' + encodeURIComponent(poem.title + ' by ' + poem.author + ' ' + getShareUrl(poem.id)) + '">Share via SMS</a>';
             html += '</div></div>';
-
-            if (poem.bookSource) {
-                html += '<div class="dropdown-section">';
-                html += '<button class="dropdown-trigger" onclick="toggleDropdown(\'book\')">📚 Buy this poem</button>';
-                html += '<div class="dropdown-content hidden" data-dropdown="book">';
-                html += '<div class="book-display">';
-                if (poem.bookSource.coverImage) {
-                    html += '<img src="' + escapeHtml(poem.bookSource.coverImage) + '" class="book-cover" alt="Book cover" onerror="this.style.display=\'none\'">';
-                }
-                html += '<div><h3>' + escapeHtml(poem.bookSource.title) + '</h3>';
-                html += '<p>' + escapeHtml(poem.author) + '</p>';
-                html += '<p>' + escapeHtml(poem.bookSource.year) + '</p>';
-                html += '<a href="' + escapeHtml(poem.bookSource.amazonUrl) + '" target="_blank" class="amazon-link">Available on Amazon</a>';
-                html += '</div></div></div></div>';
-            }
 
             html += '<div class="dropdown-section">';
             html += '<button class="dropdown-trigger" onclick="toggleDropdown(\'comments\')">💬 Comment on this poem</button>';
