@@ -1,2 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Poetry Eternal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-About yusuf misdaq yeay
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: white;
+            color: #000;
+            line-height: 1.8;
+        }
+
+        header {
+            border-bottom: 1px solid #000;
+            padding: 2rem;
+            text-align: center;
+            background: #000;
+            color: #fff;
+        }
+
+        .site-title {
+            font-size: 2.5rem;
+            letter-spacing: 0.5em;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .site-title:hover {
+            opacity: 0.7;
+        }
+
+        main {
+            max-width: 50rem;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .photo-container {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .fading-photo {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            animation: fadeInOut 24s infinite;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .bio-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .bio-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        footer {
+            border-top: 1px solid #000;
+            background: #000;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .site-title {
+                font-size: 1.5rem;
+                letter-spacing: 0.3em;
+            }
+            
+            .fading-photo {
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="site-title">P O E T R Y &nbsp; E T E R N A L</a>
+    </header>
+
+    <main>
+        <h1 style="text-align: center; margin-bottom: 3rem; font-size: 2.5rem;">About</h1>
+
+        <div class="photo-container">
+            <img src="ymisdaq2002.jpg" alt="Yusuf Misdaq" class="fading-photo">
+        </div>
+
+        <div class="bio-text">
+            <p>
+                Yusuf Misdaq is a poet whose work explores themes of spirituality, identity, love, and the human condition. His poetry draws from personal experience, cultural heritage, and a deep engagement with the natural and spiritual worlds.
+            </p>
+
+            <p>
+                Born in [location], Misdaq's work has appeared in various collections including Brighton Streets, The Butterfly Gate, Into Solidity, and other volumes. His poems are characterized by their intimate voice, careful attention to imagery, and exploration of transience and permanence.
+            </p>
+
+            <p>
+                Poetry Eternal serves as a random showcase of his verse, offering readers an ever-changing window into his poetic vision. Each visit presents a new poem, inviting discovery and contemplation.
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#donate">Donate</a>
+        </div>
+        <p style="font-size: 0.75rem; opacity: 0.7;">© <span id="year"></span> Poetry Eternal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
