@@ -659,7 +659,7 @@
             var html = '<article>';
             html += '<h2 class="poem-title">' + escapeHtml(poem.title) + '</h2>';
             html += '<p class="poem-author">By <a href="https://en.wikipedia.org/wiki/Y._Misdaq" target="_blank">' + escapeHtml(poem.author).toUpperCase() + '</a></p>';
-            if (poem.dedication) html += '<p style="font-size: 0.95rem; font-style: italic; margin-bottom: 1.5rem; text-align: left; color: #666;">' + escapeHtml(poem.dedication) + '</p>';
+            if (poem.dedication) html += '<p style="font-size: 0.95rem; margin-bottom: 1.5rem; text-align: left; color: #666;">' + escapeHtml(poem.dedication) + '</p>';
             html += '<div class="poem-content">' + escapeHtml(poem.content) + '</div>';
             if (poem.location) html += '<p class="poem-location">' + escapeHtml(poem.location) + '</p>';
             if (poem.note) html += '<p class="poem-note">' + escapeHtml(poem.note) + '</p>';
