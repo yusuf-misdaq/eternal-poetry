@@ -421,12 +421,12 @@
             <div class="admin-section">
                 <h2 id="form-title">Add New Poem</h2>
                 <div class="form-group">
-                    <label>Author Name</label>
-                    <input type="text" id="author-input" value="Yusuf Misdaq">
-                </div>
-                <div class="form-group">
                     <label>Poem Title</label>
                     <input type="text" id="title-input">
+                </div>
+                <div class="form-group">
+                    <label>Dedication (optional, e.g., "For Lila")</label>
+                    <input type="text" id="dedication-input">
                 </div>
                 <div class="form-group">
                     <label>Poem Content (paste exactly as you want it to appear)</label>
@@ -655,6 +655,7 @@
             var html = '<article>';
             html += '<h2 class="poem-title">' + escapeHtml(poem.title) + '</h2>';
             html += '<p class="poem-author">By <a href="https://en.wikipedia.org/wiki/Y._Misdaq" target="_blank">' + escapeHtml(poem.author).toUpperCase() + '</a></p>';
+            if (poem.dedication) html += '<p style="font-size: 0.95rem; font-style: italic; margin-bottom: 1.5rem; text-align: left; color: #666;">' + escapeHtml(poem.dedication) + '</p>';
             html += '<div class="poem-content">' + escapeHtml(poem.content) + '</div>';
             if (poem.location) html += '<p class="poem-location">' + escapeHtml(poem.location) + '</p>';
             if (poem.note) html += '<p class="poem-note">' + escapeHtml(poem.note) + '</p>';
@@ -957,10 +958,11 @@
         function savePoem() {
             var title = document.getElementById('title-input').value.trim();
             var author = document.getElementById('author-input').value.trim();
+            var dedication = document.getElementById('dedication-input').value.trim();
             var content = document.getElementById('content-input').value.trim();
             var location = document.getElementById('location-input').value.trim();
-            var note = document.getElementById('note-input').value.trim();
-
+            var note = document.getElementById('note-input').value.trim(); 
+            
             if (!title || !content) {
                 alert('Please fill in at least the title and content');
                 return;
@@ -982,10 +984,11 @@
                 };
             }
 
-            var poem = {
+                var poem = {
                 id: state.editingId || Date.now(),
                 title: title,
                 author: author,
+                dedication: dedication,
                 content: content,
                 location: location,
                 note: note,
@@ -1025,6 +1028,7 @@
             state.editingId = id;
             document.getElementById('title-input').value = poem.title;
             document.getElementById('author-input').value = poem.author;
+            document.getElementById('dedication-input').value = poem.dedication || '';
             document.getElementById('content-input').value = poem.content;
             document.getElementById('location-input').value = poem.location || '';
             document.getElementById('note-input').value = poem.note || '';
@@ -1064,6 +1068,7 @@
             state.editingId = null;
             document.getElementById('title-input').value = '';
             document.getElementById('author-input').value = 'Yusuf Misdaq';
+            document.getElementById('dedication-input').value = '';
             document.getElementById('content-input').value = '';
             document.getElementById('location-input').value = '';
             document.getElementById('note-input').value = '';
