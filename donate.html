@@ -1,1 +1,367 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Poetry Eternal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: white;
+            color: #000;
+            line-height: 1.8;
+        }
+
+        header {
+            border-bottom: 1px solid #000;
+            padding: 3rem 2rem;
+            text-align: center;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        header:hover {
+            opacity: 0.9;
+        }
+
+        .site-title {
+            font-size: 3rem;
+            letter-spacing: 0.5em;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .site-title-poetry {
+            color: #000;
+            animation: fadePoetryIn 23s infinite;
+        }
+
+        @keyframes fadePoetryIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 0.25;
+            }
+        }
+
+        .site-subtitle {
+            font-size: 1.5rem;
+            letter-spacing: 0.3em;
+            margin-bottom: 2rem;
+            color: #fff;
+            animation: fadeEternalInOut 30s infinite;
+        }
+
+        @keyframes fadeEternalInOut {
+            0% {
+                opacity: 1;
+            }
+            53.33% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        main {
+            max-width: 60rem;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .page-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .page-intro h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .page-intro p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 40rem;
+            margin: 0 auto;
+        }
+
+        .donate-options {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .donate-card {
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .donate-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .donate-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .donate-card p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-logo {
+            height: 50px;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-logos {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .card-logo {
+            height: 32px;
+            opacity: 0.8;
+        }
+
+        .donate-button {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: Georgia, serif;
+            font-size: 1rem;
+            transition: background 0.3s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 0.75rem;
+        }
+
+        .donate-button:hover {
+            background: #333;
+        }
+
+        .donate-button.venmo {
+            background: #008CFF;
+        }
+
+        .donate-button.venmo:hover {
+            background: #0077D9;
+        }
+
+        .donate-button.zelle {
+            background: #6D1ED4;
+        }
+
+        .donate-button.zelle:hover {
+            background: #5A18B0;
+        }
+
+        .donate-button.square {
+            background: #DAA520;
+            color: #000;
+        }
+
+        .donate-button.square:hover {
+            background: #C49A1A;
+        }
+
+        .copy-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: Georgia, serif;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .copy-button:hover {
+            background: #e0e0e0;
+        }
+
+        .payment-info {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        .qr-code {
+            max-width: 200px;
+            margin: 1rem auto;
+            display: none;
+        }
+
+        .qr-code img {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        footer {
+            border-top: 1px solid #000;
+            background: #000;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (min-width: 769px) {
+            .qr-code {
+                display: block;
+            }
+            .mobile-only {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .site-title {
+                font-size: 1.5rem;
+                letter-spacing: 0.3em;
+            }
+
+            .page-intro h1 {
+                font-size: 2rem;
+            }
+
+            .donate-options {
+                grid-template-columns: 1fr;
+            }
+
+            .desktop-only {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header onclick="window.location.href='index.html'">
+        <h1 class="site-title"><span class="site-title-poetry">P O E T R Y</span></h1>
+        <h2 class="site-subtitle">E T E R N A L</h2>
+    </header>
+
+    <main>
+        <div class="page-intro">
+            <h1>Support This Work</h1>
+            <p>Your generosity helps keep poetry alive and accessible. Thank you for supporting this art.</p>
+        </div>
+
+        <div class="donate-options">
+            <!-- Venmo Card -->
+            <div class="donate-card">
+               <img src="https://cdn.venmo.com/venmo-assets/images/branding/venmo-logo-blue.svg" alt="Venmo" class="payment-logo" onerror="this.style.display='none'">
+                <h2>Venmo</h2>
+                <p>Quick and easy mobile payment</p>
+                <a href="https://venmo.com/u/Yosuf-Misdaq" class="donate-button venmo mobile-only">Pay with Venmo</a>
+                <div class="desktop-only">
+                    <button onclick="copyText('@Yosuf-Misdaq', 'Venmo username')" class="copy-button">📋 Copy @Yosuf-Misdaq</button>
+                    <p class="payment-info">Or scan to open Venmo app</p>
+                </div>
+            </div>
+
+            <!-- Zelle Card -->
+            <div class="donate-card">
+              <img src="https://www.zellepay.com/sites/default/files/2020-06/zelle-logo-horizontal-purple.svg" alt="Zelle" class="payment-logo" onerror="this.style.display='none'">
+                <h2>Zelle</h2>
+                <p>Bank-to-bank transfer</p>
+                <button onclick="copyText('yoshi_114@hotmail.com', 'Zelle email')" class="copy-button">📋 Copy Email</button>
+                <p class="payment-info">yoshi_114@hotmail.com</p>
+            </div>
+
+            <!-- Square / Credit Card -->
+            <div class="donate-card">
+                <div class="card-logos">
+                    <svg class="card-logo" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="32" rx="4" fill="#1434CB"/>
+                        <text x="24" y="21" font-family="Arial" font-size="10" font-weight="bold" fill="white" text-anchor="middle">VISA</text>
+                    </svg>
+                    <svg class="card-logo" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="32" rx="4" fill="#EB001B"/>
+                        <circle cx="18" cy="16" r="8" fill="#FF5F00" opacity="0.8"/>
+                        <circle cx="30" cy="16" r="8" fill="#F79E1B" opacity="0.8"/>
+                    </svg>
+                    <svg class="card-logo" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="32" rx="4" fill="#006FCF"/>
+                        <text x="24" y="21" font-family="Arial" font-size="8" font-weight="bold" fill="white" text-anchor="middle">AMEX</text>
+                    </svg>
+                </div>
+                <h2>Credit Card</h2>
+                <p>Secure payment with any card</p>
+                <a href="https://square.link/u/AZumHCOC" target="_blank" class="donate-button square">Donate Now</a>
+                <p class="payment-info">Powered by Square</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="index.html">Home</a>
+            <a href="donate.html">Donate</a>
+        </div>
+        <p style="font-size: 0.75rem; opacity: 0.7;">© <span id="year"></span> Yusuf Misdaq - Eternal Poetry. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function copyText(text, label) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert(label + ' copied to clipboard!');
+            }).catch(function(err) {
+                alert('Could not copy. Please manually copy: ' + text);
+            });
+        }
+    </script>
+</body>
+</html>
