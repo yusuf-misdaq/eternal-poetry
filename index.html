@@ -1419,10 +1419,10 @@
 function closeModal() {
             var modal = document.getElementById('support-modal');
             modal.classList.remove('active');
+            document.body.style.overflow = '';  // Changed from 'auto' to '' to reset
             setTimeout(function() {
                 modal.style.display = 'none';
-            }, 3000); // Wait for fade out
-            document.body.style.overflow = 'auto';
+            }, 3000);
             localStorage.setItem('poems-viewed', '0');
         }
 
@@ -1454,6 +1454,7 @@ function closeModal() {
                     <span class="tooltip-text">
                         <ul>
                             <li>Lifetime access to this site</li>
+                            <li>Pay Once Have Access Forever</li>
                             <li>Weekly random poem in your inbox</li>
                             <li>6 digital poetry books</li>
                             <li>Rare & out-of-print editions</li>
