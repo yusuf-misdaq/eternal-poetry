@@ -378,7 +378,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-        .modal-overlay {
+.modal-overlay {
             display: none;
             position: fixed;
             top: 0;
@@ -389,16 +389,19 @@
             z-index: 1000;
             justify-content: center;
             align-items: center;
+            opacity: 0;
+            transition: opacity 3s ease-in-out;
         }
 
         .modal-overlay.active {
             display: flex;
+            opacity: 1;
         }
 
         .modal-content {
             background: white;
             padding: 3rem 2.5rem;
-            border-radius: 12px;
+            border-radius: 3px;
             max-width: 500px;
             width: 90%;
             position: relative;
@@ -470,7 +473,7 @@
             background: #C49A1A;
         }
 
-        .modal-button.subscribe {
+.modal-button.subscribe {
             background: #000;
             color: #fff;
             position: relative;
@@ -480,18 +483,25 @@
             background: #333;
         }
 
+        .tooltip-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0.5rem;
+        }
+
         .tooltip-icon {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             width: 16px;
             height: 16px;
-            border: 1px solid currentColor;
+            border: 1px solid #999;
             border-radius: 50%;
             font-size: 0.7rem;
-            margin-left: 0.5rem;
             cursor: help;
             position: relative;
+            color: #999;
         }
 
         .tooltip-text {
@@ -508,9 +518,23 @@
             font-size: 0.85rem;
             width: 280px;
             text-align: left;
-            line-height: 1.5;
+            line-height: 1.6;
             z-index: 1001;
             transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .tooltip-text ul {
+            margin: 0;
+            padding-left: 1.25rem;
+            list-style-type: disc;
+        }
+
+        .tooltip-text li {
+            margin-bottom: 0.5rem;
+        }
+
+        .tooltip-text li:last-child {
+            margin-bottom: 0;
         }
 
         .tooltip-icon:hover .tooltip-text {
@@ -533,7 +557,7 @@
             color: #666;
         }
 
-        @media (max-width: 768px) {
+@media (max-width: 768px) {
             .modal-content {
                 padding: 2rem 1.5rem;
             }
@@ -546,8 +570,13 @@
                 flex-direction: column;
             }
 
+            .tooltip-wrapper {
+                margin-top: 1rem;
+            }
+
             .tooltip-text {
-                width: 240px;
+                width: 260px;
+                bottom: 150%;
             }
         }
     </style>
@@ -1376,7 +1405,7 @@
                 localStorage.setItem('poems-viewed', poemsViewed);
                 
                 if (poemsViewed >= 4) {
-                    setTimeout(showModal, 2000); // Show after 2 seconds
+                    setTimeout(showModal, 2500); // Show after 2.5 seconds
                 }
             }
         }
@@ -1387,10 +1416,13 @@
             localStorage.setItem('modal-shown', 'true');
         }
 
-        function closeModal() {
-            document.getElementById('support-modal').classList.remove('active');
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
-            // Reset counter so modal can appear again after 10 more poems
+function closeModal() {
+            var modal = document.getElementById('support-modal');
+            modal.classList.remove('active');
+            setTimeout(function() {
+                modal.style.display = 'none';
+            }, 3000); // Wait for fade out
+            document.body.style.overflow = 'auto';
             localStorage.setItem('poems-viewed', '0');
         }
 
@@ -1413,14 +1445,22 @@
             <button class="modal-close" onclick="closeModal()">×</button>
             <h2>Do You Like This?</h2>
             <p>Please consider supporting this work</p>
-            <div class="modal-buttons">
+<div class="modal-buttons">
                 <a href="donate.html" class="modal-button donate">Donate</a>
-                <a href="#subscribe" class="modal-button subscribe">
-                    Subscribe
-                    <span class="tooltip-icon">?
-                        <span class="tooltip-text">Lifetime Access to this site, a weekly random poem in your inbox, 6 Digital Books (including rare + out of print editions + chapbooks that are no longer available).</span>
+                <a href="#subscribe" class="modal-button subscribe">Subscribe</a>
+            </div>
+            <div class="tooltip-wrapper">
+                <span class="tooltip-icon">?
+                    <span class="tooltip-text">
+                        <ul>
+                            <li>Lifetime access to this site</li>
+                            <li>Weekly random poem in your inbox</li>
+                            <li>6 digital poetry books</li>
+                            <li>Rare & out-of-print editions</li>
+                            <li>Exclusive chapbooks unavailable elsewhere</li>
+                        </ul>
                     </span>
-                </a>
+                </span>
             </div>
             <button class="modal-not-now" onclick="closeModal()">Not now</button>
         </div>
