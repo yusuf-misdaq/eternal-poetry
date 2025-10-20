@@ -378,6 +378,178 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #999;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #666;
+        }
+
+        .modal-content h2 {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            color: #000;
+        }
+
+        .modal-content p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .modal-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-button {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-family: Georgia, serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-button.donate {
+            background: #DAA520;
+            color: #000;
+        }
+
+        .modal-button.donate:hover {
+            background: #C49A1A;
+        }
+
+        .modal-button.subscribe {
+            background: #000;
+            color: #fff;
+            position: relative;
+        }
+
+        .modal-button.subscribe:hover {
+            background: #333;
+        }
+
+        .tooltip-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            border: 1px solid currentColor;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+            cursor: help;
+            position: relative;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            opacity: 0;
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            width: 280px;
+            text-align: left;
+            line-height: 1.5;
+            z-index: 1001;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        .tooltip-icon:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .modal-not-now {
+            background: none;
+            border: none;
+            color: #999;
+            font-family: Georgia, serif;
+            font-size: 0.95rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: color 0.2s;
+        }
+
+        .modal-not-now:hover {
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .modal-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .modal-content h2 {
+                font-size: 1.5rem;
+            }
+
+            .modal-buttons {
+                flex-direction: column;
+            }
+
+            .tooltip-text {
+                width: 240px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1194,8 +1366,64 @@
             };
             return text.replace(/[&<>"']/g, function(m) { return map[m]; });
         }
+// Modal tracking
+        var poemsViewed = parseInt(localStorage.getItem('poems-viewed') || '0');
+        var modalShown = localStorage.getItem('modal-shown') === 'true';
 
+        function trackPoemView() {
+            if (!modalShown) {
+                poemsViewed++;
+                localStorage.setItem('poems-viewed', poemsViewed);
+                
+                if (poemsViewed >= 4) {
+                    setTimeout(showModal, 2000); // Show after 2 seconds
+                }
+            }
+        }
+
+        function showModal() {
+            document.getElementById('support-modal').classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            localStorage.setItem('modal-shown', 'true');
+        }
+
+        function closeModal() {
+            document.getElementById('support-modal').classList.remove('active');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            // Reset counter so modal can appear again after 10 more poems
+            localStorage.setItem('poems-viewed', '0');
+        }
+
+        // Track when a new poem is shown
+        var originalGetNewPoem = getNewPoem;
+        getNewPoem = function() {
+            originalGetNewPoem();
+            trackPoemView();
+        };
+
+        // Track initial page load
+        if (state.view === 'home') {
+            trackPoemView();
+        }
         init();
     </script>
+    <!-- Support Modal -->
+    <div id="support-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+            <h2>Do You Like This?</h2>
+            <p>Please consider supporting this work</p>
+            <div class="modal-buttons">
+                <a href="donate.html" class="modal-button donate">Donate</a>
+                <a href="#subscribe" class="modal-button subscribe">
+                    Subscribe
+                    <span class="tooltip-icon">?
+                        <span class="tooltip-text">Lifetime Access to this site, a weekly random poem in your inbox, 6 Digital Books (including rare + out of print editions + chapbooks that are no longer available).</span>
+                    </span>
+                </a>
+            </div>
+            <button class="modal-not-now" onclick="closeModal()">Not now</button>
+        </div>
+    </div>
 </body>
 </html>
