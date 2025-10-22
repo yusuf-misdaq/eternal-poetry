@@ -813,14 +813,16 @@
             renderAdmin();
         }
 
-        function showPublic() {
+function showPublic() {
             document.getElementById('login-view').classList.add('hidden');
             document.getElementById('admin-view').classList.add('hidden');
             document.getElementById('public-view').classList.remove('hidden');
+            document.body.style.overflow = ''; // Reset scroll when showing public view
             renderCategories();
             renderPoem();
+            trackPoemView(); // Track initial page load here
         }
-
+        
         function renderCategories() {
             var categories = shuffleArray(data.categories.slice());
             var html = '';
@@ -985,11 +987,12 @@
             }
         }
 
-        function getNewPoem() {
+       function getNewPoem() {
             state.dropdowns = {};
             state.specificPoemId = null;
             window.history.pushState({}, '', window.location.pathname);
             renderPoem();
+            trackPoemView(); // Track here instead
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
@@ -1426,17 +1429,6 @@ function closeModal() {
             localStorage.setItem('poems-viewed', '0');
         }
 
-        // Track when a new poem is shown
-        var originalGetNewPoem = getNewPoem;
-        getNewPoem = function() {
-            originalGetNewPoem();
-            trackPoemView();
-        };
-
-        // Track initial page load
-        if (state.view === 'home') {
-            trackPoemView();
-        }
         init();
     </script>
     <!-- Support Modal -->
