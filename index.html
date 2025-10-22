@@ -1424,10 +1424,7 @@ function showPublic() {
 function closeModal() {
             var modal = document.getElementById('support-modal');
             modal.classList.remove('active');
-            document.body.style.overflow = '';  // Changed from 'auto' to '' to reset
-            setTimeout(function() {
-                modal.style.display = 'none';
-            }, 3000);
+            document.body.style.overflow = '';
             localStorage.setItem('poems-viewed', '0');
         }
 
