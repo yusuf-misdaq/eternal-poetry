@@ -592,10 +592,10 @@
         </header>
         <main id="poem-display" class="loading">Loading poems...</main>
         <footer>
-            <div class="footer-links">
+          <div class="footer-links">
             <a href="about.html">About</a>
-            <a href="#contact">Contact</a>
             <a href="donate.html">Donate</a>
+            <a href="activate.html">Patrons</a>
         </div>
         <p style="font-size: 0.75rem; opacity: 0.7;"><button onclick="goToAdmin()" style="color: #fff; text-decoration: none; background: none; border: none; cursor: pointer; font-family: Georgia, serif; font-size: 0.75rem; padding: 0;">Admin</button>. © <span id="year"></span>, Yusuf Misdaq - Eternal Poetry. All rights reserved.</p>
         </footer>
@@ -1402,11 +1402,12 @@ function showPublic() {
         }
 // Modal tracking
         var poemsViewed = parseInt(localStorage.getItem('poems-viewed') || '0');
-        var modalShown = false; // Don't read from localStorage, track in session only
+        var modalShown = false;
+        var isPatron = localStorage.getItem('is-patron') === 'true';
 
 function trackPoemView() {
-            if (modalShown) return; // Don't track if modal is currently shown
-            
+            if (modalShown || isPatron) return; // Don't track if patron
+    
             poemsViewed++;
             localStorage.setItem('poems-viewed', poemsViewed);
             
@@ -1444,7 +1445,7 @@ function closeModal() {
             <p>Please consider supporting this work</p>
 <div class="modal-buttons">
                 <a href="donate.html" class="modal-button donate">Donate</a>
-                <a href="#subscribe" class="modal-button subscribe">Subscribe</a>
+                <a href="patrons.html" class="modal-button subscribe">Subscribe</a>
             </div>
             <div class="tooltip-wrapper">
                 <span class="tooltip-icon">?
