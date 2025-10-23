@@ -1405,35 +1405,33 @@ function showPublic() {
         var modalShown = false; // Don't read from localStorage, track in session only
 
 function trackPoemView() {
-            var hasSeenModalBefore = localStorage.getItem('has-seen-modal') === 'true';
+            if (modalShown) return; // Don't track if modal is currently shown
             
-            if (!modalShown) {
-                poemsViewed++;
-                localStorage.setItem('poems-viewed', poemsViewed);
-                
-                var threshold = hasSeenModalBefore ? 10 : 4;
-                
-                if (poemsViewed >= threshold) {
-                    setTimeout(showModal, 2500);
-                }
+            poemsViewed++;
+            localStorage.setItem('poems-viewed', poemsViewed);
+            
+            var hasSeenModalBefore = localStorage.getItem('has-seen-modal') === 'true';
+            var threshold = hasSeenModalBefore ? 10 : 4;
+            
+            if (poemsViewed >= threshold) {
+                modalShown = true; // Set this BEFORE showing
+                setTimeout(showModal, 2500);
             }
         }
 
 function showModal() {
             document.getElementById('support-modal').classList.add('active');
             document.body.style.overflow = 'hidden';
-            localStorage.setItem('modal-shown', 'true');
-            localStorage.setItem('has-seen-modal', 'true');
-            modalShown = true;
+            localStorage.setItem('has-seen-modal', 'true'); // Remember they've seen it
         }
 
 function closeModal() {
             var modal = document.getElementById('support-modal');
             modal.classList.remove('active');
             document.body.style.overflow = '';
-            localStorage.setItem('poems-viewed', '0'); // Reset counter
-            localStorage.setItem('modal-shown', 'false'); // Allow it to show again
-            modalShown = false;
+            poemsViewed = 0; // Reset counter
+            localStorage.setItem('poems-viewed', '0');
+            modalShown = false; // Allow tracking again
         }
         
         init();
