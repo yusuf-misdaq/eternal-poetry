@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Patron - Poetry Eternal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: white;
+            color: #000;
+            line-height: 1.8;
+        }
+
+        header {
+            border-bottom: 1px solid #000;
+            padding: 3rem 2rem;
+            text-align: center;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        header:hover {
+            opacity: 0.9;
+        }
+
+        .site-title {
+            font-size: 3rem;
+            letter-spacing: 0.5em;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .site-title-poetry {
+            color: #000;
+            animation: fadePoetryIn 23s infinite;
+        }
+
+        @keyframes fadePoetryIn {
+            0% { opacity: 0; }
+            100% { opacity: 0.25; }
+        }
+
+        .site-subtitle {
+            font-size: 1.5rem;
+            letter-spacing: 0.3em;
+            margin-bottom: 2rem;
+            color: #fff;
+            animation: fadeEternalInOut 30s infinite;
+        }
+
+        @keyframes fadeEternalInOut {
+            0% { opacity: 1; }
+            53.33% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        main {
+            max-width: 65rem;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero .price {
+            font-size: 3rem;
+            color: #DAA520;
+            margin: 2rem 0 1rem 0;
+        }
+
+        .hero .price-note {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .benefits {
+            margin: 4rem 0;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #fafafa;
+            border-radius: 8px;
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            flex-shrink: 0;
+        }
+
+        .benefit-text h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-text p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .books-showcase {
+            margin: 4rem 0;
+        }
+
+        .books-showcase h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .book-card {
+            text-align: center;
+        }
+
+        .book-cover {
+            width: 100%;
+            max-width: 180px;
+            height: 270px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .book-title {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .book-note {
+            font-size: 0.85rem;
+            color: #999;
+            font-style: italic;
+        }
+
+        .rare-badge {
+            display: inline-block;
+            background: #ef4444;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: #f9f9f9;
+            border-radius: 12px;
+            margin: 4rem 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stripe-button-placeholder {
+            display: inline-block;
+            padding: 1.25rem 3rem;
+            background: #635BFF;
+            color: white;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: Georgia, serif;
+            transition: background 0.3s;
+        }
+
+        .stripe-button-placeholder:hover {
+            background: #4f46ba;
+        }
+
+        .setup-note {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            border-top: 1px solid #000;
+            background: #000;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .site-title {
+                font-size: 1.5rem;
+                letter-spacing: 0.3em;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero .price {
+                font-size: 2.5rem;
+            }
+            .books-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header onclick="window.location.href='index.html'">
+        <h1 class="site-title"><span class="site-title-poetry">P O E T R Y</span></h1>
+        <h2 class="site-subtitle">E T E R N A L</h2>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>Become a Patron</h1>
+            <p style="font-size: 1.2rem; color: #666; max-width: 40rem; margin: 0 auto;">Support this work and receive lifetime access to Poetry Eternal, plus exclusive digital collections.</p>
+            <div class="price">$29</div>
+            <p class="price-note">One-time payment • Lifetime access</p>
+        </div>
+
+        <div class="benefits">
+            <div class="benefit-item">
+                <div class="benefit-icon">🌐</div>
+                <div class="benefit-text">
+                    <h3>Lifetime Site Access</h3>
+                    <p>Never see interruptions again. Browse poems freely, forever.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">📧</div>
+                <div class="benefit-text">
+                    <h3>Weekly Poem in Your Inbox</h3>
+                    <p>A randomly selected poem delivered to you every week.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">📚</div>
+                <div class="benefit-text">
+                    <h3>7 Digital Poetry Books</h3>
+                    <p>Instant download of complete collections, including rare editions.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">🔒</div>
+                <div class="benefit-text">
+                    <h3>Rare & Out-of-Print Editions</h3>
+                    <p>Access to collections no longer available anywhere else.</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <div class="benefit-icon">✨</div>
+                <div class="benefit-text">
+                    <h3>Support Independent Poetry</h3>
+                    <p>Help keep this work alive and accessible to all.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="books-showcase">
+            <h2>Your Poetry Collection</h2>
+            
+            <h3 style="text-align: center; font-size: 1.3rem; margin-bottom: 2rem; color: #666;">Currently Available</h3>
+            <div class="books-grid">
+                <div class="book-card">
+                    <img src="Into Solidity.png" alt="Into Solidity" class="book-cover">
+                    <div class="book-title">Into Solidity</div>
+                </div>
+                <div class="book-card">
+                    <img src="The Butterfly Gate.png" alt="The Butterfly Gate" class="book-cover">
+                    <div class="book-title">The Butterfly Gate</div>
+                </div>
+                <div class="book-card">
+                    <img src="Spilling Kingdoms.png" alt="Spilling Kingdoms" class="book-cover">
+                    <div class="book-title">Spilling Kingdoms</div>
+                </div>
+                <div class="book-card">
+                    <img src="The Beautiful.png" alt="The Beautiful / Palace Prayers" class="book-cover">
+                    <div class="book-title">The Beautiful / Palace Prayers</div>
+                </div>
+                <div class="book-card">
+                    <img src="Lefke Automatic.png" alt="Lefke Automatic / Destiny of Love" class="book-cover">
+                    <div class="book-title">Lefke Automatic / Destiny of Love</div>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; font-size: 1.3rem; margin: 3rem 0 2rem 0; color: #666;">Rare & Out-of-Print</h3>
+            <div class="books-grid" style="max-width: 500px; margin: 0 auto;">
+                <div class="book-card">
+                    <img src="Brighton Streets.png" alt="Brighton Streets" class="book-cover">
+                    <div class="book-title">Brighton Streets</div>
+                    <div class="book-note">Nefisa UK, 2010</div>
+                    <span class="rare-badge">Out of Print</span>
+                </div>
+                <div class="book-card">
+                    <div style="width: 100%; max-width: 180px; height: 270px; background: #f0f0f0; border: 1px solid #ddd; border-radius: 4px; margin: 0 auto 1rem auto; display: flex; align-items: center; justify-content: center; color: #999;">Cover Coming Soon</div>
+                    <div class="book-title">Unoriginal Prayers for Desperate Men</div>
+                    <div class="book-note">Nefisa UK, 2015</div>
+                    <span class="rare-badge">Out of Print</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Become a Patron?</h2>
+            <p style="margin-bottom: 2rem; color: #666;">One-time payment of $29 for lifetime access</p>
+            
+            <!-- Replace this with your actual Stripe button -->
+            <button class="stripe-button-placeholder" onclick="alert('Replace this button with your Stripe Payment Link or Checkout button')">
+                Subscribe Now - $29
+            </button>
+            
+            <div class="setup-note">
+                <strong>Setup Instructions:</strong><br>
+                Replace the button above with your Stripe payment button. Set the success URL to:<br>
+                <code>https://yusuf-misdaq.github.io/eternal-poetry/activate.html</code>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="index.html">Home</a>
+            <a href="donate.html">Donate</a>
+        </div>
+        <p style="font-size: 0.75rem; opacity: 0.7;">© <span id="year"></span> Yusuf Misdaq - Eternal Poetry. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
