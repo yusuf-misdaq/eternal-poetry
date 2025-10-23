@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activate Your Access - Poetry Eternal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Georgia, 'Times New Roman', serif;
+            background: white;
+            color: #000;
+            line-height: 1.8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+            max-width: 50rem;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .instruction {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .activation-form {
+            max-width: 400px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .code-input {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            font-family: Georgia, serif;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.3s;
+        }
+
+        .code-input:focus {
+            outline: none;
+            border-color: #DAA520;
+        }
+
+        .forever-button {
+            width: 100%;
+            padding: 1.25rem 2rem;
+            background: #FFB6C1;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            font-family: Georgia, serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .forever-button:hover {
+            background: #FFA0B0;
+            transform: translateY(-2px);
+        }
+
+        .forever-button:disabled {
+            background: #ddd;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .success-message {
+            display: none;
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .error-message {
+            display: none;
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .downloads-section {
+            display: none;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: #f9f9f9;
+            border-radius: 12px;
+        }
+
+        .downloads-section.show {
+            display: block;
+        }
+
+        .downloads-section h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .book-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .book-link {
+            display: block;
+            padding: 1rem 1.5rem;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            color: #000;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .book-link:hover {
+            background: #f0f0f0;
+            transform: translateX(5px);
+        }
+
+        .rare-tag {
+            display: inline-block;
+            background: #ef4444;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            margin-left: 0.5rem;
+            text-transform: uppercase;
+        }
+
+        .continue-button {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2rem;
+            background: #DAA520;
+            color: #000;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            transition: background 0.3s;
+        }
+
+        .continue-button:hover {
+            background: #C49A1A;
+        }
+
+        footer {
+            border-top: 1px solid #000;
+            background: #000;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .instruction {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>🎉 Welcome, Patron!</h1>
+        <p class="instruction">
+            Check your email for your unique activation code.<br>
+            Enter it below to unlock lifetime access.
+        </p>
+
+        <div class="activation-form">
+            <div class="success-message" id="success-message">
+                ✓ Activation successful! Your access has been saved forever.
+            </div>
+            <div class="error-message" id="error-message">
+                Invalid code. Please check your email and try again.
+            </div>
+            
+            <input 
+                type="text" 
+                id="code-input" 
+                class="code-input" 
+                placeholder="Enter your code here"
+                autocomplete="off"
+            >
+            <button onclick="activateAccess()" class="forever-button" id="activate-btn">
+                Forever!
+            </button>
+        </div>
+
+        <div class="downloads-section" id="downloads-section">
+            <h2>📚 Download Your Books</h2>
+            <p style="margin-bottom: 2rem; color: #666;">Click any book to download your copy</p>
+            
+            <div class="book-links">
+                <a href="#" class="book-link" id="book-1">Into Solidity</a>
+                <a href="#" class="book-link" id="book-2">The Butterfly Gate</a>
+                <a href="#" class="book-link" id="book-3">Spilling Kingdoms</a>
+                <a href="#" class="book-link" id="book-4">The Beautiful / Palace Prayers</a>
+                <a href="#" class="book-link" id="book-5">Lefke Automatic / Destiny of Love</a>
+                <a href="#" class="book-link" id="book-6">Brighton Streets <span class="rare-tag">Rare</span></a>
+                <a href="#" class="book-link" id="book-7">Unoriginal Prayers for Desperate Men <span class="rare-tag">Rare</span></a>
+            </div>
+
+            <a href="index.html" class="continue-button">Continue to Poetry Eternal →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p style="font-size: 0.75rem; opacity: 0.7;">© <span id="year"></span> Yusuf Misdaq - Eternal Poetry. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // List of valid patron codes - UPDATE THIS LIST as you assign codes
+        var validCodes = [
+            'wildrose-midnight',
+            'moonlight-verse',
+            'eternal-ocean',
+            'silent-prayer',
+            // Add more codes as you assign them to patrons
+        ];
+
+        function activateAccess() {
+            var codeInput = document.getElementById('code-input');
+            var code = codeInput.value.trim().toLowerCase();
+            var successMsg = document.getElementById('success-message');
+            var errorMsg = document.getElementById('error-message');
+            var downloadsSection = document.getElementById('downloads-section');
+            var activateBtn = document.getElementById('activate-btn');
+
+            // Hide previous messages
+            successMsg.classList.remove('show');
+            errorMsg.classList.remove('show');
+
+            if (!code) {
+                errorMsg.textContent = 'Please enter your activation code.';
+                errorMsg.classList.add('show');
+                return;
+            }
+
+            // Check if code is valid
+            if (validCodes.indexOf(code) !== -1) {
+                // Save to localStorage
+                localStorage.setItem('patron-code', code);
+                localStorage.setItem('is-patron', 'true');
+                
+                // Show success
+                successMsg.classList.add('show');
+                activateBtn.disabled = true;
+                activateBtn.textContent = 'Activated ✓';
+                codeInput.disabled = true;
+
+                // Set up download links with the patron's code
+                setupDownloadLinks(code);
+
+                // Show downloads section
+                setTimeout(function() {
+                    downloadsSection.classList.add('show');
+                    downloadsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 500);
+            } else {
+                errorMsg.textContent = 'Invalid code. Please check your email and try again.';
+                errorMsg.classList.add('show');
+            }
+        }
+
+        function setupDownloadLinks(code) {
+            var baseUrl = 'https://yusuf-misdaq.github.io/eternal-poetry/books/';
+            var books = [
+                { id: 'book-1', file: 'Into-Solidity.pdf' },
+                { id: 'book-2', file: 'The-Butterfly-Gate.pdf' },
+                { id: 'book-3', file: 'Spilling-Kingdoms.pdf' },
+                { id: 'book-4', file: 'The-Beautiful-Palace-Prayers.pdf' },
+                { id: 'book-5', file: 'Lefke-Automatic-Destiny-of-Love.pdf' },
+                { id: 'book-6', file: 'Brighton-Streets.pdf' },
+                { id: 'book-7', file: 'Unoriginal-Prayers-for-Desperate-Men.pdf' }
+            ];
+
+            for (var i = 0; i < books.length; i++) {
+                var link = document.getElementById(books[i].id);
+                link.href = baseUrl + books[i].file + '?access=' + code;
+            }
+        }
+
+        // Allow Enter key to submit
+        document.getElementById('code-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                activateAccess();
+            }
+        });
+
+        // Check if already activated
+        window.addEventListener('load', function() {
+            var savedCode = localStorage.getItem('patron-code');
+            if (savedCode) {
+                document.getElementById('code-input').value = savedCode;
+                document.getElementById('success-message').classList.add('show');
+                document.getElementById('activate-btn').disabled = true;
+                document.getElementById('activate-btn').textContent = 'Already Activated ✓';
+                document.getElementById('code-input').disabled = true;
+                setupDownloadLinks(savedCode);
+                document.getElementById('downloads-section').classList.add('show');
+            }
+        });
+    </script>
+</body>
+</html>
