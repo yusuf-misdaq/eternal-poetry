@@ -1404,21 +1404,27 @@ function showPublic() {
         var poemsViewed = parseInt(localStorage.getItem('poems-viewed') || '0');
         var modalShown = localStorage.getItem('modal-shown') === 'true';
 
-        function trackPoemView() {
+function trackPoemView() {
+            var hasSeenModalBefore = localStorage.getItem('has-seen-modal') === 'true';
+            
             if (!modalShown) {
                 poemsViewed++;
                 localStorage.setItem('poems-viewed', poemsViewed);
                 
-                if (poemsViewed >= 4) {
-                    setTimeout(showModal, 1600); // Show after 1.6 seconds
+                var threshold = hasSeenModalBefore ? 10 : 4;
+                
+                if (poemsViewed >= threshold) {
+                    setTimeout(showModal, 2500);
                 }
             }
         }
 
-        function showModal() {
+function showModal() {
             document.getElementById('support-modal').classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            document.body.style.overflow = 'hidden';
             localStorage.setItem('modal-shown', 'true');
+            localStorage.setItem('has-seen-modal', 'true');
+            modalShown = true;
         }
 
 function closeModal() {
