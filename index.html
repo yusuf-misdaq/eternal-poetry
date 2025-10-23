@@ -392,7 +392,7 @@
             align-items: center;
             opacity: 0;
             pointer-events: none;
-            transition: opacity 3s ease-in-out;
+            transition: opacity 1.5s ease-in-out;
         }
 
         .modal-overlay.active {
@@ -1410,7 +1410,7 @@ function showPublic() {
                 localStorage.setItem('poems-viewed', poemsViewed);
                 
                 if (poemsViewed >= 4) {
-                    setTimeout(showModal, 2500); // Show after 2.5 seconds
+                    setTimeout(showModal, 1600); // Show after 1.6 seconds
                 }
             }
         }
