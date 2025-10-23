@@ -357,21 +357,23 @@
             </div>
         </div>
 
-        <div class="cta-section">
+<div class="cta-section">
             <h2>Ready to Become a Patron?</h2>
             <p style="margin-bottom: 2rem; color: #666;">One-time payment of $29 for lifetime access</p>
             
-            <!-- Replace this with your actual Stripe button -->
-            <button class="https://buy.stripe.com/eVq28ta6lfIXfNj1HBgnK00" onclick="alert('Replace this button with your Stripe Payment Link or Checkout button')">
-                Subscribe Now - $29
-            </button>
-            
-            <div class="setup-note">
-                <strong>Setup Instructions:</strong><br>
-                Replace the button above with your Stripe payment button. Set the success URL to:<br>
-                <code>https://yusuf-misdaq.github.io/eternal-poetry/activate.html</code>
-            </div>
+            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+            <stripe-buy-button
+              buy-button-id="buy_btn_1SLUXQQldRlSzMZ8vWpcBdyq"
+              publishable-key="pk_live_51SLJ3SQldRlSzMZ8x0yvraB3c97XfaBuiEaiAHCKFiYeGuVuBxc2s289Iz6FmKyr2W4gvHLnuwHrTYCkPY3UEbVE00Nc76bdqN">
+            </stripe-buy-button>
         </div>
+```
+
+---
+
+**Important:** Make sure in your Stripe Dashboard you've set the success URL to:
+```
+https://yusuf-misdaq.github.io/eternal-poetry/activate.html
     </main>
 
     <footer>
