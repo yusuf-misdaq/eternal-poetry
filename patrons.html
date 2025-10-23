@@ -71,7 +71,7 @@
 
         .hero {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
         .hero h1 {
@@ -88,21 +88,40 @@
         .hero .price-note {
             font-size: 1rem;
             color: #666;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .buy-button-container {
+            display: flex;
+            justify-content: center;
+            margin: 3rem 0;
         }
 
         .benefits {
             margin: 4rem 0;
         }
 
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
         .benefit-item {
             display: flex;
             align-items: flex-start;
             gap: 1.5rem;
-            margin-bottom: 2rem;
             padding: 1.5rem;
             background: #fafafa;
             border-radius: 8px;
+        }
+
+        .benefit-item.centered {
+            grid-column: 1 / -1;
+            max-width: 600px;
+            margin: 0 auto;
+            width: 100%;
         }
 
         .benefit-icon {
@@ -132,13 +151,17 @@
 
         .books-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-bottom: 3rem;
         }
 
         .book-card {
             text-align: center;
+        }
+
+        .book-card.centered {
+            grid-column: 2;
         }
 
         .book-cover {
@@ -148,8 +171,9 @@
             object-fit: cover;
             border: 1px solid #ddd;
             border-radius: 4px;
-            margin-bottom: 1rem;
+            margin: 0 auto 1rem auto;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: block;
         }
 
         .book-title {
@@ -176,10 +200,24 @@
             letter-spacing: 0.05em;
         }
 
+        .placeholder-cover {
+            width: 100%;
+            max-width: 180px;
+            height: 270px;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin: 0 auto 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
         .cta-section {
             text-align: center;
             padding: 3rem 2rem;
-            background: #f9f9f9;
             border-radius: 12px;
             margin: 4rem 0;
         }
@@ -187,32 +225,6 @@
         .cta-section h2 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
-        }
-
-        .stripe-button-placeholder {
-            display: inline-block;
-            padding: 1.25rem 3rem;
-            background: #635BFF;
-            color: white;
-            font-size: 1.2rem;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-family: Georgia, serif;
-            transition: background 0.3s;
-        }
-
-        .stripe-button-placeholder:hover {
-            background: #4f46ba;
-        }
-
-        .setup-note {
-            margin-top: 1.5rem;
-            padding: 1rem;
-            background: #fff3cd;
-            border: 1px solid #ffc107;
-            border-radius: 4px;
-            font-size: 0.9rem;
         }
 
         footer {
@@ -251,8 +263,22 @@
             .hero .price {
                 font-size: 2.5rem;
             }
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            .benefit-item.centered {
+                grid-column: 1;
+            }
             .books-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            .book-card.centered {
+                grid-column: 1 / -1;
+            }
+            .book-cover, .placeholder-cover {
+                max-width: 150px;
+                height: 225px;
             }
         }
     </style>
@@ -271,40 +297,50 @@
             <p class="price-note">One-time payment • Lifetime access</p>
         </div>
 
+        <div class="buy-button-container">
+            <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+            <stripe-buy-button
+              buy-button-id="buy_btn_1SLUXQQldRlSzMZ8vWpcBdyq"
+              publishable-key="pk_live_51SLJ3SQldRlSzMZ8x0yvraB3c97XfaBuiEaiAHCKFiYeGuVuBxc2s289Iz6FmKyr2W4gvHLnuwHrTYCkPY3UEbVE00Nc76bdqN">
+            </stripe-buy-button>
+        </div>
+
         <div class="benefits">
-            <div class="benefit-item">
-                <div class="benefit-icon">🌐</div>
-                <div class="benefit-text">
-                    <h3>Lifetime Site Access</h3>
-                    <p>Never see interruptions again. Browse poems freely, forever.</p>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-icon">🌐</div>
+                    <div class="benefit-text">
+                        <h3>Lifetime Site Access</h3>
+                        <p>Never see interruptions again. Browse poems freely, forever.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">📧</div>
+                    <div class="benefit-text">
+                        <h3>Weekly Poem in Your Inbox</h3>
+                        <p>A randomly selected poem delivered to you every week.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">📚</div>
+                    <div class="benefit-text">
+                        <h3>7 Digital Poetry Books</h3>
+                        <p>Instant download of complete collections, including rare editions.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon">🔒</div>
+                    <div class="benefit-text">
+                        <h3>Rare & Out-of-Print Editions</h3>
+                        <p>Access to collections no longer available anywhere else.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="benefit-item">
-                <div class="benefit-icon">📧</div>
-                <div class="benefit-text">
-                    <h3>Weekly Poem in Your Inbox</h3>
-                    <p>A randomly selected poem delivered to you every week.</p>
-                </div>
-            </div>
-
-            <div class="benefit-item">
-                <div class="benefit-icon">📚</div>
-                <div class="benefit-text">
-                    <h3>7 Digital Poetry Books</h3>
-                    <p>Instant download of complete collections, including rare editions.</p>
-                </div>
-            </div>
-
-            <div class="benefit-item">
-                <div class="benefit-icon">🔒</div>
-                <div class="benefit-text">
-                    <h3>Rare & Out-of-Print Editions</h3>
-                    <p>Access to collections no longer available anywhere else.</p>
-                </div>
-            </div>
-
-            <div class="benefit-item">
+            <div class="benefit-item centered">
                 <div class="benefit-icon">✨</div>
                 <div class="benefit-text">
                     <h3>Support Independent Poetry</h3>
@@ -316,7 +352,6 @@
         <div class="books-showcase">
             <h2>Your Poetry Collection</h2>
             
-            <h3 style="text-align: center; font-size: 1.3rem; margin-bottom: 2rem; color: #666;">Currently Available</h3>
             <div class="books-grid">
                 <div class="book-card">
                     <img src="Into Solidity.png" alt="Into Solidity" class="book-cover">
@@ -338,18 +373,14 @@
                     <img src="Lefke Automatic.png" alt="Lefke Automatic / Destiny of Love" class="book-cover">
                     <div class="book-title">Lefke Automatic / Destiny of Love</div>
                 </div>
-            </div>
-
-            <h3 style="text-align: center; font-size: 1.3rem; margin: 3rem 0 2rem 0; color: #666;">Rare & Out-of-Print</h3>
-            <div class="books-grid" style="max-width: 500px; margin: 0 auto;">
                 <div class="book-card">
                     <img src="Brighton Streets.png" alt="Brighton Streets" class="book-cover">
                     <div class="book-title">Brighton Streets</div>
                     <div class="book-note">Nefisa UK, 2010</div>
                     <span class="rare-badge">Out of Print</span>
                 </div>
-                <div class="book-card">
-                    <div style="width: 100%; max-width: 180px; height: 270px; background: #f0f0f0; border: 1px solid #ddd; border-radius: 4px; margin: 0 auto 1rem auto; display: flex; align-items: center; justify-content: center; color: #999;">Cover Coming Soon</div>
+                <div class="book-card centered">
+                    <div class="placeholder-cover">Cover Coming Soon</div>
                     <div class="book-title">Unoriginal Prayers for Desperate Men</div>
                     <div class="book-note">Nefisa UK, 2015</div>
                     <span class="rare-badge">Out of Print</span>
@@ -357,7 +388,7 @@
             </div>
         </div>
 
-<div class="cta-section">
+        <div class="cta-section">
             <h2>Ready to Become a Patron?</h2>
             <p style="margin-bottom: 2rem; color: #666;">One-time payment of $29 for lifetime access</p>
             
@@ -367,13 +398,6 @@
               publishable-key="pk_live_51SLJ3SQldRlSzMZ8x0yvraB3c97XfaBuiEaiAHCKFiYeGuVuBxc2s289Iz6FmKyr2W4gvHLnuwHrTYCkPY3UEbVE00Nc76bdqN">
             </stripe-buy-button>
         </div>
-```
-
----
-
-**Important:** Make sure in your Stripe Dashboard you've set the success URL to:
-```
-https://yusuf-misdaq.github.io/eternal-poetry/activate.html
     </main>
 
     <footer>
