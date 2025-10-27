@@ -154,14 +154,16 @@
       "id": 1759821501927,
       "title": "Sleepy Poem",
       "author": "Yusuf Misdaq",
-      "content": "My temple is certified and affluent when denied and dented, \nIt fills with smoke which also clears, and settled suns which also rise. \nMy tears are drowning fears which slowly vapour clear on up,\nCloud is me and you and all our pain that cries to feel relieved, \nRain on earth is vapour, we are cycles, we are circles. \nAll the time forgetting, 'til we turn and must remember.",
+      "dedication": "",
+      "content": "My temple is certified and affluent \nwhen denied and dented \n\nIt fills with smoke which also clears, \nand settled suns which also rise. \n\nMy tears are drowning fears which slowly vapour \nclear on up,\n\nCloud is me and you and all our \npain that cries to feel relieved, \n\nRain on earth is vapour, we are cycles, we are \ncircles. \n\nAll the time forgetting, 'til we \nturn and must remember.",
       "location": "May 13th, 2006. Brighton.",
       "note": "",
       "categories": [
         "sad",
         "water"
       ],
-      "bookSource": null
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1759821701322,
@@ -499,8 +501,9 @@
     },
     {
       "id": 1760162564774,
-      "title": "Father, upon a cliff",
+      "title": "Father, upon a cliff (one week after Big Sur)",
       "author": "Yusuf Misdaq",
+      "dedication": "",
       "content": "A side uncovered\nA child untold\nA sparkling ember\nA million memory\n\nA glittering century\nResplendent finery \nLost in dreams\nRupturing seams\nof Time, the past, \nNot what is seems. \nI was a boy\nAm not yet old\nStand upon the edge\nOf the cliff unsold. \nStill like the mist\nFree with the rift\nFrom the moat I float\nWaves lift and kiss\n\"Take me within\"\nAs away I drift\nApproaching the merge\nof karma & kin\nMy brother within\nMy mother, my me\nMy father, the wind\nBlowing cooly in rhythms\nAlternate rhythms\nStrange studded stars\nIn different time\nFor his spirit is far\n\nA side recovered \nA child informed\nA sparkling whisper\nFrom there to ear.",
       "location": "September 10th, 2022. Rosslyn, Virginia",
       "note": "",
@@ -1039,7 +1042,7 @@
       "dedication": "",
       "content": "Tendulkar meritorius \n\n  the famous men in grey \n   all lined up in some \n    graeco roman garden \n     posing with huge \n       balls of stone and \n         small willies of earth \n      whatever they said and stood \n     for must be great, they think. \n   But then again, maybe they were\n  their generations biebers \nor hairless k pop stars\n\nMaybe they were muzak\nprozak\npro-vax\nselfy kodak\nthey don't know that\nthey all blowback \ncan't get the show back \ndead, and can't grow back \ngraeco-pedos \njocks in speedos \ngtfo you ain't real men \nstandin around in gazebos\nsee those / hear those \nweirdos in   \nfear mode\ni smash the stone and make \nhistory, dont you know\nim the only real\nhero.",
       "location": "",
-      "note": "",
+      "note": "Huntington Gardens Pasadena",
       "categories": [
         "lol"
       ],
@@ -1387,8 +1390,8 @@
       "title": "Bismillah",
       "author": "Yusuf Misdaq",
       "dedication": "",
-      "content": "Bismillah explosion\nThe purpose-world of magnitude opens\nReacts upon us\nDetracts the us of us\nTurning us to Ebbing\n                                  Oceanways\n\nWell we go\nDown into Darkness\n\nWell we go\nDown the Tunnel\n\nWell we go\nAlone\nWhere we came from.",
-      "location": "2017, Hawai'i.",
+      "content": "Bismillah explosion\nThe purpose-world of magnitude opens\nReacts upon us\nDetracts the us of us\nTurning us to Ebbing\n                                   Oceanways\n\nWell we go\nDown into Darkness\n\nWell we go\nDown the Tunnel\n\nWell we go\nAlone\nWhere we came from.",
+      "location": "2017, Hawai'i",
       "note": "",
       "categories": [
         "black",
@@ -1671,11 +1674,16 @@
       "id": 1761034423996,
       "title": "4",
       "author": "Yusuf Misdaq",
+      "dedication": "",
       "content": "Don't hold me so tightly\nDon't lock in absentia",
       "location": "2007. London.",
-      "note": "Source: Frozen Fountain (2008). Out of print.",
-      "categories": [],
-      "bookSource": null
+      "note": "From Frozen Fountain (2008). Out of print.",
+      "categories": [
+        "body",
+        "love"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034424996,
@@ -1770,11 +1778,16 @@
       "id": 1761034430996,
       "title": "Disquiet",
       "author": "Yusuf Misdaq",
+      "dedication": "",
       "content": "\"Feel free to chime in,\"\nSaid the man who\nHad such little\nCalm within him\nThat he could never\nLet a bell echo\nAll the way\ndown to\nSilence",
       "location": "Late October, 2019. California.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "lol",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034431996,
@@ -1792,32 +1805,35 @@
       "id": 1761034441996,
       "title": "Out Front in the Western Village",
       "author": "Yusuf Misdaq",
+      "dedication": "For Molly Qerim, Jenny Taft, Joy Taylor",
       "content": "I run a flame\nselected from my\nchime palette\n\ntouch it\nupon the furniture\neveryone is afraid\nto stain\n\nthis is how\nyou rename\nyour daughters\nI tell the villagers\nas I cup the bird\nin two\nwarm hands\n\nhold it aloft\n(the key is\nabove yourself)\nand with the give of love\ni say to the villagers\n\"hear her song!\"\n\na beautiful voice\nsilences all\nwho twist\nand shout.",
       "location": "20th July, 2019. Washington D.C.",
       "note": "",
       "categories": [
-        "love"
+        "society"
       ],
       "bookSource": null,
-      "dedication": "For Molly Qerim, Jenny Taft, Joy Taylor"
+      "comments": []
     },
     {
       "id": 1761034442996,
       "title": "Blueberries before sunset",
       "author": "Yusuf Misdaq",
+      "dedication": "",
       "content": "Slow\nGo slow into the warm dark pasture\n\nEnvelops you and surrounds you\nIts texture is smooth and velvet.\nSpace without stars.\n\nSoft\nBe soft\nIn the tickling night\nThe glint of light is a loudest whisper\n\nVesper, vesper,\nMaghreb, vespers\nVapours swarm as a storm of\nOpenings\n\nPerishings\n\nPeaces\n\nLatitudes\n\nOpenings\n\n*\n\nBead by beautiful bead\n\nDhikr'd head-first into Heaven",
       "location": "January, 2009. Northern Cyprus.",
       "note": "",
       "categories": [
-        "prayer",
-        "light"
+        "light",
+        "prayer"
       ],
       "bookSource": {
         "title": "Lefke Automatic / Destiny of Love",
         "amazonUrl": "https://www.amazon.com/Lefke-Automatic-Destiny-Yusuf-Misdaq/dp/0955502462",
         "coverImage": "Lefke Automatic.png",
         "year": "2013"
-      }
+      },
+      "comments": []
     },
     {
       "id": 1761034443996,
@@ -2013,13 +2029,15 @@
       "id": 1761034457996,
       "title": "My Conscience",
       "author": "Yusuf Misdaq",
+      "dedication": "",
       "content": "Oh good god\nDon't go\nDon't leave\nThough I asked you to\n\nOh, good-God\ndon't take her\n\nI keep removing\nparts of myself\nlike a monkey\npicking up\nmonkey\nfrom monkey\n\nI keep saying no\nto myself\nand the conscience\nof self that she\nembodies.\n\nThe dog shakes itself loose\ninvisible dust goes everywhere\n\nIf she is my conscience\nShe is also my dust\nMy germs and yes\nMy poisons.\n\nPoison isn't something\nyou get to vote\nno on.\n\nPoison is always something\nthat you're given\n\nAnd there are\nalways reasons.",
       "location": "October 18th, California.",
       "note": "",
       "categories": [
         "prayer"
       ],
-      "bookSource": null
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034458996,
@@ -2038,11 +2056,16 @@
       "id": 1761034459996,
       "title": "Multiverse 12 million and 6",
       "author": "Yusuf Misdaq",
+      "dedication": "",
       "content": "Caravaggio\nMervene forenniffer\nMudjie told me I wasn't allowed to write\nBut I wrote a lot\nAnd a avalanche came\nLike me, tumbling into a multiverse\nWhere everyone's hair is always messed up\nAnd there's no culture where people on tv look great\nSo we laugh like dorks when we see each other messy\nEach morning, messy and laughing at the sillyness of ourselves\nOur pillow hair on full display\nThe yellow stains of curry on our selves\n'That one's a pen that leaked,' you say\nLaughing, and she laughing too\n'I have one on the back of my pants,'\nShe says pointing to her arse\n'You should see it it's terrible.'\n\nAll innocent mistakes\nThey let the moment flow\nKnowing they're not more important than it.",
       "location": "December 20th, 2022. California.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "lol",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034460996,
@@ -2058,11 +2081,17 @@
       "id": 1761034470996,
       "title": "Rider",
       "author": "Yusuf Misdaq",
-      "content": "Faradise\nA dusty beach\nThe water all dried up\nA black man with odd-shaped bald head, one quarter of it shining in the sun\n\nChurrup\nFoot in stirrup\nHya say rider\nHya !\nNo whip\nJust passion of\nHYA\nGentle digging of ankles\nTwo bodies in communication\nCollaborating into motion\nMan and horse\nIn a co-dependent fling\nFiring off\n         for a few moments into heaven.",
+      "dedication": "",
+      "content": "Faradise\nA dusty beach\nThe water all dried up\nA black man with odd-shaped bald head, one quarter of it shining in the sun\n\nChurrup\nFoot in stirrup\nHya say rider\nHya !\nNo whip\nJust passion of\nHYA\nGentle digging of ankles\nTwo bodies in communication\nCollaborating into motion\nMan and horse\nIn a co-dependent fling\nFiring off\n                 for a few moments into heaven.",
       "location": "October 20th, 2022. California",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "black",
+        "body",
+        "moving"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034471996,
@@ -2218,11 +2247,16 @@
       "id": 1761034495996,
       "title": "Pain-Root",
       "author": "Yusuf Misdaq",
-      "content": "A tincture with pain-root\nWhat's pain-root?\nA sham of solidity\nA true story\nA new science to learn\nA a. \\\nSometimes, I smash the walls down\nI curse the kind\nDestroy the place of worship\nAnd hug a demon\nAll so\nbalance returns\nLet the dreary satisfied ones\nBurn in the fire\nfire of life:\n- a reservation for the fortunate\n- furnace of freedom\\\n'Come here,' it's advertisement would claim\n'And watch all your pain just\nMelt away!'\\\nAnd it's true, too.\nNothing will destroy your pain like more pain.\nTwo negatives multiplied\nA child/age of prosperity\nTomorrow\nAlways sounds like\nSuch a hopeful, promising word.\n\"Tomorrow!\"\nto be said with eyes wide\nLooking up at a fat universal sky\nwith ample supply of clouded beings and\nshaded forgivers.\\\n'Come!' sayeth our Lord God.\n'Try my prayer and the breathing thoughts\nI shall call \"meditation!\"\nA fantasy dream\nto give off\namber and scenic\nroute scents.\\\nSaturday 14th Jan 2023. Los Angeles, California. \\\na pearl in a species\ntracks from a heart\nto a no-distance heart\\\nand you rotated me\\\nAnd now here I am again\nWhere I started and\nI Love you\\\nLav you\\\nLaff you\\\nLaugh. \\",
+      "dedication": "",
+      "content": "A tincture with pain-root\nWhat's pain-root?\nA sham of solidity\nA true story\nA new science to learn\nA a. \n\nSometimes, I smash the walls down\nI curse the kind\nDestroy the place of worship\nAnd hug a demon\nAll so\nbalance returns\nLet the dreary satisfied ones\nBurn in the fire\nfire of life:\n- a reservation for the fortunate\n- furnace of freedom\n\n'Come here,' it's advertisement would claim\n'And watch all your pain just\nMelt away!'\n\nAnd it's true, too.\nNothing will destroy your pain like more pain.\nTwo negatives multiplied\nA child/age of prosperity\nTomorrow\nAlways sounds like\nSuch a hopeful, promising word.\n\"Tomorrow!\"\nto be said with eyes wide\nLooking up at a fat universal sky\nwith ample supply of clouded beings and\nshaded forgivers.\n\n'Come!' sayeth our Lord God.\n'Try my prayer and the breathing thoughts\nI shall call \"meditation!\"\nA fantasy dream\nto give off\namber and scenic\nroute scents.",
       "location": "January 19th, 2023. Plane, Los Angeles, California. \\",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "prayer",
+        "water"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034496996,
@@ -2248,11 +2282,17 @@
       "id": 1761034498996,
       "title": "Some of them want to be abused",
       "author": "Yusuf Misdaq",
-      "content": "My computer can make a computer generated image of me that makes me look heroic and wonderful but in reality I am just a tired old raisin talking the same old stale shit that ive already said a hundred times before, and i know im not that hero in the picture so why would i ever put it out there what a nerve now isnt that the biggest lie that’s ever been sold? I wish I could put a picture of me in my underwear and have my bad morning breath hit the viewer right in the face, that would be heroic.\\",
-      "location": "January 23rd, 2023. Arlington, Virginia. \\",
+      "dedication": "",
+      "content": "My computer can make a computer generated image of me that makes me look heroic and wonderful but in reality I am just a tired old raisin talking the same old stale shit that ive already said a hundred times before, and i know im not that hero in the picture so why would i ever put it out there what a nerve now isnt that the biggest lie that’s ever been sold? I wish I could put a picture of me in my underwear and have my bad morning breath hit the viewer right in the face, that would be heroic.",
+      "location": "January 23rd, 2023. Arlington, Virginia.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "grr",
+        "lol",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034499996,
@@ -2278,11 +2318,13 @@
       "id": 1761034501996,
       "title": "During Class",
       "author": "Yusuf Misdaq",
-      "content": "Who is the Lover?\nAnd who do you love?\\\n\\",
-      "location": "April 9th, 2015. Vienna, Virginia.\\",
+      "dedication": "",
+      "content": "Who is the Lover?\nAnd who do you love?",
+      "location": "April 9th, 2015. Vienna, Virginia.",
       "note": "",
       "categories": [],
-      "bookSource": null
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034502996,
@@ -2298,41 +2340,67 @@
       "id": 1761034503996,
       "title": "Transmission",
       "author": "Yusuf Misdaq",
-      "content": "High chime,\nAquiline\nSlice thru the time\nSlide thru the pines\nI’m one with the mind \\\nGolden sun thuds onto dead concrete\nEveryone walks upon a golden street\nThe empire buildings either side of us are our wings\nEach tiny brick of them would fit in the palm of our hand\nHere we stand with the spirit of God within us\nAwaiting the reality of this self-awareness\nTo catch up with us in the years before\nWe fade away\\\n\\",
-      "location": "February 29th, 2020. Manhattan, New York. \\",
+      "dedication": "",
+      "content": "High chime,\nAquiline\nSlice thru the time\nSlide thru the pines\nI’m one with the mind \n\nGolden sun thuds onto dead concrete\nEveryone walks upon a golden street\nThe empire buildings either side of us are our wings\nEach tiny brick of them would fit in the palm of our hand\nHere we stand with the spirit of God within us\nAwaiting the reality of this self-awareness\nTo catch up with us in the years before\nWe fade away",
+      "location": "February 29th, 2020. Manhattan, New York.",
       "note": "",
       "categories": [],
-      "bookSource": null
+      "bookSource": {
+        "title": "",
+        "amazonUrl": "",
+        "coverImage": "",
+        "year": ""
+      },
+      "comments": []
     },
     {
       "id": 1761034504996,
       "title": "Open Sesame",
       "author": "Yusuf Misdaq",
-      "content": "Rose garden, I’m stuck \\\nSometimes the details don’t matter\nI’m not scared of the shady\nSecrets, the dark corners\nI noticed \\\nI sit with her and notice that\nThe most impossible equations\nResolve in her eyes \\\nI should know better than this\nI’m a far-sighted man, yes,\nI’ve traveled the heart\nSki’d toward horizons\nThat looked distant and daunting\nSoon became as familiar\nas my own\nwarm palms \\\nI’ve gone everywhere and now\nI feel like a child again\n“Let me show you what I can do,”\nThis funny immature voice within me\nWanting to impress\nher\nquiet queen eyes \\\nI laugh at the voice and\nPush it aside.\nMy history book\nMy wholeness of being\nMy confidence\nGet back into the drivers seat\nGrabbing that wheel\nSteadying this ship\nMan, like. \\\nBut\nthen her eyes keep talking\nMore pieces begin\nDissolving and\nIt feels nice \\\nI’m stuck in a rose garden\nTrapped in honey moment\nGone in cherry skies\nUpward\nin her camomile eyes \\\nTrue love is to be born again\nResetting into a pool of\nDual origin\\\n2018, Somewhere in Southern California.\\\nI was crying at the misty dawn\nGreen\narc of brick over green\nSomething tufted hedges and\nMist hanging like logic\nJesus fairmount chiming in on\nHorseback where the shadows have gone\nTrying and tumbleweed\nStarguts and cowbells\\",
-      "location": "October 30th, 2019. Los Angeles, California.\\",
+      "dedication": "For H",
+      "content": "Rose garden, I’m stuck \n\nSometimes the details don’t matter\nI’m not scared of the shady\nSecrets, the dark corners\nI noticed \n\nI sit with her and notice that\nThe most impossible equations\nResolve in her eyes\n\nI should know better than this\nI’m a far-sighted man, yes,\nI’ve traveled the heart\nSki’d toward horizons\nThat looked distant and daunting\nSoon became as familiar\nas my own\nwarm palms\n\nI’ve gone everywhere and now\nI feel like a child again\n“Let me show you what I can do,”\nThis funny immature voice within me\nWanting to impress\nher\nquiet queen eyes\n\nI laugh at the voice and\nPush it aside.\nMy history book\nMy wholeness of being\nMy confidence\nGet back into the drivers seat\nGrabbing that wheel\nSteadying this ship\nMan, like.\n\nBut\nthen her eyes keep talking\nMore pieces begin\nDissolving and\nIt feels nice\n\nI’m stuck in a rose garden\nTrapped in honey moment\nGone in cherry skies\nUpward\nin her camomile eyes\n\nTrue love is to be born again\nResetting into a pool of\nDual origin",
+      "location": "2018, Somewhere in Southern California.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "love"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034505996,
-      "title": "With Hiroshi",
+      "title": "Splendid",
       "author": "Yusuf Misdaq",
-      "content": "Come in, she said.\nGo on, she said.\nYou should, she said.\nYou can, she said.\nI will, she said.\nI will. \\\nHer hot will\nAwake by a\nHot candle\nBurning the night\nA passionate 23 with\nNeon eyesight \\",
-      "location": "May 31st, 2019. Fenton, Michigan. \\",
+      "dedication": "For Hiroshi Yoshimura",
+      "content": "Come in, she said.\nGo on, she said.\nYou should, she said.\nYou can, she said.\nI will, she said.\nI will. \n\nHer hot will\nAwake by a\nHot candle\nBurning the night\nA passionate 23 with\nNeon eyesight",
+      "location": "May 31st, 2019. Fenton, Michigan.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "art",
+        "music"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034506996,
       "title": "Andean Transmission",
       "author": "Yusuf Misdaq",
-      "content": "Cranberry Regulus\nFile out of the shop in\nSingle file \\\nBells collide and make\nMarks upon the\nFolded prerogatives.\nSine waves jumped\nUp and bit\nPeruvan perritos\nToo high up\nAndean\nCumulus\nTo be\nAny\nThreat. \\\nSomething about the altitude\nSaid the man with a nose shaped like a\nHawk, an impressive man, to be sure\nHe let the doors all be open as he spoke\nAcknowledging every movement of wind\nAnd distant car horn as though it were all\nA part of the conversation. \\\nIt was beautiful said the woman carefully\nStudying his face. \\\nIt’s all a response with them, said Jahangir\nWho had just been dumped\nThey don’t have any originality\nStupid women !\nBut the truth was the goods he had brought to the table were weak as fuck\nShe just let him know about it. \\\nFire them all\nThe caretaker took his keys out\nOpened the office door and sat inside it\nWeeping by the little sink which was reserved for the dirty water of mops\nHis tears went down the same dirty channels and he heard his ancient grandmothers voice\nTell him until you begin to sculpt your own destiny, your tears will be wasted and do no good. \\\nHe balled up his fists and went out determined to make the next step only to be gunned down by a high school shooting. With his last breath he uttered the prayer of the five mothers which he had learned as a child in the mountains from the large lady who controlled the water reserves. \\",
-      "location": "December 30th, 2019. Gaithersburg, Maryland. \\",
+      "dedication": "",
+      "content": "Cranberry Regulus\nFile out of the shop in\nSingle file \n\nBells collide and make\nMarks upon the\nFolded prerogatives.\n\nSine waves jumped\nUp and bit\nPeruvan perritos\nToo high up\nAndean\nCumulus\nTo be\nAny\nThreat.\n\nSomething about the altitude\nSaid the man with a nose shaped like a\nHawk, an impressive man, to be sure\nHe let the doors all be open as he spoke\nAcknowledging every movement of wind\nAnd distant car horn as though it were all\nA part of the conversation.\n\nIt was beautiful said the woman carefully\nStudying his face. \n\nIt’s all a response with them, said Jahangir\nWho had just been dumped\nThey don’t have any originality\nStupid women !\nBut the truth was the goods he had brought to the table were weak as fuck\nShe just let him know about it.\n\nFire them all\nThe caretaker took his keys out\nOpened the office door and sat inside it\nWeeping by the little sink which was reserved for the dirty water of mops\nHis tears went down the same dirty channels and he heard his ancient grandmothers voice\nTell him until you begin to sculpt your own destiny, your tears will be wasted and do no good.\n\nHe balled up his fists and went out determined to make the next step only to be gunned down by a high school shooting. With his last breath he uttered the prayer of the five mothers which he had learned as a child in the mountains from the large lady who controlled the water reserves. \n\nMay the pipes run clean  \nWater goes on  \nFor centuries  \nUntil it stops \nFor salty  \nTears     \n\nAmen.",
+      "location": "December 30th, 2019. Gaithersburg, Maryland.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "art",
+        "lol"
+      ],
+      "bookSource": {
+        "title": "Lefke Automatic / Destiny of Love",
+        "amazonUrl": "https://a.co/d/bXFo8Nj",
+        "coverImage": "Lefke Automatic.png",
+        "year": "2013"
+      },
+      "comments": []
     },
     {
       "id": 1761034507996,
@@ -2348,11 +2416,16 @@
       "id": 1761034508996,
       "title": "Beaware",
       "author": "Yusuf Misdaq",
-      "content": "Children of the magnified era:\nParaglide into the past\nWhere things were held up\nIn high-regard and\nChanges were humbly\nObserved on their way in. \\\nChildren of the fantasy land:\nCheck your pulse before diving.\nThe faraway frontier can be had\nBut the streams you are dreaming of\nWon’t fall in the direction of your will. \\\nTurn away from this insistence\nThis undignified resistance.\nMark upon your hearts\nThe baggy parts\nWith a tailors pin\nCut away this\nVengeful cyst\nThat you harbour. \\\nThere is a gentle harbour\nHigh in the mountains\nA high sea\nA rare sight\nMountainous dignity\nThroat singers there\nAre chanting\nFor your\nCalm \\",
-      "location": "December 11th, 2019. Gaithersburg, Maryland. \\",
+      "dedication": "",
+      "content": "Children of the magnified era:\nParaglide into the past\nWhere things were held up\nIn high-regard and\nChanges were humbly\nObserved on their way in.\n\nChildren of the fantasy land:\nCheck your pulse before diving.\nThe faraway frontier can be had\nBut the streams you are dreaming of\nWon’t fall in the direction of your will. \n\nTurn away from this insistence\nThis undignified resistance.\nMark upon your hearts\nThe baggy parts\nWith a tailors pin\nCut away this\nVengeful cyst\nThat you harbour. \n\nThere is a gentle harbour\nHigh in the mountains\nA high sea\nA rare sight\nMountainous dignity\nThroat singers there\nAre chanting\nFor your\nCalm",
+      "location": "December 11th, 2019. Gaithersburg, Maryland.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "moving",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034509996,
@@ -2388,11 +2461,17 @@
       "id": 1761034512996,
       "title": "Yuko's Kitchen, 1, 2, 3",
       "author": "Yusuf Misdaq",
-      "content": "1.\nGender reveal party\n\\{Bring gloves\\} \\\n\\\n2.\nMimes are French \\\n\\\n3.\nEveryone's talking about Elon Musk\nInstead of the reason why\nThey themselves are shit \\\n\\",
-      "location": "December 29th, 2022. DTLA, California. \\",
+      "dedication": "",
+      "content": "1.\nGender reveal party\n{Bring gloves} \n\n2.\nMimes are French \n\n3.\nEveryone's talking about Elon Musk\nInstead of the reason why\nThey themselves are shit",
+      "location": "December 29th, 2022. DTLA, California.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "grr",
+        "lol",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034513996,
@@ -2418,11 +2497,15 @@
       "id": 1761034515996,
       "title": "Aurtistic",
       "author": "Yusuf Misdaq",
-      "content": "Johnny CharangoFelicitus Munde Carebellum Dravidian Chalice Mondial Prebantum chakillius ferdinnia prosciutto \\\nMy mother loves to watch me growLovers love to watch me goI'm the go-ho I go very much As I come forth bravely andSet the scene anew \\",
-      "location": "December 22nd, 2022. DTLA, California. \\",
+      "dedication": "",
+      "content": "Johnny Charango\nFelicitus Munde \nCarebellum Dravidian Chalice Mondial \nPrebantum chakillius ferdinnia prosciutto \n\nMy mother loves to watch me grow\nLovers love to watch me go\nI'm the go-ho \nI go very much \nAs I come forth bravely and\nSet the scene anew",
+      "location": "December 22nd, 2022. DTLA, California.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "moving"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034516996,
@@ -2496,13 +2579,18 @@
     },
     {
       "id": 1761034523996,
-      "title": "Outsiders (sitting beside Malzo-jan and Wazo-jan)",
+      "title": "Outsiders",
       "author": "Yusuf Misdaq",
-      "content": "I walk into the forest\nThe mist of the trees\nFails to be damp and cold\nFails to be hazy and unclear\n\\\nThe mist of the trees\nBegins to be oxygen\nBegins to be moisture\n\\\nAnd in a droplet of time\nNew life grows upon my body\n\\\nThe outcast of the forest\nNow has truffles\nNow has flowers\nPoring out\n\\\nSome of the others in the town look in at me, now.\nBefore, they used to pour the bad smells onto me\nNow it changes and little by little, children come in\nAnd ask to smell this floris-anubis I have\n\\\nThey tell me I am bringing back the\nDead ones and the golden ways.\n\\\nAnd soon, others will come in, too\nEager to proclaim me the\nNew colour.\n\\",
-      "location": "August 1st, 2022. Porter Ranch, California.\\",
+      "dedication": "Sitting with Malahat & Wazina",
+      "content": "I walk into the forest\nThe mist of the trees\nFails to be damp and cold\nFails to be hazy and unclear\n\nThe mist of the trees\nBegins to be oxygen\nBegins to be moisture\n\nAnd in a droplet of time\nNew life grows upon my body\n\nThe outcast of the forest\nNow has truffles\nNow has flowers\nPoring out\n\nSome of the others in the town look in at me, now.\nBefore, they used to pour the bad smells onto me\nNow it changes and little by little, children come in\nAnd ask to smell this floris-anubis I have\n\nThey tell me I am bringing back the\nDead ones and the golden ways.\n\nAnd soon, others will come in, too\nEager to proclaim me the\nNew colour.",
+      "location": "August 1st, 2022. Porter Ranch, California.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "society",
+        "time"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034524996,
@@ -2568,11 +2656,15 @@
       "id": 1761034530996,
       "title": "McDonalds after Midnight",
       "author": "Yusuf Misdaq",
-      "content": "Credit Columbia\nSanctified History\nSell me a Search\nSell me a Mystery\\",
+      "dedication": "",
+      "content": "Credit Columbia\nSanctified History\nSell me a Search\nSell me a Mystery",
       "location": "March 28th, 2010. Manhattan, New York City\\",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "art"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034531996,
@@ -2598,11 +2690,16 @@
       "id": 1761034533996,
       "title": "Fana / Good Death",
       "author": "Yusuf Misdaq",
-      "content": "All roads melt into a swoosh\nA curved line in the sunset sky\nDrawn by the unnameable one\nAnd tinged with something like\nOrange & Light\n(Light as a colour)\\\nAll paths apex at annhilation\nConjoining\nRejoicing in\nLove pools. \\\nWherever you go\nGood death is hunting you. \\",
-      "location": "Early May, 2012. Triunfo de la cruz, Honduras.\\",
+      "dedication": "",
+      "content": "All roads melt into a swoosh\nA curved line in the sunset sky\nDrawn by the unnameable one\nAnd tinged with something like\nOrange & Light\n(Light as a colour)\n\nAll paths apex at annhilation\nConjoining\nRejoicing in\nLove pools. \n\nWherever you go\nGood death is hunting you.",
+      "location": "Early May, 2012. Triunfo de la cruz, Honduras.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "light",
+        "love"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034534996,
@@ -2618,11 +2715,16 @@
       "id": 1761034535996,
       "title": "Santa Fe Obama Years",
       "author": "Yusuf Misdaq",
-      "content": "New Mexico is perfect nowhere\nIf that's too scary, you can go to Santa Fe\nWhich is a place, a somewhere.\\\nIt comes with a silly legend or two\nAnd an agreed upon atmosphere\nIt's funded and advertised and\nIt's very nice to be there.\\\nBut you don't find much of oneself\nWhen surrounded by like-minded people.\nYou won't get to outer space and beyond that way. \\\nSanta Fe is a station at the safe edge of outer space.\nAll of the astronauts that chickened out are there\nTheir space suits are hung up on a hook by the door gathering\nDust and they are now busy making a community\nFilling it with words like young and\nVibrant and\nUp and coming\nthe Arts\nAnd so on. \\\nGeorgia O'Keefe didn't die in Santa Fe\nNot really.\nShe died in stillness\nin\nMountain\nand agreement with stillness\non the other side of space. \\\nThin cows graze gently on sparse shrubs\nSatisfied under the overcast sky\nThat holds the vast desert in place. \\\nI don't eat beef.\nI just hug their kind bodies and cry.\nWe just look out together at the river that's dry. \\\nThe land is losing\nGold destiny bruising\nA controlling cruise on\nAutopilot is what we choose. \\\nWe put all our brains and lives into computers and now we're empty.\nDry rivers. \\\nScared, dead old men\nAre rummaging around the slag heap with\nDry mouths and rock hard, chemical willies that\nWon't waver in the wind nor\nHelp us win.\\\n\"Give me more,\" he says, pointing to his mouth\nLast words. \\\nThe vision puts fear into me\nI hold the cow tighter\nAnd we look out, this time at the mountain\nAnd the misty mountains behind it\\\nThey are reachable\nLike the idea of flying\n(If we can think of it. . . )\\",
-      "location": "September 12th, 2012. Rail Runner Train towards Santa Fe, New Mexico.\\",
+      "dedication": "",
+      "content": "New Mexico is perfect nowhere\nIf that's too scary, you can go to Santa Fe\nWhich is a place, a somewhere.\n\nIt comes with a silly legend or two\nAnd an agreed upon atmosphere\nIt's funded and advertised and\nIt's very nice to be there.\n\nBut you don't find much of oneself\nWhen surrounded by like-minded people.\nYou won't get to outer space and beyond that way. \n\nSanta Fe is a station at the safe edge of outer space.\nAll of the astronauts that chickened out are there\nTheir space suits are hung up on a hook by the door gathering\nDust and they are now busy making a community\nFilling it with words like young and\nVibrant and\nUp and coming\nthe Arts\nAnd so on. \n\nGeorgia O'Keefe didn't die in Santa Fe\nNot really.\nShe died in stillness\nin\nMountain\nand agreement with stillness\non the other side of space.",
+      "location": "September 11th, 2012. Abiqui, New Mexico",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "art",
+        "moving"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034536996,
@@ -2708,21 +2810,31 @@
       "id": 1761034544996,
       "title": "Attunement",
       "author": "Yusuf Misdaq",
-      "content": "Huu is the hereafter\nBird is the drink\nClouds are the smoke\nand\nHearts are the pink\\\nWhere is my lover? They say\nWhere? I’m looking.\nEveryone wanders the streets of theories\nEarnestly digesting never-ending books from\nThe library of tick-time.\\\nWhere is my lover? They ask, repeatedly\naloud\nForming the question with their\ntwo lips, which flap around like\nOstentation\nBouncing up and down like a\nsalesman\nin a suburb\nMissing the point\\\n.(And then talking about missing the point).\\\nThe answer is raining down upon them\nAnd inner their humid-hearts\nIf only they had ears more\nAttuned to the subtle drama\nOf silent droplets.\\",
-      "location": "",
-      "note": "Sometime between 2010-2015/ Unknown location.Source: Unoriginal Prayers for Desperate Men (Nefisa UK, 2015). Out of print\\",
-      "categories": [],
-      "bookSource": null
+      "dedication": "",
+      "content": "Huu is the hereafter\n  Bird is the drink\n   Clouds are the smoke\n    and\n     Hearts are the pink\n\nWhere is my lover? They say\nWhere? I’m looking.\nEveryone wanders the streets of theories\nEarnestly digesting never-ending books from\nThe library of tick-time.\n\nWhere is my lover? They ask, repeatedly\n                                                           aloud\n                                                  Forming the question with their\n                                     two lips, which flap around like\n                         Ostentation\n            Bouncing up and down like a\nsalesman\n            in a suburb\n                         Missing the point\n\n           .(And then talking about missing the point).\n\nThe answer is raining down upon them\nAnd inner their humid-hearts\nIf only they had ears more\nAttuned to the subtle drama\nOf silent droplets.",
+      "location": "Sometime between 2010-2015/ Unknown location.",
+      "note": "Source: Unoriginal Prayers for Desperate Men (Nefisa UK, 2015). Out of print",
+      "categories": [
+        "love",
+        "prayer"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034545996,
       "title": "Proposition",
       "author": "Yusuf Misdaq",
-      "content": "My moon tonight is a lilting tusk\nA midnight musk\nScatterings of dancing girls surround it like\nJewelry of history\nMotion caught in time and\nKept there for eternity\nFor Alexander and I to marvel at\\\nSeparated by centuries\nAs the dead stars and us are\nSeparated by life cycles of uncountable eons\nSleeping through existence\nOr slowly awake for all time\\\nUniting us and watching with a softened, veiled glance as we\nMurder one another with serious faces on and\nSweat-sin to get disgusted and thin\\\nWe waste away woefully woe-begotten\nAsking where and why and where again in maggot-iterations\nTrawling across a 10-mile trash heap for 80 years, fully zoomed in.\nOr worse: feeling comfortable, loving it all\nThinking that we understand\nAnd feeling understood!\nWhat a woe-is-me neighborhood!\\\nMy moon is gorgeous as your dear heart\nAnd my dear hearts attachment to yours is\nA fragment of time\nA shard or a splinter in this robed\nJewel encrusted chandelier called here\nLet’s encircle one another for a glad, gifted lunar year\\\nSee what becomes misty and what becomes clear.\\\n\\",
+      "dedication": "",
+      "content": "My moon tonight is a lilting tusk\n    A midnight musk\n\nScatterings of dancing girls surround it like\nJewelry of history\nMotion caught in time and\nKept there for eternity\nFor Alexander and I to marvel at\n\nSeparated by centuries\nAs the dead stars and us are\nSeparated by life cycles of uncountable eons\nSleeping through existence\nOr slowly awake for all time\n\nUniting us and watching with a softened, veiled glance as we\nMurder one another with serious faces on and\nSweat-sin to get disgusted and thin\n\nWe waste away woefully woe-begotten\nAsking where and why and where again in maggot-iterations\nTrawling across a 10-mile trash heap for 80 years, fully zoomed in.\nOr worse: feeling comfortable, loving it all\nThinking that we understand\nAnd feeling understood!\nWhat a woe-is-me neighborhood!\n\nMy moon is gorgeous as your dear heart\nAnd my dear hearts attachment to yours is\nA fragment of time\nA shard or a splinter in this robed\nJewel encrusted chandelier called here\n\nLet’s encircle one another for a glad, gifted lunar year\n\nSee what becomes misty and what becomes clear.",
       "location": "March, 2015. Vienna, Virginia.",
-      "note": "Source: Unoriginal Prayers for Desperate Men (Nefisa UK, 2015). Out of print\\",
-      "categories": [],
-      "bookSource": null
+      "note": "Source: Unoriginal Prayers for Desperate Men (Nefisa UK, 2015). Out of print.",
+      "categories": [
+        "society",
+        "time"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034546996,
@@ -2738,11 +2850,15 @@
       "id": 1761034547996,
       "title": "Hard Winter",
       "author": "Yusuf Misdaq",
-      "content": "In the name of Goodness\nDesolation exists,\nas an avenue of access\nSmooth and supple\\\nDespair tickles\nBoredom suggests\nUnhappiness desires\\\nOn the other side of the misty pond is sheer\nJoy. Fantasy and bells that swing like\nDrunk doors flapping open and closed,\naaaand open !\nHeld on a string\nPulsing like a palace-ring-ring\nDelighting and trilling on bending beats that\nMake time and space mere footnotes of the play sheet\\\nTurn in, from desolation, despair, boredom and overcastness.\nTurn in one more turn to this place. It is closer than you think, and always\nhere. Do you not feel it at least once each day? One joy. One moment,\nwhere you can be in one spot and feel one yes? \\\nSearch for it within your diamond-day.\nExpand it beyond a moment.\nDiversify it and keep on investing in it.\n.Your portfolio expands .\\\nHeart is rising to the clouds, though you still look normal and regular.\nThe whispers of heaven are scars of love and memory\nYou are covered in them.\nLet us enter the House of the Lord.\nWhere is He?\nHe is \\",
-      "location": "Summer, 2013. New Jersey.",
+      "dedication": "",
+      "content": "In the name of Goodness\nDesolation exists,\nas an avenue of access\nSmooth and supple\n\nDespair     tickles\nBoredom      suggests\nUnhappiness      desires\n\nOn the other side of the misty pond is sheer\nJoy. Fantasy and bells that swing like\nDrunk doors flapping open and closed,\n                                                             aaaand open !\nHeld on a string\nPulsing like a palace-ring-ring\nDelighting and trilling on bending beats that\nMake time and space mere footnotes of the play sheet\n\nTurn in, from desolation, despair, boredom and overcastness.\nTurn in one more turn to this place. It is closer than you think, and always\nhere. Do you not feel it at least once each day? One joy. One moment,\nwhere you can be in one spot and feel one yes?\n\nSearch for it within your diamond-day.\nExpand it beyond a moment.\nDiversify it and keep on investing in it.\n\n       . Your portfolio expands .\nHeart is rising to the clouds, though you still look normal and regular.\n\nThe whispers of heaven are scars of love and memory\nYou are covered in them.\n\nLet us enter the House of the Lord.\n\n    Where is He?\n       \n          He is",
+      "location": "February, 2013. Baltimore, Maryland.",
       "note": "Source: Unoriginal Prayers for Desperate Men (Nefisa UK, 2015). Out of print\\",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "prayer"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034548996,
@@ -2758,11 +2874,15 @@
       "id": 1761034549996,
       "title": "Baggage",
       "author": "Yusuf Misdaq",
-      "content": "“Baggage” is the ugliest word in the English language.\\\nIf not, it’s up there. \\",
+      "dedication": "",
+      "content": "“Baggage” is the ugliest word in the English language.\nIf not, it’s up there.",
       "location": "August, 2015. New York City.",
-      "note": "Source: Unoriginal Prayers for Desperate Men (Nefisa UK, 2015). Out of print\\",
-      "categories": [],
-      "bookSource": null
+      "note": "Source: Unoriginal Prayers for Desperate Men (Nefisa UK, 2015). Out of print",
+      "categories": [
+        "lol"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034550996,
@@ -2778,21 +2898,120 @@
       "id": 1761034551996,
       "title": "Last breakup e-mail",
       "author": "Yusuf Misdaq",
-      "content": "The children emerge from the forest, holding medals that shine and a crowd quickly gathers around them.\\\n\"Where have you been?\" Ask the voices\\\nThe children, all smiling, put their medals away and tell a fantastic tale, of a dream that was a nightmare that was a dream, filled (and fueled) from start to finish with love. They speak of a wise and kind man and a beautiful young woman who looked after them, and other wild beasts and insects who formed stories and moments that would remain indelibly stamped upon their young free hearts forever; it had been an education in wonder and giving, they said. And this education would forever inform all of the serious and wondrous events that they would go on to partake in throughout their lives. \\",
-      "location": "January 24th, 2016. Honolulu, Hawai'i. \\",
+      "dedication": "NB",
+      "content": "The children emerge from the forest, holding medals that shine and a crowd quickly gathers around them.\n\n\"Where have you been?\" Ask the voices\n\nThe children, all smiling, put their medals away and tell a fantastic tale, of a dream that was a nightmare that was a dream, filled (and fueled) from start to finish with love. They speak of a wise and kind man and a beautiful young woman who looked after them, and other wild beasts and insects who formed stories and moments that would remain indelibly stamped upon their young free hearts forever; it had been an education in wonder and giving, they said. And this education would forever inform all of the serious and wondrous events that they would go on to partake in throughout their lives.",
+      "location": "January 24th, 2016. Honolulu, Hawai'i.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "love",
+        "sad"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034552996,
       "title": "Integrity",
       "author": "Yusuf Misdaq",
-      "content": "Grated carrots go bad quicker than carrots with their integrity still intact\\\nHouseplants aren’t as strong as the ones rooted in the planet\\\nIf you make it rain, you lose all of your money\\\nIt’s better to stay whole.\nRetire into a hole.\nFigure yourself\nInto silence\nGo untrue\nto the world\nand let all tablets\npowders and lotions\ndevolve back to the plant\nthe original green of health\nthe salver of all pains, whose\nscent\ncuts\ngrief\na thousand wishes and blowers\nthe dandelion pods of fur\nthe set free graceful birds\nand the prettiest milken words\nfall back into me\nthe pool in the cave\nthat leads back toward my center\ntake your root within me\nand stay there blooming in my\nshuffle core\nim not clever and\ni have no more energy\ni’m so sorry\nit can only be\nyou \\\nDec 22, 2023. Rosslyn, Virginia. \\",
-      "location": "",
+      "dedication": "",
+      "content": "Grated carrots go bad quicker than carrots with their integrity still intact\n\nHouseplants aren’t as strong as the ones rooted in the planet\n\nIf you make it rain, you lose all of your money\n\nIt’s better to stay whole.\nRetire into a hole.\nFigure yourself\nInto silence\nGo untrue\nto the world\nand let all tablets\npowders and lotions\ndevolve back to the plant\nthe original green of health\nthe salver of all pains, whose\nscent\n         cuts\n                 grief\n\na thousand wishes and blowers\nthe dandelion pods of fur\nthe set free graceful birds\nand the prettiest milken words\n\nfall back into me\nthe pool in the cave\nthat leads back toward my center\n\ntake your root within me\nand stay there blooming in my\nshuffle core\n\nim not clever and\ni have no more energy\n\ni’m so sorry\nit can only be\nyou",
+      "location": "Dec 22, 2023. Rosslyn, Virginia.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "water"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1761588421534,
+      "title": "At \"Domingo\" Station",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Thin cows graze gently on sparse shrubs\nSatisfied under the overcast sky \nThat holds the vast desert in place. \n\nI don't eat beef. \nI just hug their kind bodies and cry. \nWe just look out together at the river that's dry. \n\nThe land is losing\nGold destiny bruising\nA controlling cruise on\nAutopilot is what we choose. \n\nWe put all our brains and lives into computers and now we're empty. \nDry rivers. \n\nScared, dead old men\nAre rummaging around the slag heap with \nDry mouths and rock hard, chemical willies that\nWon't waver in the wind nor\nHelp us win.\n\n\"Give me more,\" he says, pointing to his mouth\nLast words. \n\nThe vision puts fear into me\nI hold the cow tighter\nAnd we look out, this time at the mountain\nAnd the misty mountains behind it\n\n      They are reachable\n      Like the idea of flying \n      \n      (If we can think of it. . . )",
+      "location": "September 12th, 2012. Rail Runner Train towards Santa Fe, New Mexico.",
+      "note": "",
+      "categories": [
+        "moving",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1761588622440,
+      "title": "Hollywood Blvd., before sunset",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Chime parlance\nCaregivers receive the \nDivine sustenance while\nOthers bemoan their luck\nImbalance; a famous Hollywood\nStar is bowed in humble prayer\nCompleted in a gratitude far broader \nThan the poor one with the headitude of a pitiful victim",
+      "location": "October 30th, 2019. Los Angeles, California.",
+      "note": "",
+      "categories": [
+        "love",
+        "prayer",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1761588682533,
+      "title": "After dhikr sitting alone in theater",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "So much joy \nChimera\n\nI was crying at the misty dawn\nGreen\n             arc of brick over green\nSomething tufted hedges and \nMist hanging like logic\nJesus fairmount chiming in on\nHorseback where the shadows have gone\nTrying and tumbleweed\nStarguts and cowbells",
+      "location": "May 4th, 2019. Gaithersburg, Maryland.",
+      "note": "",
+      "categories": [
+        "art"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1761588754179,
+      "title": "After dhikr sitting alone in the library",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Save me, when I am quiet on weekends  \nI hear it inside.  \nit’s a small everything \n\nIt’s my cells crying all at once \nSave me, they say \nAnd they are all crying \nIn Dari it’s called gereeyan \nAnd it sounds like it.  \n\nThis feeling has gone from my heart to my deeper heart.\nIt lies there in secrecy.  \nThe main heart has become an accomplice to lies \nIt protects the feeling that says save me \nIt hides it, covers it from me  \nTrying not to let me see  \nSo I stay running on  \nThis wheel and  \nNever make  \nThe call to  \nConfront \nMy past \nAnd say \nI’m sorry  \nI will always    \nLove you.",
+      "location": "April 6th, 2019. Gaithersburg, Maryland.",
+      "note": "",
+      "categories": [
+        "love",
+        "prayer",
+        "sad"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1761601027336,
+      "title": "Laughter is the God-Gene",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "a pearl in a species\n  tracks from a heart\n   to a no-distance heart\n\nConnect smoothly.\n\nUnfunnel to your Creator the megaphone\nDeclaration, \nsay, \"I came in flame\n        Balls of fire\n        And I burnt,\n\n        and you rotated me\n\nAnd now here I am again\nWhere I started and \n\nI Love you\n\nLav you\n\nLaff you\n\nLaugh.",
+      "location": "January 19th, 2023. Plane, Los Angeles, California.",
+      "note": "",
+      "categories": [
+        "lol",
+        "love"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1761601273463,
+      "title": "(Prayer for this place)",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Many people live here\nAdvertisements for Fatigue, Heart Palpitations\nStress, all !n bullet points¡!¡!¡!¡!¡!¡!\n                                                 .May they rest.\n\nMay pool tables have no hustlers crowded around\nMay they not have people hitting balls with big sticks and bragging about\neach others dicks like meat-men.\nMay pool tables be filled with light water that people gather around to jump into\nAnd may these portals not be located in dark halls under smokey lamps but\nOn the pulsing street corners of all neighborhoods in need.\n\nMay the portals take men where man can go.",
+      "location": "Summer, 2013. New Jersey.",
+      "note": "Source: Unoriginal Prayers for Desperate Men (Nefisa UK, 2015). Out of print",
+      "categories": [
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
     }
   ],
   "categories": [
