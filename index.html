@@ -756,20 +756,16 @@
             }
         }
 
-        function loadPoemsFromJSON() {
-            fetch('poems.json')
+       function loadPoemsFromJSON() {
+            // Add cache-busting timestamp to force fresh data
+            fetch('poems.json?v=' + Date.now())
                 .then(function(response) {
                     if (!response.ok) throw new Error('Failed to load poems');
                     return response.json();
                 })
                 .then(function(jsonData) {
-                    var saved = localStorage.getItem('poetry-eternal');
-                    if (saved) {
-                        data = JSON.parse(saved);
-                    } else {
-                        data = jsonData;
-                        saveData();
-                    }
+                    // Always use fresh data from JSON, ignore localStorage for poems
+                    data = jsonData;
                     state.dataLoaded = true;
                     render();
                 })
