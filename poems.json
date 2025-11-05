@@ -15,8 +15,9 @@
     },
     {
       "id": 1759819915467,
-      "title": "Echoing of Chasmic Vervours",
+      "title": "Echoes of Chasmic Vervour",
       "author": "Yusuf Misdaq",
+      "dedication": "",
       "content": "Firey hands touch the material and\nEverything burns up to\nImmediate flame \n\nThe game is gone and\nThe hand is played\n\nWhen the point of breathing at nothing comes \nYour chasmic vervour \nShimmers as a black patch upon a \nLava crawl \n\nEverything will melt unto \nPure nothing \n\nThe body a sumptuously devoured flake bidden bye\n\nA mind that made a million molehills is now one with the mountain\n\nA fountain of Divine lava \nThe final sentence of Gods love in this life\nThe crumbling meandering overwashing that must happen\nTo all forms\nBefore gas and spirit \nbegin to form\nAnew \n\nThe Godliness of us \nMarks us\n\nWe can’t go quietly \nWe are so Divine we \nWill never shut down\n\nLike some silly line \nA child drew \nWe keep on flowing \nFrom river to sea \n     and\nFrom sea we \nAre siphoned off into \nEternity",
       "location": "September 30th, 2025. Historic Filipinotown, Los Angeles",
       "note": "",
@@ -25,7 +26,8 @@
         "prayer",
         "water"
       ],
-      "bookSource": null
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1759820195759,
@@ -1998,15 +2000,18 @@
       "id": 1761034454996,
       "title": "Scarcity",
       "author": "Yusuf Misdaq",
+      "dedication": "For Mark Zuckerburg the pauper",
       "content": "Prime members get anointed\nWith special oil\n\nYour babies will get light\nAnd discounted access to water\n\nHurry now sign up\nOffer period ends soon",
       "location": "September 22nd, 2002. California",
       "note": "",
       "categories": [
-        "water",
-        "light"
+        "light",
+        "lol",
+        "society",
+        "water"
       ],
       "bookSource": null,
-      "dedication": "For Mark Zuckerburg the pauper"
+      "comments": []
     },
     {
       "id": 1761034455996,
@@ -2127,11 +2132,16 @@
       "id": 1761034473996,
       "title": "DTLA",
       "author": "Yusuf Misdaq",
+      "dedication": "",
       "content": "Chime in. check sideways.\n  Palley around with those\n    Big shots from outside of town.\n         A crown, you'll get your dirty hands on.\n                A shimmering Tuesday way\n         To do what you do, yet again\n    Face pressed up against the damaged glass\n  A corner turned, a new glint in the angle\nWhite truths form today\n                    So clear you wonder how\n               They didn't present themselves to you sooner\n\nYou want to shout out to the world\n   That you've discovered the cure\n  And resolved the equation of why\nStreets get dirty and why dogs can\nSense sadness and everything under\nThis new sun.\n\n                      All of the secrets\nYours for a temporary\n   Dissolving moment.",
       "location": "November 26th, 2022. California.",
       "note": "",
-      "categories": [],
-      "bookSource": null
+      "categories": [
+        "light",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034474996,
@@ -3422,7 +3432,9 @@
       "content": "May; the blossoms burst.\nYou are made of April.\nIt's fresh, warm breeze\nBlows through your forgiving figure.",
       "location": "2006. London.",
       "note": "",
-      "categories": [],
+      "categories": [
+        "love"
+      ],
       "bookSource": null,
       "comments": []
     },
@@ -3777,6 +3789,485 @@
         "title": "Into Solidity",
         "amazonUrl": "https://a.co/d/4POL2Tq",
         "coverImage": "Into Solidity.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762326172466,
+      "title": "First Boy, Butterfly Born",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Here I am \nSat, stone\n\nA diamond-stud\nPinned into the soft-grass\n\nThe balance-waves of flux-life\nAre stasis-like\nAll pushing and pulling with equality \n.Not lonely.\n\nThe lovely winds\nFold aloft above\nFor their own happiness\n\nFalling a little on me \nAs after-thought\n\nIt’s in this position\nWith the sun on my hair\nThat my egg is cracked\nAnd majesty evaporates\nSeeping sleepily with lulled pleasure \nAcross the waiting town",
+      "location": "Spring, 2008. Brighton.",
+      "note": "",
+      "categories": [
+        "light"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/iAUVPmk",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762326279044,
+      "title": "A Deep Feeling of Bliss",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "The feeling is accompanied by a \nDelicate flutter in the stummy *\nAs if you are nervous\nAt the prospect of goodness occurring\n\nThe body is somehow unpeaceful \nThrough many veils\nThere is a dulled jitteriness\n\nIs it the squeezing\nOf the soul\nAs it tries to sneak out of the body?\n\nCreep out without me knowing \nIn the late afternoon?",
+      "location": "",
+      "note": "",
+      "categories": [
+        "light",
+        "prayer",
+        "time"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/iAUVPmk",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762326369285,
+      "title": "Remember to look up to the big big sky",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Endless possibility which is constantly in motion \nAnd at night time when it twinkles\nEverything open and waiting\nInviting you to take a step\n\n\n                   Step in \n                 Out there\n\n       The earth will shake once you’ve begun to touch it.",
+      "location": "Spring, 2008. Brighton",
+      "note": "",
+      "categories": [
+        "moving",
+        "society"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "q",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762326545687,
+      "title": "Springday",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Delicate day, 11 o’clock\nSun living in peace with my skin\n\nSpring. Easter Holiday\nNo time limits, no deadlines\n\nI awake early, even though I don’t have to \nAnd the day seems expansive, open and long\n\nInside my heart there is a gentle clock that ticks only forwards. It doesn’t know how much time remains; it only dreams how much is yet to come. Forwards it moves, not so much ticking as surging, silently, in peace it swims gently. And you hear the folding water, calmly rippling and the droplets trickling.\n\nSoon a fact, a face or a facet of something will stir me back into the mixture of Earth. I shall be diluted down amidst the swirls of problem and pasture. But again and again my soul pushes for its place at the new peak, where in purity it settles and its true colours become.\n\nNow I hear a drill. It’s time for housework.",
+      "location": "Spring, 2008. Brighton.",
+      "note": "",
+      "categories": [
+        "time"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/iAUVPmk",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762326636139,
+      "title": "Idea",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "My mind es mi mundo. Solipsism.\n\nThe brain floats in the skull \nFloats in fluid.\nThat’s a fact.\nThere is no pressure on it. \nIt’s not in a cage.\nIt is free.\n\nThe lack of pressure\nThe fact that it floats\nProbably gives a good indication as to why it is capable of such magnificence.\nI would like, therefore, to have my entire body float. \n\nI will look into that.",
+      "location": "",
+      "note": "",
+      "categories": [
+        "body",
+        "lol"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/iAUVPmk",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762326757527,
+      "title": "Horizon life",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Where there lies a horizon, and on it a leaving light \nThere, on that positive wave is where you must place your life\n\nWherever things slowly drag and fade away \nThat’s where to invest.\n\nLet these days fall off your shoulders and let them leave. \nLet them roll off you like shower droplets\nWhen your eye is on the sun from the window\nLet the showers wash over you\n\nWith each polishing moment of break and sobriety \nEach soliloquy\nEach delicately phrased thought and\nEach forgotten one too\n\nWe will be thrust into the great darkness \nWhere we shall remain until \nThe Great Piecing\n\nWhen that black cellar is illuminated",
+      "location": "Spring, 2008. Brighton.",
+      "note": "",
+      "categories": [
+        "light",
+        "time"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/iAUVPmk",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762326897673,
+      "title": "Regarding the Winter son, warmly",
+      "author": "Yusuf Misdaq",
+      "dedication": "For Dindana S. & Mika Yamagata",
+      "content": "Sun tinted lullaby\n\nOh, the window sill got warm when the \nParent put her hand on it\n\nWalking into the warm silent room \nThick, soft, socks\n                                 Clean, shining wooden floor\n\nStaring at her son, asleep by the window \nHandsome face and clean hair with the \nSleeping smile of a perfect child\n\nAll that she knew - felt from life \n\nNow looking at him as son\n\nHer beautiful son",
+      "location": "Spring, 2008. Brighton",
+      "note": "",
+      "categories": [
+        "body",
+        "light",
+        "star"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/iAUVPmk",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762327011139,
+      "title": "Second Butterfly",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "A flight \nLite flite \nTakes kite\n\nForget close-ups of brownies\nWith warm chocolate steaming from the centriheart\n\nForget dark wooden interiors \nWarm condensation\n\nForget the word ‘succulent’ or ‘wholesome’ \nForget yeast, bonded bread in all its forms\n\nWhatever a Clearwater Fish makes you feel like \nImagine that feeling\n\nUp in the air",
+      "location": "Spring, 2008. Brighton.",
+      "note": "",
+      "categories": [
+        "light",
+        "water"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/iAUVPmk",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762327171811,
+      "title": "A Completely Uneventful Day (Fajjr’s Reward)",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Oh dear Lord, I am excited\n\nPresent on this marching day of rolling, thrilling news \n\nA day which started with\nDiscipline and dawn\n                                      is concluding with\nDeliverance and euphoria\n\nI’m so thrilled to be a part of this world, to take place in the\nstreet scenes for fleeting moments and make smiling eye- \ncontact with shaking old men and give my seat up for all \nflavours of wonderful women and hitch a ride on the piggy- \nback of any child at play.\n\nI couldn’t be happier to be swinging low under the \nDay-time half-moon.\nTo be tripping across the arc\nEternally\nRainbow snowing\nAnd skiing through the supple and willing air \nInterceding and confronting\nEvery single atom\n\nI don’t know what the silent explosion of future holds in her \nsecretive, gathering arms. I see only the vague reflections of \nlight shimmering up onto her body. I can’t imagine the taste \neither, but despite that, I keep on biting and licking the \noxygen around me. As if this life were unreal and dreams \nmade more sense. \n\nCan’t stop myself.",
+      "location": "",
+      "note": "",
+      "categories": [
+        "light",
+        "time"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/iAUVPmk",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762327314360,
+      "title": "The Jiant Inside",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "I’m a donkey rubbing itself up against a warm radiator \nTrying to be happy\n\nI’m a fat man in love with hope as the sun rises \n\nIt’s a new day. It’s a new life\n\nI’m a smile exploding all over the dead bystanders \nBringing them back to life\n\nMassage yourself\nBring out your dandelion\n     Cultivate your full potential \n\nIt’s waiting for you\n\n* \n\nIn your written tapestry\n    (Which doesn’t need you to believe in it)\nThere are buses leaving bus stops\nHeading to Rajasthan’s and Zanzibar’s and \nNewfoundland’s and Godthab’s and \nWellington’s... Of the mind\n\nEach bus hopes in its heart that you are on it\nBut if not there will be plenty more coming along\n\n            Buses of Opportunity are \n            Blood cells of Destiny",
+      "location": "",
+      "note": "",
+      "categories": [
+        "lol",
+        "moving",
+        "time"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/iAUVPmk",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762327402982,
+      "title": "Dynamism of Man",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Retina opens and what floods in?\n\nI tell you it’s a blue light\nI tell you it’s a soft yellow\nI tell you tonight it’s a moon as bright as the sun\n\nAnd it makes music swirl and ghost. The music bounces off \nthe walls of our heart chambers, burning itself up in energy \nand fizzing into blood which speeds like fast cars through our \nphysical inches\n\nThe dynamism of man is this:\n      I’m standing perfectly still and yet I feel as though the \n      world belongs to me.",
+      "location": "",
+      "note": "",
+      "categories": [
+        "light",
+        "moving"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/iAUVPmk",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762328172303,
+      "title": "Winter Sunset over Ocean from promenade, une impression",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "1\nSurleft. Makosh. Swool.\nI take turns in the wind\nWhat’s left of me disperses\nIn a twinkle of birds that’s soon to be stars\nIn the maddening colour of love across the sky that brings people with purple and orange flaming hearts out to play.\nAnd there isn’t much left to say.\n\n2\nCross my quilt.\nPretty girls pose in front of it\nAs if it’s a landmark\n                                       .A voyaging lava-spill landmark.\nAnd their boyfriends blow them flash-kisses\nA couple of mega-pixels of love or happiness-transient.\n\nAn overpowering other half of the sky\nBlue and adult\nMore dubious and powerful\nCasting an unbelieving eye to The Magic Orange\n\nThe magic-half now looks to be dying\nI can see it narrowing on top and bottom\nThe encroachment of the dark blue\nIs like watching Bob Marley’s last few breaths\nOr the end of a bedside candle\nBroadcasted in 4-D to the hearts of a country\n\nAnd, should it be incumbent upon us to ask what the purpose of it really is?\n     This daily painting of fire in love with its own colours\n                 (Licking and burning and framing itself)\n\nWhy?\n\nI’m sitting behind everyone\nWatching them watching it\nWatching them all come together and rendered speechless\n        Bullshitless\nAnd full’d with the Wonder-Trance\n \n3\nLast batch of birds, 20 or so\nSwoon a small swoon over the West Pier.\n\nAnd now I notice the artificial lights\n                   And the drone of cars\n              By the promenade\n\nFreezing wind\nA very young father messily pushes a pram along\nHe wears white trainers and a huge adidas logo on his back\nA sad child walks sullenly behind him\nThe mother is a blonde, walking well ahead of all of them\nShe is not interested.\nShe has her two arms wrapped around her own damn self.\n\nThe father has bought a brand new DVD player and seated it in the child’s pram.\nHe shouts at the sulking child, who he is now attempting to grab and drag along, like a sack of unwilling sausages.\n“That’s what you get for fighting!” He says accusingly to the four-year old, as if the two of them were bickering school-friends\n\nWalking off hurriedly into the red light to escape the cold.",
+      "location": "January 26th, 2007. Brighton.",
+      "note": "Source: Brighton Streets (Nefisa UK, 2010). Out of print.",
+      "categories": [
+        "light",
+        "society",
+        "time"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1762328399788,
+      "title": "Aliving",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "1\nWherefore art Thou?\n\n2\nI’ve said the word ‘before’\n\nIn my head enough times\nAnd now it rhymes with silence and has lost all meaning\n\nBefore is not yesterday\nBefore is when the whistle in your heart had a different melody\n\n3\nYes is not Yes. It is breathing. And believing.\n\n4\nIt is generally accepted that one cannot expect anything to grow if one waters a patch of desert sand. The same is not expected of fertile soil in greener areas.\n\nHaving said that, so-called atheists become believers,\nSo-called believers become atheists.",
+      "location": "Winter, 2006. London.",
+      "note": "",
+      "categories": [
+        "time"
+      ],
+      "bookSource": {
+        "title": "Into Solidity",
+        "amazonUrl": "https://a.co/d/b5Pebq9",
+        "coverImage": "Into Solidity.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762328586701,
+      "title": "Weirdly unpoetic poem about a cherry",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "A contrite looking cherry fell off the tree\nAs if in apology\nFell directly into my pocket unbeknownst to me\nAnd it made me\nBy cherry osmosis\nWalk to the river\n\nThe river flowed sadly\nI think, ‘I grew up by the sea\nThis river is beneath me\nA pathetic still stream\nLittle and second\nOnly to a pond in its meekness\nThe water swelling up like\nInflamed ankles in this desperate place.\n\nI used to be the dream of the\nWild crashing ocean shores\nThe English grey sea\nAlways a part of me.’\n\nThe cherry glows inside me\nMaking me turn the page on this misery\nI look up and see what I know I’ve missed\nA sky above my eye\nA mist upon my wrist\nA crunching twiglet\nA bird crying like a piglet\nSome stray life\nThough distant\nStill around me. \n\nThis dead land of money and toxicity\nWhere no one is allowed to be happy\nThis dire flat nothingness\nOf people who talk like the culture\nHas nothing for me\n\nMy hand to escape the toxic gas\nSeeks for sanctuary in the pocket\nWhat’s this, I say, a shiny presence touching back at me\nI take it out and inspect it \n\nA cherry ! I say\nA cherry !\nWhere did that come from?",
+      "location": "March 1st, 2019.",
+      "note": "",
+      "categories": [
+        "lol",
+        "water"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1762328982841,
+      "title": "Solar Events",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Jesus has spanned all three of the religions\nLike wheat and milk\nLike sky and silk\nLike the un-cuffed marriage of\nChild and wonder. \n\nMirror beams go\n   with distinction upon\n      the floral coordinates\n\nMoonfalls in sunsets give\n   cause for international celebration\n\nNews footage of men and women with children gathering at a mountain to look at the sky with specialized eyes making you think we could come together like this all the time. \n\nGathered in clumps of awe,\nFully relinquished and acknowledging finally\nThat we have nothing to offer, and\nThat all gain is in the seeking.",
+      "location": "2020. Airport.",
+      "note": "",
+      "categories": [
+        "prayer",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1762329722264,
+      "title": "Brighton Seagulls",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "The seagulls in this town are lambasted and lampooned on a regular basis by the complaining, comfortable people.\n\nWhat the people don’t understand (because they are no longer poets) is that the seagulls have been placed here as mirrors unto ourselves.\n \nWe neglect and fail to appreciate our Sea.\nSo the seagulls roam through our city and our streets.\n\nWe turn everything into commodities and spend our time chasing after our latest buyable desires.\nSo the seagulls run us down outside the shops\nAnd do a smash-and-grab-job on our fast food.\n\nWe sit at home and consume indefinitely. Too much.\nSo the seagulls peck open the black bin-liners outside our houses.\nThey spill our guts out all over the street to shame us.\n\nBut we don’t get it.\nWe just curse them and buy better, bigger bins.\n\nOur reasons for living, it seems\nAre to eat\n                and shit\n                             and purchase\n                                                   and complain \nThe seagulls are like us\n                                         but they respect a good sunset",
+      "location": "Spring, 2008. Brighton.",
+      "note": "Source: Brighton Streets (Nefisa UK, 2010). Out of print.",
+      "categories": [
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1762329898365,
+      "title": "Like a Diamond in the Sky",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "I dare to dream\n\nThat what you are is what I dream.",
+      "location": "",
+      "note": "Source: My Love is for You (2007). Unpublished collection.",
+      "categories": [
+        "love"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1762330070181,
+      "title": "Seven (txt. msg)",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "good morning beautiful body\ngood morning beautiful heart. \n\nur a gemstone chandelier sparkler in my eyes.\nso when ur sad it hurts me too, \n\nbut today's a good day,\na good new, unbiased day,\nnot siding with anyone or anything,\nhaving no agendas, and not expecting\nanything from you. \n\nthe day is your lover, it's just happy to be with you\n \nas you are. tag along as you do what you do.\n\ngo out there and impress yourself.\nbeautiful heart.",
+      "location": "2006. Brighton.",
+      "note": "Source: My Love is for You (2007). Unpublished collection",
+      "categories": [
+        "love"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1762330213802,
+      "title": "Increasing Presence",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Time since it’s going\nA treasured thing\nI like to smile now\nBefore plunging\nWhile I like to drown myself in the gorge\nI get better at rising\nSaying yes like the evaporating water that\nReturns up to Heaven.",
+      "location": "March 3rd, 2023. Kauai, Hawaii.",
+      "note": "",
+      "categories": [
+        "time",
+        "water"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1762330626157,
+      "title": "Airport",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Fruit berries falling on me\nlike soft rain\n\nWho is here to collect the rent I'm willing to pay?\nWho wants to take what I want to give?\n\nA smile I've been wearing all day.\nI've been walking around town\nWalking around this airport being\nThe opposite of a thief\nOffering to give what is mine to others. \n\nA boomerang goes to Australia, but it comes back to you. \n\nThe sweat that falls into the soil will water the seed that your children will see. \n\nThere's no stop sign that isn't secretly a go sign. \n\nThere's no end to the road that doesn't become a runway.\n\nThere's no take-off that won't let you down, either. \n\nSo stay in the middle of the river,\nwhere water falls and where you are carried away.\n\nHold onto a branch\nand don't let go until it creaks and\nSnaps when God\nsaid, \"It's time\nto go.\"\n\n*\n\nThe little flowers flow\nThe wind blows\nThe gentle river goes\nMother sun fuels with love.",
+      "location": "Possibly 2020. Airport.",
+      "note": "",
+      "categories": [
+        "moving"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1762331210335,
+      "title": "Sentence",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Semantic fields of green leaves of beauty",
+      "location": "September 11th, 2001. Gaithersburg, Maryland.",
+      "note": "",
+      "categories": [
+        "moving"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1762331497679,
+      "title": "Freshlands",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Pine averoes \n  Septimal changes\n     The rigid stormer \n          Ferrous derrida\n              Timpletown chahogness\n          Fug-fug baroness\n      My unholy burnishings\n                papa-pepper simmering",
+      "location": "2nd March 2023, Kauai, Hawai'i.",
+      "note": "",
+      "categories": [
+        "art"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1762331570052,
+      "title": "Sitting on a bench after Midnight",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "One bountiful tree after another\nFalls off into the voidswirl\nOnly to release itself \nAs feelings",
+      "location": "Late April, 2009. Washington D.C.",
+      "note": "",
+      "categories": [
+        "moving"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1762331826124,
+      "title": "God’s people",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Galaxy brown fades volume serene hum human motion calmly becoming and humming and strumming and singing and bringing it all to the moment, where? The moment in heart, the essence of heart, the tiger of expression, the courage of truth, which is wheat. The courage of wheat and the toil of the truth-tellers who nurture it, perfumed sweat spinning away from their wise, raising foreheads, from their long black hair, back into the brown earth of their brown skin. Their fertile bodies make birth earth and surf.",
+      "location": "",
+      "note": "",
+      "categories": [
+        "moving",
+        "society"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/1fa2wGo",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762332192014,
+      "title": "Untitled",
+      "author": "Yusuf Misdaq",
+      "dedication": "For Lawrence ‘Ytzakh’ Braithewaite, for Ishaq",
+      "content": "Pile it on!\n\nKeeeeeeeep it comin’ now!\nLeft right Left right!\nMONDAY TUESDAY WEDNESDAY THURSDAY FRIDAY SATURDAY SUNDAY!\n\nPASS ME THE SPOON!\n\nTradition! Living tradition!\n\nWhere do we go though\nWhen we get subtle and humble and quiet and have time to waste on imaginings?\n\nWhich curling crease in the cotton trouser leg\nDo we run up?\nSlime and wriggle up?\nShadow and silently\nFaceless and thoughtfully\n\nSuch questions present themselves to you when\nOnce the mirror has responded with a gormless shrug You are forced to turn away\nAnd ask yourself inwards\nWith palms facing you and\nNose-vision on both sides,\n“So... What am I, then?”\n\nYou are a random day off in the Winter\nA bunking off from school afternoon\nSitting in a midnight highway\nLying down with a backwards moon on your Upwards cheeks\nLike a teardrop \n                              Below your eyes\nOr a mouthful\n\nFruit that nobody knows about \nSomewhere underground, in a \nCypriot treasure-cave.\n\n   You are a dead friend hung \n   Who nobody knew\n   Who died in a vacuum where nobody grew And sadness should be stifling\n   But really it’s just stunted\n\n   And sadness should be stifling\n   But really it’s just shooed\n   Away for today and the next day too  \n   Wait for the feeling to catch up to you.\n\n   When it does it will satisfy\n   Black day= good (for it pacify) \n   Make full sense,   so  no  analyse\n   Stone true life, still          paralyzed\n\nBut the subtlelight haze haz\nWholes in it\nSize of white dustdots in window sunlines \nSeparated possibilities\nPanicles of perfect dreams\n\n.Ready to rain true.\n\nDreamscoops of half-moons like \nCurling ice cream\n\nFlirting upwards and slowly singing: \n“Maybeee!”\n\nYou never know!",
+      "location": "",
+      "note": "",
+      "categories": [
+        "lol",
+        "sad"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/1fa2wGo",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762332336846,
+      "title": "If (The merchant of tenderness)",
+      "author": "Yusuf Misdaq",
+      "dedication": "For Prince Rogers Nelson",
+      "content": "If I could, I’d try to sell Mandarin newspapers on the \nBeaches of Yemen\n\nIf I could, I’d ride elephants slowly through the beastly \nshopping malls of Houston, Texas\nSeated on a piece of white canvas which drapes down its \nside and reads, ‘believe’\n\nIf I could, I would marry you right here and now, live a full \nlifetime with you, smooth over every single rough edge and \ndeliver you to absolute happiness\n\nIf I could I would fill all the huge modern glass buildings \nwith sea-water and tropical fish and slow, smiling whales\n\nI’d turn right forever and make funny faces at all the children \nI meet along the way\n\nI’d make pockets in ties and heaters in shoes \nI’d make rockets in eyes and whirlpools in you\n\nIf I could, I’d die right now and go straight to heaven",
+      "location": "",
+      "note": "",
+      "categories": [
+        "art",
+        "music"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/6FEkglI",
+        "coverImage": "Butterfly Gate.png",
+        "year": "2011"
+      },
+      "comments": []
+    },
+    {
+      "id": 1762332525332,
+      "title": "Der Lebenskünstler",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Concern yourself with creating \n   Collect things and set them free\n\nCo-operate with everybody \n\nSubjugate your self & remain silent!\n\nKnow nothing. \nExpect nothing.\n\nKeep on falling down\n                                          Black caves\n Alone\n                   And with loves\n\nHave no standards\nRemove your judgements\nShed your morals\n\nThey will still be there for you when you need them\n\nConcern yourself with crying\nCapturing \n                      Air\nOf all colours and flavours\nWith your loose net of heartellect\n\nAccept that you're a fake. \n\nAnd don't be so pleased with the fact that you're\nSo wonderful. \n\n\nGet in between your dreams and your\nDays\n\nAnd listen to the strange things your body \nSays",
+      "location": "",
+      "note": "",
+      "categories": [
+        "art",
+        "love"
+      ],
+      "bookSource": {
+        "title": "The Butterfly Gate",
+        "amazonUrl": "https://a.co/d/6FEkglI",
+        "coverImage": "Butterfly Gate.png",
         "year": "2011"
       },
       "comments": []
