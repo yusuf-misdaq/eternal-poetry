@@ -747,8 +747,18 @@
                 <div id="category-chips"></div>
             </div>
 
-            <div class="admin-section">
+         <div class="admin-section" id="poems-section">
                 <h2>All Poems (<span id="poem-count">0</span>)</h2>
+                <div class="poem-search-container">
+                    <input 
+                        type="text" 
+                        id="poem-search" 
+                        class="poem-search-input" 
+                        placeholder="Search poems by title, author, or content..."
+                        oninput="filterPoems()"
+                    >
+                    <button class="jump-button" onclick="jumpToBottom()">↓ Jump to Bottom</button>
+                </div>
                 <div id="poems-list"></div>
             </div>
 
@@ -1497,6 +1507,53 @@ function closeModal() {
             localStorage.setItem('poems-viewed', '0');
             modalShown = false; // Allow tracking again
         }
+
+// Search and navigation functions
+        function filterPoems() {
+            var searchTerm = document.getElementById('poem-search').value.toLowerCase();
+            var poemItems = document.querySelectorAll('.poem-list-item');
+            var visibleCount = 0;
+
+            for (var i = 0; i < poemItems.length; i++) {
+                var item = poemItems[i];
+                var text = item.textContent.toLowerCase();
+                
+                if (text.indexOf(searchTerm) !== -1) {
+                    item.classList.remove('hidden-by-search');
+                    visibleCount++;
+                } else {
+                    item.classList.add('hidden-by-search');
+                }
+            }
+
+            // Update count to show filtered results
+            if (searchTerm) {
+                document.getElementById('poem-count').textContent = visibleCount + ' of ' + data.poems.length;
+            } else {
+                document.getElementById('poem-count').textContent = data.poems.length;
+            }
+        }
+
+        function jumpToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function jumpToBottom() {
+            var poemsList = document.getElementById('poems-list');
+            poemsList.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        }
+
+        // Show/hide jump to top button on scroll
+        window.addEventListener('scroll', function() {
+            var jumpBtn = document.getElementById('jump-to-top');
+            if (jumpBtn) {
+                if (window.pageYOffset > 300) {
+                    jumpBtn.classList.add('visible');
+                } else {
+                    jumpBtn.classList.remove('visible');
+                }
+            }
+        });
         
         init();
     </script>
@@ -1527,5 +1584,6 @@ function closeModal() {
             <button class="modal-not-now" onclick="closeModal()"></button>
         </div>
     </div>
+    <button class="jump-to-top" id="jump-to-top" onclick="jumpToTop()">↑ Top</button>
 </body>
 </html>
