@@ -1509,16 +1509,27 @@ function closeModal() {
         }
 
 // Search and navigation functions
-        function filterPoems() {
+function filterPoems() {
             var searchTerm = document.getElementById('poem-search').value.toLowerCase();
             var poemItems = document.querySelectorAll('.poem-list-item');
             var visibleCount = 0;
 
             for (var i = 0; i < poemItems.length; i++) {
                 var item = poemItems[i];
-                var text = item.textContent.toLowerCase();
+                var poem = data.poems[i];
                 
-                if (text.indexOf(searchTerm) !== -1) {
+                // Search through all poem fields
+                var searchableText = [
+                    poem.title,
+                    poem.author,
+                    poem.content,
+                    poem.location || '',
+                    poem.note || '',
+                    poem.dedication || '',
+                    poem.categories.join(' ')
+                ].join(' ').toLowerCase();
+                
+                if (searchableText.indexOf(searchTerm) !== -1) {
                     item.classList.remove('hidden-by-search');
                     visibleCount++;
                 } else {
