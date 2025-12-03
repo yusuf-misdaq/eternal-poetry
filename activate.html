@@ -46,7 +46,7 @@
             margin: 0 auto 3rem auto;
         }
 
-        .code-input {
+        .email-input {
             width: 100%;
             padding: 1rem;
             font-size: 1.1rem;
@@ -58,7 +58,7 @@
             transition: border-color 0.3s;
         }
 
-        .code-input:focus {
+        .email-input:focus {
             outline: none;
             border-color: #DAA520;
         }
@@ -113,6 +113,16 @@
         }
 
         .error-message.show {
+            display: block;
+        }
+
+        .loading {
+            display: none;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .loading.show {
             display: block;
         }
 
@@ -206,8 +216,8 @@
     <main>
         <h1>🎉 Welcome, Patron!</h1>
         <p class="instruction">
-            Check your email for your unique activation code.<br>
-            Enter it below to unlock lifetime access.
+            Enter the email address you used for your purchase.<br>
+            We'll verify your payment and unlock lifetime access.
         </p>
 
         <div class="activation-form">
@@ -215,15 +225,18 @@
                 ✓ Activation successful! Your access has been saved forever.
             </div>
             <div class="error-message" id="error-message">
-                Invalid code. Please check your email and try again.
+                We couldn't find a payment for that email. Please check the email address or contact support.
+            </div>
+            <div class="loading" id="loading">
+                Verifying your purchase...
             </div>
             
             <input 
-                type="text" 
-                id="code-input" 
-                class="code-input" 
-                placeholder="Enter your code here"
-                autocomplete="off"
+                type="email" 
+                id="email-input" 
+                class="email-input" 
+                placeholder="Enter your email address"
+                autocomplete="email"
             >
             <button onclick="activateAccess()" class="forever-button" id="activate-btn">
                 Forever!
@@ -255,60 +268,90 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // List of valid patron codes - UPDATE THIS LIST as you assign codes
-        var validCodes = [
-            'wildrose-midnight',
-            'moonlight-verse',
-            'eternal-ocean',
-            'silent-prayer',
-            // Add more codes as you assign them to patrons
-        ];
+        // Your Cloudflare Worker URL
+        var WORKER_URL = 'https://poetry-stripe-validator.astralab33.workers.dev';
 
-        function activateAccess() {
-            var codeInput = document.getElementById('code-input');
-            var code = codeInput.value.trim().toLowerCase();
+        async function activateAccess() {
+            var emailInput = document.getElementById('email-input');
+            var email = emailInput.value.trim().toLowerCase();
             var successMsg = document.getElementById('success-message');
             var errorMsg = document.getElementById('error-message');
+            var loadingMsg = document.getElementById('loading');
             var downloadsSection = document.getElementById('downloads-section');
             var activateBtn = document.getElementById('activate-btn');
 
             // Hide previous messages
             successMsg.classList.remove('show');
             errorMsg.classList.remove('show');
+            loadingMsg.classList.remove('show');
 
-            if (!code) {
-                errorMsg.textContent = 'Please enter your activation code.';
+            if (!email) {
+                errorMsg.textContent = 'Please enter your email address.';
                 errorMsg.classList.add('show');
                 return;
             }
 
-            // Check if code is valid
-            if (validCodes.indexOf(code) !== -1) {
-                // Save to localStorage
-                localStorage.setItem('patron-code', code);
-                localStorage.setItem('is-patron', 'true');
-                
-                // Show success
-                successMsg.classList.add('show');
-                activateBtn.disabled = true;
-                activateBtn.textContent = 'Activated ✓';
-                codeInput.disabled = true;
-
-                // Set up download links with the patron's code
-                setupDownloadLinks(code);
-
-                // Show downloads section
-                setTimeout(function() {
-                    downloadsSection.classList.add('show');
-                    downloadsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 500);
-            } else {
-                errorMsg.textContent = 'Invalid code. Please check your email and try again.';
+            // Basic email validation
+            if (!email.includes('@') || !email.includes('.')) {
+                errorMsg.textContent = 'Please enter a valid email address.';
                 errorMsg.classList.add('show');
+                return;
+            }
+
+            // Show loading
+            loadingMsg.classList.add('show');
+            activateBtn.disabled = true;
+            activateBtn.textContent = 'Checking...';
+
+            try {
+                // Call Cloudflare Worker to validate against Stripe
+                var response = await fetch(WORKER_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email: email })
+                });
+
+                var data = await response.json();
+                loadingMsg.classList.remove('show');
+
+                if (data.valid) {
+                    // Payment verified! Save to localStorage
+                    localStorage.setItem('patron-email', email);
+                    localStorage.setItem('is-patron', 'true');
+                    
+                    // Show success
+                    successMsg.classList.add('show');
+                    activateBtn.textContent = 'Activated ✓';
+                    emailInput.disabled = true;
+
+                    // Set up download links
+                    setupDownloadLinks(email);
+
+                    // Show downloads section
+                    setTimeout(function() {
+                        downloadsSection.classList.add('show');
+                        downloadsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 500);
+                } else {
+                    // Payment not found
+                    errorMsg.textContent = "We couldn't find a payment for that email. Please check the email address or contact support.";
+                    errorMsg.classList.add('show');
+                    activateBtn.disabled = false;
+                    activateBtn.textContent = 'Forever!';
+                }
+            } catch (error) {
+                loadingMsg.classList.remove('show');
+                errorMsg.textContent = 'Something went wrong. Please try again or contact support.';
+                errorMsg.classList.add('show');
+                activateBtn.disabled = false;
+                activateBtn.textContent = 'Forever!';
+                console.error('Activation error:', error);
             }
         }
 
-        function setupDownloadLinks(code) {
+        function setupDownloadLinks(email) {
             var baseUrl = 'https://yusuf-misdaq.github.io/eternal-poetry/books/';
             var books = [
                 { id: 'book-1', file: 'Into-Solidity.pdf' },
@@ -320,14 +363,17 @@
                 { id: 'book-7', file: 'Unoriginal-Prayers-for-Desperate-Men.pdf' }
             ];
 
+            // Simple hash of email for download tracking
+            var hash = btoa(email).slice(0, 10);
+
             for (var i = 0; i < books.length; i++) {
                 var link = document.getElementById(books[i].id);
-                link.href = baseUrl + books[i].file + '?access=' + code;
+                link.href = baseUrl + books[i].file + '?access=' + hash;
             }
         }
 
         // Allow Enter key to submit
-        document.getElementById('code-input').addEventListener('keypress', function(e) {
+        document.getElementById('email-input').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 activateAccess();
             }
@@ -335,14 +381,14 @@
 
         // Check if already activated
         window.addEventListener('load', function() {
-            var savedCode = localStorage.getItem('patron-code');
-            if (savedCode) {
-                document.getElementById('code-input').value = savedCode;
+            var savedEmail = localStorage.getItem('patron-email');
+            if (savedEmail) {
+                document.getElementById('email-input').value = savedEmail;
                 document.getElementById('success-message').classList.add('show');
                 document.getElementById('activate-btn').disabled = true;
                 document.getElementById('activate-btn').textContent = 'Already Activated ✓';
-                document.getElementById('code-input').disabled = true;
-                setupDownloadLinks(savedCode);
+                document.getElementById('email-input').disabled = true;
+                setupDownloadLinks(savedEmail);
                 document.getElementById('downloads-section').classList.add('show');
             }
         });
