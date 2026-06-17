@@ -2852,11 +2852,13 @@
       "id": 1761034532996,
       "title": "Human Feelings",
       "author": "Yusuf Misdaq",
-      "content": "Blankets of biographies\nBooks a million\nEnough to sink a world\nThe throbbing weight of\nHuman feelings\nEnough to bury us all\\",
+      "dedication": "",
+      "content": "Blankets of biographies\nBooks a million\nEnough to sink a world\nThe throbbing weight of\nHuman feelings\nEnough to bury us all",
       "location": "Early May, 2012. Triunfo de la cruz, Honduras.\\",
       "note": "",
       "categories": [],
-      "bookSource": null
+      "bookSource": null,
+      "comments": []
     },
     {
       "id": 1761034533996,
@@ -4906,6 +4908,53 @@
       "categories": [
         "light",
         "love"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1781721971740,
+      "title": "Wrong Paths",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "Severance packets\n  I ask for renumeration but \n    God gives me slaps and\n        I understand why\n\nTo train ones eye on the \n      incorrect terrain and \n         knowingly attempt to \n            traverse the wrong path \n              is a stupidity that \n                He does not allow in\n                    His just, watery \n                         Universe\n\nFire comes in an instant \n      All courage and nobility \n          Can fall like a deadman off his horse\n              if the course is off. \n               \nNever tempt God knowingly \n~ 'Tis a consummation devoutly to be missed. \n\nHis flame thrower reaches us \n     When we're the villain \n          We'll scream a hollywood horror film \n             scream as our skin, \n                       that is, \n           everything we're in,\n            begins to dissolve",
+      "location": "June 16th, 2026. Los Feliz, Los Angeles.",
+      "note": "",
+      "categories": [
+        "body",
+        "grr",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1781722501578,
+      "title": "The Crushing",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "A riparian gallant \n  Furrowed from the \n      dearth of sacrifice\n\nGorged upon the \n    Holy nutrients of \n         Sage advice\n\nA magic wand\n  Others saw\n                   what was \nIn reality two feet\n   Taking turns in stepping \nIn the feet of\n  gathered and ushered \nHoliness. \n\n   . Nobody wants to believe. \n\nEveryone's eager to point out the slip \n  that gives lie to the lie\n  the dye that they assert\n  undoes any/all claims to truth \n\n   But this, if nothing else, is Satanic\n\nTo claim holy purity on a \n   ground that falters \n   all of us the same. \n\nEvery one of us a broken name\n   That now just spells out \n The how \n                  and the way \n            we survived\n when the breaking came.",
+      "location": "June 16th, 2026. Los Feliz, Los Angeles.",
+      "note": "",
+      "categories": [
+        "black",
+        "society"
+      ],
+      "bookSource": null,
+      "comments": []
+    },
+    {
+      "id": 1781722771715,
+      "title": "Payback",
+      "author": "Yusuf Misdaq",
+      "dedication": "",
+      "content": "A shell fish derivative\n  borne of sea foam form \n     a winter alone forlorn \n        burning, born\n      sworn to untether \n     depregnate and \n        isolate from the swarm \n     a humble thing \n           seeking simply to be warm \n        never guessing or imagining \n     that in the reverent space \n        between dawn and morn \n     she could go from \n        acorn to unicorn",
+      "location": "",
+      "note": "",
+      "categories": [
+        "moving",
+        "star",
+        "water"
       ],
       "bookSource": null,
       "comments": []
