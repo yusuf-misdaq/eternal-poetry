@@ -833,12 +833,6 @@
             </div>
 
             <div class="admin-section">
-                <h2>📊 Like Analytics</h2>
-                <p style="margin-bottom: 1rem; color: #666;">Total likes per poem (tracked separately from poems.json)</p>
-                <div id="likes-analytics"></div>
-            </div>
-
-            <div class="admin-section">
                 <h2>Backup & Restore</h2>
                 <p style="margin-bottom: 1rem; color: #666;">Export your poems to save a backup, or import previously saved data.</p>
                 <div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
@@ -1229,7 +1223,6 @@
             renderCategoryChips();
             renderPoemsList();
             renderCommentsList();
-            renderLikesAnalytics();
         }
 
         function renderCategoryCheckboxes() {
@@ -1313,34 +1306,6 @@
             }
             
             document.getElementById('comments-list').innerHTML = html;
-        }
-
-        function renderLikesAnalytics() {
-            // This will show like counts from Cloudflare KV
-            // For now, placeholder - will be populated by heart button tracking
-            fetch(LIKES_API + '?action=get_all')
-                .then(function(response) { return response.json(); })
-                .then(function(likes) {
-                    var html = '';
-                    var totalLikes = 0;
-                    
-                    for (var i = 0; i < data.poems.length; i++) {
-                        var p = data.poems[i];
-                        var poemLikes = likes['poem_' + p.id] || 0;
-                        totalLikes += poemLikes;
-                        
-                        html += '<div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0;">';
-                        html += '<span>' + escapeHtml(p.title) + '</span>';
-                        html += '<span style="font-weight: 500; color: #ef4444;">❤️ ' + poemLikes + '</span>';
-                        html += '</div>';
-                    }
-                    
-                    html = '<p style="margin-bottom: 1rem; font-weight: 500;">Total likes across all poems: ' + totalLikes + '</p>' + html;
-                    document.getElementById('likes-analytics').innerHTML = html;
-                })
-                .catch(function() {
-                    document.getElementById('likes-analytics').innerHTML = '<p style="color: #999;">Like data will appear here once users start engaging.</p>';
-                });
         }
 
         function deleteComment(poemId, commentIndex) {
