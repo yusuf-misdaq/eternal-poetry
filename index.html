@@ -1251,12 +1251,24 @@
 
         function renderPoemsList() {
             document.getElementById('poem-count').textContent = data.poems.length;
+            fetch(LIKES_API + '?action=get_all')
+                .then(function(r) { return r.json(); })
+                .then(function(likes) { buildPoemsList(likes); })
+                .catch(function() { buildPoemsList({}); });
+        }
+
+        function buildPoemsList(likes) {
             var html = '';
             for (var i = 0; i < data.poems.length; i++) {
                 var p = data.poems[i];
+                var likeCount = likes['poem_' + p.id] || 0;
                 html += '<div class="poem-list-item">';
                 html += '<div><h3 style="font-weight: 500; margin-bottom: 0.25rem;">' + escapeHtml(p.title) + '</h3>';
-                html += '<p style="font-size: 0.9rem; color: #666;">' + p.categories.join(', ') + '</p></div>';
+                html += '<p style="font-size: 0.9rem; color: #666;">' + p.categories.join(', ') + '</p>';
+                if (likeCount > 0) {
+                    html += '<p style="font-size: 0.85rem; color: #e05; margin-top: 0.25rem;">&#10084; Likes: ' + likeCount + '</p>';
+                }
+                html += '</div>';
                 html += '<div><button onclick="editPoem(' + p.id + ')" class="button button-warning">Edit</button>';
                 html += '<button onclick="deletePoem(' + p.id + ')" class="button button-danger">Delete</button></div>';
                 html += '</div>';
