@@ -404,11 +404,6 @@
             display: block;
         }
 
-        .jump-to-top:hover {
-            background: #C49A1A;
-            transform: translateY(-2px);
-        }
-
         .poem-list-item.hidden-by-search {
             display: none;
         }
@@ -446,7 +441,7 @@
             }
         }
         
-.modal-overlay {
+        .modal-overlay {
             display: flex;
             position: fixed;
             top: 0;
@@ -542,7 +537,7 @@
             background: #C49A1A;
         }
 
-.modal-button.subscribe {
+        .modal-button.subscribe {
             background: #000;
             color: #fff;
             position: relative;
@@ -626,7 +621,76 @@
             color: #666;
         }
 
-@media (max-width: 768px) {
+        .heart-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 99;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .heart-button.visible {
+            display: flex;
+        }
+
+        .heart-icon {
+            position: relative;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        .heart-svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .heart-count {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.65rem;
+            color: #999;
+            font-weight: 500;
+            font-family: Arial, sans-serif;
+            pointer-events: none;
+        }
+
+        @keyframes heartPulse {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.15); }
+            50% { transform: scale(1.2); }
+            75% { transform: scale(1.15); }
+        }
+
+        @keyframes heartFloat {
+            0% { 
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            100% { 
+                transform: translateY(-80px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        .heart-icon.pulse {
+            animation: heartPulse 0.6s ease-in-out;
+        }
+
+        .heart-icon.float {
+            animation: heartFloat 2.5s ease-out forwards;
+        }
+
+        @media (max-width: 768px) {
             .modal-content {
                 padding: 2rem 1.5rem;
             }
@@ -688,7 +752,7 @@
                 <button onclick="logout()" style="text-decoration: underline; background: none; border: none; cursor: pointer;">Logout</button>
             </div>
 
-<div style="text-align: center; margin: 2rem 0;">
+            <div style="text-align: center; margin: 2rem 0;">
                 <a href="#" onclick="goHome(); return false;" style="text-decoration: underline;">View Site</a>
             </div>
 
@@ -747,7 +811,7 @@
                 <div id="category-chips"></div>
             </div>
 
-         <div class="admin-section" id="poems-section">
+            <div class="admin-section" id="poems-section">
                 <h2>All Poems (<span id="poem-count">0</span>)</h2>
                 <div class="poem-search-container">
                     <input 
@@ -766,6 +830,12 @@
                 <h2>Manage Comments</h2>
                 <p style="margin-bottom: 1rem; color: #666;">View and moderate all comments across your poems.</p>
                 <div id="comments-list"></div>
+            </div>
+
+            <div class="admin-section">
+                <h2>📊 Like Analytics</h2>
+                <p style="margin-bottom: 1rem; color: #666;">Total likes per poem (tracked separately from poems.json)</p>
+                <div id="likes-analytics"></div>
             </div>
 
             <div class="admin-section">
@@ -815,6 +885,9 @@
             specificPoemId: null
         };
 
+        // Cloudflare KV endpoint for like tracking
+        const LIKES_API = 'https://poetry-stripe-validator.astralab33.workers.dev/likes';
+
         function init() {
             document.getElementById('year').textContent = new Date().getFullYear();
             document.getElementById('book-toggle').addEventListener('change', function(e) {
@@ -833,7 +906,7 @@
             }
         }
 
-       function loadPoemsFromJSON() {
+        function loadPoemsFromJSON() {
             // Add cache-busting timestamp to force fresh data
             fetch('poems.json?v=' + Date.now())
                 .then(function(response) {
@@ -888,7 +961,7 @@
             renderAdmin();
         }
 
-function showPublic() {
+        function showPublic() {
             document.getElementById('login-view').classList.add('hidden');
             document.getElementById('admin-view').classList.add('hidden');
             document.getElementById('public-view').classList.remove('hidden');
@@ -946,7 +1019,7 @@ function showPublic() {
             if (poem.location) html += '<p class="poem-location">' + escapeHtml(poem.location) + '</p>';
             if (poem.note) html += '<p class="poem-note">' + escapeHtml(poem.note) + '</p>';
             
-                if (poem.bookSource) {
+            if (poem.bookSource) {
                 html += '<div style="margin: 3rem 0; padding: 1.5rem; border: 1px solid #ddd; border-radius: 4px; background: #fafafa;">';
                 html += '<div style="display: flex; gap: 1.5rem; justify-content: space-between; align-items: flex-start;">';
                 html += '<div style="text-align: left; flex: 1;">';
@@ -956,7 +1029,7 @@ function showPublic() {
                 html += '<p style="margin-bottom: 1rem; text-align: left; color: #000;">' + escapeHtml(poem.bookSource.year) + '</p>';
                 html += '<a href="' + escapeHtml(poem.bookSource.amazonUrl) + '" target="_blank" style="display: inline-block; padding: 0.5rem 1rem; background: #1a4d8f; color: #fff; text-decoration: none; border-radius: 4px;">Available on Amazon</a>';
                 html += '</div>';
-             if (poem.bookSource.coverImage) {
+                if (poem.bookSource.coverImage) {
                     var imagePath = poem.bookSource.coverImage;
                     if (!imagePath.startsWith('http') && !imagePath.startsWith('/')) {
                         imagePath = '/' + imagePath;
@@ -1062,7 +1135,7 @@ function showPublic() {
             }
         }
 
-       function getNewPoem() {
+        function getNewPoem() {
             state.dropdowns = {};
             state.specificPoemId = null;
             window.history.pushState({}, '', window.location.pathname);
@@ -1156,6 +1229,7 @@ function showPublic() {
             renderCategoryChips();
             renderPoemsList();
             renderCommentsList();
+            renderLikesAnalytics();
         }
 
         function renderCategoryCheckboxes() {
@@ -1229,6 +1303,34 @@ function showPublic() {
             document.getElementById('comments-list').innerHTML = html;
         }
 
+        function renderLikesAnalytics() {
+            // This will show like counts from Cloudflare KV
+            // For now, placeholder - will be populated by heart button tracking
+            fetch(LIKES_API + '?action=get_all')
+                .then(function(response) { return response.json(); })
+                .then(function(likes) {
+                    var html = '';
+                    var totalLikes = 0;
+                    
+                    for (var i = 0; i < data.poems.length; i++) {
+                        var p = data.poems[i];
+                        var poemLikes = likes['poem_' + p.id] || 0;
+                        totalLikes += poemLikes;
+                        
+                        html += '<div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0;">';
+                        html += '<span>' + escapeHtml(p.title) + '</span>';
+                        html += '<span style="font-weight: 500; color: #ef4444;">❤️ ' + poemLikes + '</span>';
+                        html += '</div>';
+                    }
+                    
+                    html = '<p style="margin-bottom: 1rem; font-weight: 500;">Total likes across all poems: ' + totalLikes + '</p>' + html;
+                    document.getElementById('likes-analytics').innerHTML = html;
+                })
+                .catch(function() {
+                    document.getElementById('likes-analytics').innerHTML = '<p style="color: #999;">Like data will appear here once users start engaging.</p>';
+                });
+        }
+
         function deleteComment(poemId, commentIndex) {
             if (confirm('Are you sure you want to delete this comment?')) {
                 for (var i = 0; i < data.poems.length; i++) {
@@ -1271,7 +1373,7 @@ function showPublic() {
                 };
             }
 
-                var poem = {
+            var poem = {
                 id: state.editingId || Date.now(),
                 title: title,
                 author: author,
@@ -1473,12 +1575,13 @@ function showPublic() {
             };
             return text.replace(/[&<>"']/g, function(m) { return map[m]; });
         }
-// Modal tracking
+
+        // Modal tracking
         var poemsViewed = parseInt(localStorage.getItem('poems-viewed') || '0');
         var modalShown = false;
         var isPatron = localStorage.getItem('is-patron') === 'true';
 
-function trackPoemView() {
+        function trackPoemView() {
             if (modalShown || isPatron) return; // Don't track if patron
     
             poemsViewed++;
@@ -1493,13 +1596,13 @@ function trackPoemView() {
             }
         }
 
-function showModal() {
+        function showModal() {
             document.getElementById('support-modal').classList.add('active');
             document.body.style.overflow = 'hidden';
             localStorage.setItem('has-seen-modal', 'true'); // Remember they've seen it
         }
 
-function closeModal() {
+        function closeModal() {
             var modal = document.getElementById('support-modal');
             modal.classList.remove('active');
             document.body.style.overflow = '';
@@ -1508,8 +1611,59 @@ function closeModal() {
             modalShown = false; // Allow tracking again
         }
 
-// Search and navigation functions
-function filterPoems() {
+        // Heart/Like button functions
+        function likePoem(poemId) {
+            var heartIcon = document.querySelector('.heart-icon');
+            
+            // Animate heart
+            heartIcon.classList.add('pulse');
+            setTimeout(function() {
+                heartIcon.classList.remove('pulse');
+                heartIcon.classList.add('float');
+            }, 600);
+
+            // Update like count in Cloudflare KV
+            fetch(LIKES_API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ poemId: poemId })
+            })
+            .then(function(response) { return response.json(); })
+            .then(function(data) {
+                // Update the displayed count
+                updateHeartCount(data.likes);
+            })
+            .catch(function(error) { console.error('Like error:', error); });
+        }
+
+        function updateHeartCount(count) {
+            var countEl = document.querySelector('.heart-count');
+            if (countEl) {
+                countEl.textContent = count > 0 ? count : '';
+            }
+        }
+
+        function renderHeartButton() {
+            var heartBtn = document.querySelector('.heart-button');
+            if (!heartBtn) {
+                var btn = document.createElement('button');
+                btn.className = 'heart-button';
+                btn.onclick = function() { likePoem(state.currentPoemId); };
+                btn.innerHTML = '<div class="heart-icon"><svg class="heart-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><span class="heart-count"></span></div>';
+                document.body.appendChild(btn);
+            }
+
+            // Load current like count
+            fetch(LIKES_API + '?poemId=' + state.currentPoemId)
+                .then(function(response) { return response.json(); })
+                .then(function(data) {
+                    updateHeartCount(data.likes);
+                })
+                .catch(function() { updateHeartCount(0); });
+        }
+
+        // Search and navigation functions
+        function filterPoems() {
             var searchTerm = document.getElementById('poem-search').value.toLowerCase();
             var poemItems = document.querySelectorAll('.poem-list-item');
             var visibleCount = 0;
@@ -1554,17 +1708,41 @@ function filterPoems() {
             poemsList.scrollIntoView({ behavior: 'smooth', block: 'end' });
         }
 
-        // Show/hide jump to top button on scroll
+        // Show/hide jump to top button on scroll (admin only) & heart button (public only)
         window.addEventListener('scroll', function() {
-            var jumpBtn = document.getElementById('jump-to-top');
-            if (jumpBtn) {
+            var jumpBtn = document.querySelector('.jump-to-top');
+            if (jumpBtn && state.view === 'admin' && state.authenticated) {
                 if (window.pageYOffset > 300) {
                     jumpBtn.classList.add('visible');
                 } else {
                     jumpBtn.classList.remove('visible');
                 }
+            } else if (jumpBtn) {
+                jumpBtn.classList.remove('visible');
+            }
+
+            var heartBtn = document.querySelector('.heart-button');
+            if (heartBtn && state.view === 'home') {
+                if (window.pageYOffset > 300) {
+                    heartBtn.classList.add('visible');
+                } else {
+                    heartBtn.classList.remove('visible');
+                }
+            } else if (heartBtn) {
+                heartBtn.classList.remove('visible');
             }
         });
+
+        // Clean up heart button when changing poems
+        var originalRenderPoem = renderPoem;
+        renderPoem = function() {
+            var floatingHearts = document.querySelectorAll('.heart-icon.float');
+            for (var i = 0; i < floatingHearts.length; i++) {
+                floatingHearts[i].remove();
+            }
+            originalRenderPoem.call(this);
+            renderHeartButton();
+        };
         
         init();
     </script>
@@ -1574,7 +1752,7 @@ function filterPoems() {
             <button class="modal-close" onclick="closeModal()">×</button>
             <h2>Do You Like This?</h2>
             <p>Please consider supporting this work</p>
-<div class="modal-buttons">
+            <div class="modal-buttons">
                 <a href="donate.html" class="modal-button donate">Donate</a>
                 <a href="patrons.html" class="modal-button subscribe">Subscribe</a>
             </div>
@@ -1595,6 +1773,6 @@ function filterPoems() {
             <button class="modal-not-now" onclick="closeModal()"></button>
         </div>
     </div>
-    <button class="jump-to-top" id="jump-to-top" onclick="jumpToTop()">↑ Top</button>
+    <button class="jump-to-top" onclick="jumpToTop()">↑ Top</button>
 </body>
 </html>
