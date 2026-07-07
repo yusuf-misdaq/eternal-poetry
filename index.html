@@ -830,7 +830,6 @@
                 <h2>Manage Comments</h2>
                 <p style="margin-bottom: 1rem; color: #666;">View and moderate all comments across your poems.</p>
                 <div id="comments-list"></div>
-                </div>
 
             <div class="admin-section">
                 <h2>Backup & Restore</h2>
@@ -844,20 +843,17 @@
             </div>
 
             <div class="admin-section">
-                <h2>🚀 Sync to GitHub</h2>
-                <p style="margin-bottom: 1rem; color: #666;">Click below to get the updated poems.json file. Download it and upload to GitHub.</p>
-                <button onclick="downloadPoemsJSON()" class="button button-primary" style="background: #2ea44f;">📤 Download poems.json</button>
+                <h2>🚀 Publish to GitHub</h2>
+                <p style="margin-bottom: 1rem; color: #666;">Click below to publish your changes directly to the live site. No downloads needed.</p>
+                <button onclick="publishToGitHub()" class="button button-primary" id="publish-btn" style="background: #2ea44f;">🚀 Publish Changes</button>
+                <p id="publish-status" style="margin-top: 1rem; font-size: 0.9rem;"></p>
                 <div style="margin-top: 1rem; padding: 1rem; background: #f0f0f0; border-radius: 4px;">
-                    <p style="font-weight: 500; margin-bottom: 0.5rem;">Instructions:</p>
-                    <ol style="padding-left: 1.5rem; line-height: 1.8; font-size: 0.9rem;">
-                        <li>Click "Download poems.json" above</li>
-                        <li>Go to: <a href="https://github.com/yusuf-misdaq/eternal-poetry" target="_blank" style="text-decoration: underline;">eternal-poetry on GitHub</a></li>
-                        <li>Click "Add file" → "Upload files"</li>
-                        <li>Drag the <code style="background: white; padding: 0.2rem 0.4rem;">poems.json</code> file (it will replace the old one)</li>
-                        <li>Scroll down → "Commit changes"</li>
-                        <li>Wait 2-3 minutes for site to update</li>
-                    </ol>
+                    <p style="font-size: 0.85rem; color: #666;">This publishes poems.json directly to your GitHub repository. Changes go live in 2-3 minutes.</p>
                 </div>
+                <details style="margin-top: 1rem;">
+                    <summary style="cursor: pointer; font-size: 0.85rem; color: #999;">Backup option: manual download</summary>
+                    <button onclick="downloadPoemsJSON()" class="button button-secondary" style="margin-top: 0.5rem;">📥 Download poems.json instead</button>
+                </details>
             </div>
 
             <div style="text-align: center; margin-top: 2rem;">
@@ -1521,6 +1517,44 @@
             event.target.value = '';
         }
 
+        // Publish via Cloudflare Worker (keeps GitHub token hidden server-side)
+        var PUBLISH_API = 'https://poetry-stripe-validator.astralab33.workers.dev/publish';
+
+        function publishToGitHub() {
+            var btn = document.getElementById('publish-btn');
+            var status = document.getElementById('publish-status');
+            
+            btn.disabled = true;
+            btn.textContent = 'Publishing...';
+            status.textContent = '';
+            status.style.color = '#666';
+
+            fetch(PUBLISH_API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ data: data })
+            })
+            .then(function(response) { return response.json(); })
+            .then(function(result) {
+                btn.disabled = false;
+                btn.textContent = '🚀 Publish Changes';
+                if (result.success) {
+                    status.textContent = '✓ Published! Live in 2-3 minutes.';
+                    status.style.color = '#2ea44f';
+                } else {
+                    status.textContent = '✗ Error: ' + result.message;
+                    status.style.color = '#ef4444';
+                }
+            })
+            .catch(function(error) {
+                btn.disabled = false;
+                btn.textContent = '🚀 Publish Changes';
+                status.textContent = '✗ Error: ' + error.message;
+                status.style.color = '#ef4444';
+                console.error('Publish error:', error);
+            });
+        }
+
         function downloadPoemsJSON() {
             try {
                 var dataStr = JSON.stringify(data, null, 2);
@@ -1575,6 +1609,7 @@
 
         function showModal() {
             document.getElementById('support-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
             localStorage.setItem('has-seen-modal', 'true'); // Remember they've seen it
         }
 
