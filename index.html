@@ -830,6 +830,7 @@
                 <h2>Manage Comments</h2>
                 <p style="margin-bottom: 1rem; color: #666;">View and moderate all comments across your poems.</p>
                 <div id="comments-list"></div>
+            </div>
 
             <div class="admin-section">
                 <h2>Backup & Restore</h2>
@@ -1609,7 +1610,6 @@
 
         function showModal() {
             document.getElementById('support-modal').classList.add('active');
-            document.body.style.overflow = 'hidden';
             localStorage.setItem('has-seen-modal', 'true'); // Remember they've seen it
         }
 
